@@ -34,6 +34,14 @@ void Xmove_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
+
+    if(data[3] == 4){
+
+    }else if(data[3] == 5){
+
+    }else if(data[3] == 6){
+        
+    }
     if (recognition_msg->data[1] > 0)
     {
         this->l1 = 0;
