@@ -67,6 +67,7 @@ all: CMakeFiles/SerialKIMD.dir/all
 all: CMakeFiles/Xmove_Controller.dir/all
 all: CMakeFiles/DriveMotion.dir/all
 all: CMakeFiles/Drive_Controller.dir/all
+all: CMakeFiles/Upper_Controller.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -80,6 +81,7 @@ clean: CMakeFiles/SerialKIMD.dir/clean
 clean: CMakeFiles/Xmove_Controller.dir/clean
 clean: CMakeFiles/DriveMotion.dir/clean
 clean: CMakeFiles/Drive_Controller.dir/clean
+clean: CMakeFiles/Upper_Controller.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -167,7 +169,7 @@ CMakeFiles/SerialKIMD.dir/clean:
 CMakeFiles/Xmove_Controller.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Xmove_Controller.dir/build.make CMakeFiles/Xmove_Controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Xmove_Controller.dir/build.make CMakeFiles/Xmove_Controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roboconb/robocon_ws/build/robocon2023_b_dash/CMakeFiles --progress-num=7,8 "Built target Xmove_Controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roboconb/robocon_ws/build/robocon2023_b_dash/CMakeFiles --progress-num=9,10 "Built target Xmove_Controller"
 .PHONY : CMakeFiles/Xmove_Controller.dir/all
 
 # Build rule for subdir invocation for target.
@@ -237,6 +239,32 @@ Drive_Controller: CMakeFiles/Drive_Controller.dir/rule
 CMakeFiles/Drive_Controller.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Drive_Controller.dir/build.make CMakeFiles/Drive_Controller.dir/clean
 .PHONY : CMakeFiles/Drive_Controller.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Upper_Controller.dir
+
+# All Build rule for target.
+CMakeFiles/Upper_Controller.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roboconb/robocon_ws/build/robocon2023_b_dash/CMakeFiles --progress-num=7,8 "Built target Upper_Controller"
+.PHONY : CMakeFiles/Upper_Controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Upper_Controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboconb/robocon_ws/build/robocon2023_b_dash/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Upper_Controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roboconb/robocon_ws/build/robocon2023_b_dash/CMakeFiles 0
+.PHONY : CMakeFiles/Upper_Controller.dir/rule
+
+# Convenience name for target.
+Upper_Controller: CMakeFiles/Upper_Controller.dir/rule
+.PHONY : Upper_Controller
+
+# clean rule for target.
+CMakeFiles/Upper_Controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/clean
+.PHONY : CMakeFiles/Upper_Controller.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

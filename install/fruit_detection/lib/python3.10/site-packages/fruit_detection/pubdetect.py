@@ -16,7 +16,7 @@ conf = 0
 
 save = False
 # start webcam
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(9)
 # cap.set(3, 1920)  # 横
 # cap.set(4, 1080)  # 縦
 cap.set(3, 480)
@@ -108,7 +108,8 @@ def detect():
     # model = YOLO("resource/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
-    model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
+    model = YOLO("/home/roboconb/detection-model/v8-v24-1007.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917_"+str(imgsize)+"_openvino_model")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005-openvino-model")
     # model = YOLO("/home/roboconb/python/fruits/640int8_openvino_model")
@@ -133,7 +134,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=416) # 416 v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         # value reset
         cls = 0

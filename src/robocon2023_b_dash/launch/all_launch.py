@@ -31,16 +31,16 @@ def generate_launch_description():
                 executable="Drive_Controller",
             ),
             Node(
+                package="robocon2023_b_dash",
+                namespace="robocon2023_b_dash",
+                executable="Upper_Controller",
+            ),
+            Node(
                 package="fruit_detection",
                 namespace="robocon2023_b_dash",
                 executable="pubdetect",
                 prefix= "xterm -e",
                 output = "screen", # print wo hyouzi
             ),
-            # Node(
-            #     package="fruit_detection",
-            #     namespace="robocon2023_b_dash",
-            #     executable="listener",
-            # )
         ]
     )

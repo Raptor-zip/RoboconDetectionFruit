@@ -249,6 +249,19 @@ Drive_Controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Drive_Controller.dir/build.make CMakeFiles/Drive_Controller.dir/build
 .PHONY : Drive_Controller/fast
 
+#=============================================================================
+# Target rules for targets named Upper_Controller
+
+# Build rule for target.
+Upper_Controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Upper_Controller
+.PHONY : Upper_Controller
+
+# fast build rule for target.
+Upper_Controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/build
+.PHONY : Upper_Controller/fast
+
 src/Drive_Controller.o: src/Drive_Controller.cpp.o
 .PHONY : src/Drive_Controller.o
 
@@ -321,6 +334,30 @@ src/SerialKIMD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SerialKIMD.dir/build.make CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.s
 .PHONY : src/SerialKIMD.cpp.s
 
+src/Upper_Controller.o: src/Upper_Controller.cpp.o
+.PHONY : src/Upper_Controller.o
+
+# target to build an object file
+src/Upper_Controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o
+.PHONY : src/Upper_Controller.cpp.o
+
+src/Upper_Controller.i: src/Upper_Controller.cpp.i
+.PHONY : src/Upper_Controller.i
+
+# target to preprocess a source file
+src/Upper_Controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.i
+.PHONY : src/Upper_Controller.cpp.i
+
+src/Upper_Controller.s: src/Upper_Controller.cpp.s
+.PHONY : src/Upper_Controller.s
+
+# target to generate assembly for a file
+src/Upper_Controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.s
+.PHONY : src/Upper_Controller.cpp.s
+
 src/Xmove_Controller.o: src/Xmove_Controller.cpp.o
 .PHONY : src/Xmove_Controller.o
 
@@ -363,6 +400,7 @@ help:
 	@echo "... DriveMotion"
 	@echo "... Drive_Controller"
 	@echo "... SerialKIMD"
+	@echo "... Upper_Controller"
 	@echo "... Xmove_Controller"
 	@echo "... src/Drive_Controller.o"
 	@echo "... src/Drive_Controller.i"
@@ -373,6 +411,9 @@ help:
 	@echo "... src/SerialKIMD.o"
 	@echo "... src/SerialKIMD.i"
 	@echo "... src/SerialKIMD.s"
+	@echo "... src/Upper_Controller.o"
+	@echo "... src/Upper_Controller.i"
+	@echo "... src/Upper_Controller.s"
 	@echo "... src/Xmove_Controller.o"
 	@echo "... src/Xmove_Controller.i"
 	@echo "... src/Xmove_Controller.s"

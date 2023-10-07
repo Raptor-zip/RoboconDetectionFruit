@@ -41,6 +41,10 @@ add_executable(Drive_Controller src/Drive_Controller.cpp)
 ament_target_dependencies(Drive_Controller rclcpp std_msgs sensor_msgs)
 install(TARGETS Drive_Controller DESTINATION lib/${PROJECT_NAME})
 
+add_executable(Upper_Controller src/Upper_Controller.cpp)
+ament_target_dependencies(Upper_Controller rclcpp std_msgs sensor_msgs)
+install(TARGETS Upper_Controller DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

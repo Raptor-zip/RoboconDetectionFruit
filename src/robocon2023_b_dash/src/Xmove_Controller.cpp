@@ -37,11 +37,11 @@ void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
     if (recognition_msg->data[1] > 0)
     {
         this->l1 = 0;
-        this->r1 = (float)recognition_msg->data[1] / 4.0;
+        this->r1 = (float)recognition_msg->data[1] / 6.0;
     }
     else
     {
-        this->l1 = (float)recognition_msg->data[1] / -4.0;
+        this->l1 = (float)recognition_msg->data[1] / -6.0;
         this->r1 = 0;
     }
 }

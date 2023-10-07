@@ -31,23 +31,92 @@ Drive_Controller_Node::~Drive_Controller_Node()
 
 void Drive_Controller_Node::WallMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
+    if (this->motion_flag <= 3)
+    {
+        if (md_msg->data[16] == 1)
+        {
+            this->motion_flag = 3;
+        }
+        else
+        {
+            this->motion_flag = 0;
+        }
+    }
+
+    for (int i = 0; i < 8; i++)
+    {
+        this->WallMotion_msg[0].bin[i] = md_msg->data[i];
+        this->WallMotion_msg[1].bin[i] = md_msg->data[i + 8];
+    }
 }
 
 void Drive_Controller_Node::RopeMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
+    if (this->motion_flag <= 2)
+    {
+        if (md_msg->data[16] == 1)
+        {
+            this->motion_flag = 2;
+        }
+        else
+        {
+            this->motion_flag = 0;
+        }
+    }
+
+    for (int i = 0; i < 8; i++)
+    {
+        this->RopeMotion_msg[0].bin[i] = md_msg->data[i];
+        this->RopeMotion_msg[1].bin[i] = md_msg->data[i + 8];
+    }
 }
 
 void Drive_Controller_Node::DriveMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
+    if (this->motion_flag <= 1)
+    {
+        if (md_msg->data[16] == 1)
+        {
+            this->motion_flag = 1;
+        }
+        else
+        {
+            this->motion_flag = 0;
+        }
+    }
+
     for (int i = 0; i < 8; i++)
     {
-        this->Drive_Controller_msg[0].bin[i] = md_msg->data[i];
-        this->Drive_Controller_msg[1].bin[i] = md_msg->data[i + 8];
+        this->DriveMotion_msg[0].bin[i] = md_msg->data[i];
+        this->DriveMotion_msg[1].bin[i] = md_msg->data[i + 8];
     }
 }
 
 void Drive_Controller_Node::timer_callback(void)
 {
+    if (this->motion_flag == 3)
+    {
+        this->Drive_Controller_msg[0] = this->WallMotion_msg[0];
+        this->Drive_Controller_msg[1] = this->WallMotion_msg[1];
+    }
+    else if (this->motion_flag == 2)
+    {
+        this->Drive_Controller_msg[0] = this->RopeMotion_msg[0];
+        this->Drive_Controller_msg[1] = this->RopeMotion_msg[1];
+    }
+    else if (this->motion_flag == 1)
+    {
+        this->Drive_Controller_msg[0] = this->DriveMotion_msg[0];
+        this->Drive_Controller_msg[1] = this->DriveMotion_msg[1];
+    }
+    else if (this->motion_flag == 0)
+    {
+        this->Drive_Controller_msg[0].cmd = 0;
+        this->Drive_Controller_msg[0].M = 0;
+        this->Drive_Controller_msg[1].cmd = 0;
+        this->Drive_Controller_msg[1].M = 0;
+    }
+
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(16);
     for (int i = 0; i < 8; i++)

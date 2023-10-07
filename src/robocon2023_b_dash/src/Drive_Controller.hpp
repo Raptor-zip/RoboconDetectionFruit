@@ -20,7 +20,7 @@ private:
 
     rclcpp::Publisher<std_msgs::msg::ByteMultiArray>::SharedPtr Drive_Controller_publisher;
 
-    ABU2023_GenericOutput_Header_Typedef Drive_Controller_msg[2], WallMotion_msg, RopeMotion_msg, DriveMotion_msg;
+    ABU2023_GenericOutput_Header_Typedef Drive_Controller_msg[2], WallMotion_msg[2], RopeMotion_msg[2], DriveMotion_msg[2];
 
     rclcpp::TimerBase::SharedPtr timer_;
 
