@@ -14,6 +14,9 @@ y = 0
 kind = 0
 conf = 0
 
+# Areas of absolute recognition
+margin = [0.1, 0.2, 0.2 , 0.2]
+
 save = False
 # start webcam
 cap = cv2.VideoCapture(9)
@@ -105,7 +108,6 @@ def detect():
     count = 0
     max_count = 30
     fps = 0
-    # model = YOLO("resource/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
@@ -121,7 +123,7 @@ def detect():
     # model = YOLO("yolo-Weights/yolov8n.pt")
 
     # classNames = ["kiwi", "orange", "peach", "blueberry", "grape", "mix"]
-    classNames = ["berry", "grape", "mix"]
+    classNames = ["blueberry", "grape", "mix"]
 
 
     while True:
@@ -134,7 +136,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(5,6), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         # value reset
         cls = 0
@@ -179,14 +181,26 @@ def detect():
             y = 0
             kind = 0
             conf = 0
-            for box in boxes:
-                x1, y1, x2, y2 = box.xyxy[0]
+            print("aaaaa")
+            print(len(boxes))
+            if len(boxes) == 1 :
+                x1, y1, x2, y2 = boxes.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(
                     x2), int(y2)  # convert to int values
-                conf_tmp = int(f'{box.conf[0].item()*100:.0f}')  # 信頼度の取得
-                cls = int(box.cls[0])
-
-                if conf_tmp > conf_threshold:
+                state = 1
+                # yの値が大きい場合のほう→xの値の大きいほうとしないと、近くにあって右にあるものと、遠くにあって真ん中にある状況だった場合、遠くのものに合わせられちゃう
+                if abs((x1 + x2) / 2 - width / 2) < abs(center_x / 2 - width / 2):
+                    center_x = (x1 + x2) / 2
+                    move_value = round(center_x / width * 100 - 50)
+                x = move_value
+                y = round((y1+y2)/2/height*100)  # 今後治す
+                kind = int(boxes.cls[0])
+                conf = int(f'{boxes.conf[0].item()*100:.0f}')
+            else:
+                for box in boxes:
+                    x1, y1, x2, y2 = box.xyxy[0]
+                    x1, y1, x2, y2 = int(x1), int(y1), int(
+                        x2), int(y2)  # convert to int values
                     state = 1
                     # yの値が大きい場合のほう→xの値の大きいほうとしないと、近くにあって右にあるものと、遠くにあって真ん中にある状況だった場合、遠くのものに合わせられちゃう
                     if abs((x1 + x2) / 2 - width / 2) < abs(center_x / 2 - width / 2):
@@ -194,8 +208,8 @@ def detect():
                         move_value = round(center_x / width * 100 - 50)
                     x = move_value
                     y = round((y1+y2)/2/height*100)  # 今後治す
-                    kind = cls
-                    conf = conf_tmp
+                    kind = int(box.cls[0])
+                    conf = int(f'{box.conf[0].item()*100:.0f}')  # 信頼度の取得
 
 
         if show == True:

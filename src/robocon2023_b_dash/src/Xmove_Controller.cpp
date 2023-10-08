@@ -34,14 +34,14 @@ void Xmove_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    int gain = 6;
-    if(data[3] == 4){
+    float gain = 6;
+    if(recognition_msg->data[3] == 4){
         // blueberry
         gain = 8;
-    }else if(data[3] == 5){
+    }else if(recognition_msg->data[3] == 5){
         // grape
         gain = 6;
-    }else if(data[3] == 6){
+    }else if(recognition_msg->data[3] == 6){
         // mix
         gain = 4;
     }
