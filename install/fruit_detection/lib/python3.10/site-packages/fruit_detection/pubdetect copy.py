@@ -1,3 +1,5 @@
+# dousakakunizumi 10/5
+
 from ultralytics import YOLO
 import cv2
 import datetime
@@ -10,18 +12,22 @@ state = 0
 x = 0
 y = 0
 kind = 0
+conf = 0
+
+# Areas of absolute recognition
+margin = [0.1, 0.2, 0.2 , 0.2]
 
 save = False
 # start webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(9)
 # cap.set(3, 1920)  # 横
 # cap.set(4, 1080)  # 縦
-cap.set(3, 640)
-cap.set(4, 480)
+cap.set(3, 480)
+cap.set(4, 360)
 cap.set(5, 60)  # fps
 conf_threshold = 80  # confidence threshold(信頼度の閾値)
-show = False
-# show = False
+# show = True
+show = False #true ni dekinai
 # cap.set(11, 480) # コントラスト
 # cap.set(15, 100)
 
@@ -32,11 +38,17 @@ show = False
 # CV_CAP_PROP_EXPOSURE 露出（カメラの場合のみ）．15
 
 
+def main():
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        executor.submit(pub)
+        executor.submit(detect)
+
+
 class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(Int16MultiArray, 'topic', 10)
-        timer_period = 0.0333  # seconds
+        self.publisher_ = self.create_publisher(Int16MultiArray, 'image_recognition', 10)
+        timer_period = 0.03  # seconds 33fps設定
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
@@ -45,22 +57,12 @@ class MinimalPublisher(Node):
         global x
         global y
         global kind
-        print("つぎああああああああああああああ")
-        print(state)
-        print(x)
-        print(y)
-        print(kind)
+        global conf
         msg = Int16MultiArray()
-        msg.data = [state, x, y, kind]
+        msg.data = [state, x, y, kind, conf]
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
+        # self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
-
-
-def main():
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        executor.submit(pub)
-        executor.submit(detect)
 
 
 def pub(args=None):
@@ -75,6 +77,12 @@ def pub(args=None):
 
 
 def detect():
+    global state
+    global x
+    global y
+    global kind
+    global conf
+    state = 2
     if save == True:
         fps = int(cap.get(cv2.CAP_PROP_FPS))  # カメラのFPSを取得
         w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # カメラの横幅を取得
@@ -88,6 +96,9 @@ def detect():
 
     if cap.isOpened():
         print("カメラの初期化に成功")
+    else:
+        print("カメラkidousippai")
+        state = 2
 
     fps_setting = cap.get(cv2.CAP_PROP_FPS)
     print("FPS(Setting):", '{:11.02f}'.format(fps_setting))
@@ -97,15 +108,23 @@ def detect():
     count = 0
     max_count = 30
     fps = 0
-
-    # model = YOLO(
-    #     "C:/Users/Rapto/マイドライブ/学校/ロボコン/フルーツ検出/学習済み/v8v90917/weights/v8-v9-0917.pt")
-    # model = YOLO("resource/v8-v9-0917.pt")
-    model = YOLO("/home/ros-industrial/fruit/v8-v9-0917.pt")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
+    model = YOLO("/home/roboconb/detection-model/v8-v24-1007.pt")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917_"+str(imgsize)+"_openvino_model")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005-openvino-model")
+    # model = YOLO("/home/roboconb/python/fruits/640int8_openvino_model")
+    # model = YOLO("/home/roboconb/python/fruits/output512_openvino_model")
+    # model = YOLO("/home/roboconb/python/fruits/output.onnx")
+    # model = YOLO("/home/roboconb/python/fruits/640int8.onnx")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917-640.onnx")
+    # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.onnx")
     # model = YOLO("yolo-Weights/yolov8n.pt")
 
-    # object classes
-    classNames = ["kiwi", "orange", "peach", "blueberry", "grape", "mix"]
+    # classNames = ["kiwi", "orange", "peach", "blueberry", "grape", "mix"]
+    classNames = ["blueberry", "grape", "mix"]
+
 
     while True:
         if count == max_count:
@@ -117,10 +136,12 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
+        # value reset
         cls = 0
-        center = 0
+        center_x = 0
+        move_value = 0
         x1, y1, x2, y2 = 0, 0, 0, 0
         # coordinates
         for r in results:
@@ -153,42 +174,79 @@ def detect():
                             [30, 110], font, fontScale, color, thickness)
                 cv2.putText(img, str(len(boxes))+" of fruits",
                             [30, 150], font, fontScale, color, thickness)
-
             else:
-                print("       "+str(f'{fps:.0f}')+"FPS")
+                print(str(f'{fps:.0f}')+"FPS")
 
-            for box in boxes:
-                x1, y1, x2, y2 = box.xyxy[0]
+            x = 0
+            y = 0
+            kind = 0
+            conf = 0
+            print(boxes.xyxy)
+            if len(boxes) == 1:
+                x1, y1, x2, y2 = boxes.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(
                     x2), int(y2)  # convert to int values
-                conf = int(f'{box.conf[0].item()*100:.0f}')  # 信頼度の取得
-
-                if conf > conf_threshold:
-                    if show == True:
-                        cv2.rectangle(img, (x1, y1), (x2, y2),
-                                      (246, 205, 87), 3)
-                        cls = int(box.cls[0])
-                        org = [x1 - 10, y1 - 10]
-                        cv2.putText(img, str(classNames[cls])+str(conf)+"%("+str(x1)+","+str(y1)+"),("+str(
-                            x2)+","+str(y2)+")", org, font, fontScale, (0, 0, 0), thickness + 10)
-                        cv2.putText(img, str(classNames[cls])+str(conf)+"%("+str(x1)+","+str(
-                            y1)+"),("+str(x2)+","+str(y2)+")", org, font, fontScale, color, thickness)
-
-                    # yの値が大きい場合のほう→xの値の大きいほうとしないと、近くにあって右にあるものと、遠くにあって真ん中にある状況だった場合、遠くのものに合わせられちゃう
-                    if abs((x1 + x2) / 2 - width / 2) < abs(center / 2 - width / 2):
-                        center = (x1 + x2) / 2
-                        move_value = round(center / width - 0.5, 3)
-                        print(move_value)
-
-        global state
-        global x
-        global y
-        global kind
-
-        state = 1
-        x = center
-        y = y1 + y2
-        kind = cls
+                state = 1
+                center_x = (x1 + x2) / 2 / width
+                center_y = (y1 + y2) / 2 / height
+                kind = int(boxes.cls[0])
+                state = 1
+                # ryouiki ni haitteiruka kakunin
+                print("ccccccccccccccccccccccccccccccccccccccccccccc")
+                print(margin[1])
+                print(center_x)
+                if margin[1] < center_x:
+                    print(1111111111111111111111111111111111)
+                if margin[3] < center_x:
+                    print(3333333333333333333333333333333333)
+                if margin[0] < center_y:
+                    print(0000000000000000000000000000000000)
+                if margin[2] < center_y:
+                    print(2222222222222222222222222222222222)
+                
+                if abs((x1 + x2) / 2 - width / 2) < abs(center_x / 2 - width / 2):
+                    center_x = (x1 + x2) / 2
+                    move_value = round(center_x / width * 100 - 50)
+                x = move_value
+                y = round((y1+y2)/2/height*100)  # 今後治す
+                kind = int(boxes.cls[0])
+                conf = int(f'{boxes.conf[0].item()*100:.0f}')
+            else:
+                fruit_array = []
+                for box in boxes:
+                    x1, y1, x2, y2 = box.xyxy[0]
+                    x1, y1, x2, y2 = int(x1), int(y1), int(
+                        x2), int(y2)  # convert to int values
+                    print(x1)
+                    print(x2)
+                    print(y1)
+                    print(y2)
+                    center_x = (x1 + x2) / 2 / width
+                    center_y = (y1 + y2) / 2 / height
+                    kind = int(box.cls[0])
+                    state = 1
+                    # ryouiki ni haitteiruka kakunin
+                    print("ccccccccccccccccccccccccccccccccccccccccccccc")
+                    print(margin[1])
+                    print(center_x)
+                    if margin[1] < center_x:
+                        print(1111111111111111111111111111111111)
+                    if margin[3] > center_x:
+                        print(3333333333333333333333333333333333)
+                    if margin[0] > center_y:
+                        print(0000000000000000000000000000000000)
+                    if margin[2] < center_y:
+                        print(2222222222222222222222222222222222)
+                    if(margin[1] > center_x and margin[3] < center_x and margin[0] > center_y and margin[2] < center_y):
+                        print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
+                        fruit_array.append([center_x, center_y, kind])
+                        # rennsouhairetu ni box naino mono wo tuika siteiku
+                for i in range(len(fruit_array)):
+                    if fruit_array[i][1] < fruit_array[i][1]:
+                        fruit_array[i][1].pop
+                print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+                print(fruit_array)
+                conf = 0
 
         if show == True:
             resized = cv2.resize(img, None, None, 0.8, 0.8)
