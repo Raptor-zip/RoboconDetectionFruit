@@ -103,7 +103,7 @@ void Upper_Controller_Node::timer_callback(void)
         }
     }
 
-    RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M); //10/9 turn off
     // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 3 & 0b001);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);

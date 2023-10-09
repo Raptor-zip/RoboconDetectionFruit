@@ -15,7 +15,7 @@ kind = 0
 conf = 0
 
 # Areas of absolute recognition
-margin = [0.1, 0.2, 0.2 , 0.2]
+margin = [0.1, 0.8, 0.8 , 0.2]
 
 save = False
 # start webcam
@@ -27,7 +27,7 @@ cap.set(4, 360)
 cap.set(5, 60)  # fps
 conf_threshold = 80  # confidence threshold(信頼度の閾値)
 # show = True
-show = False #true ni dekinai
+# show = False #true ni dekinai
 # cap.set(11, 480) # コントラスト
 # cap.set(15, 100)
 
@@ -136,7 +136,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         # value reset
         cls = 0
@@ -192,27 +192,15 @@ def detect():
                 kind = int(boxes.cls[0])
                 state = 1
                 # ryouiki ni haitteiruka kakunin
-                print("ccccccccccccccccccccccccccccccccccccccccccccc")
-                print(margin[1])
-                print(center_x)
-                if margin[1] < center_x:
-                    print(1111111111111111111111111111111111)
-                if margin[3] < center_x:
-                    print(3333333333333333333333333333333333)
-                if margin[0] < center_y:
-                    print(0000000000000000000000000000000000)
-                if margin[2] < center_y:
-                    print(2222222222222222222222222222222222)
-                
-                if abs((x1 + x2) / 2 - width / 2) < abs(center_x / 2 - width / 2):
-                    center_x = (x1 + x2) / 2
-                    move_value = round(center_x / width * 100 - 50)
+                center_x = (x1 + x2) / 2
+                move_value = round(center_x / width * 100 - 50)
                 x = move_value
                 y = round((y1+y2)/2/height*100)  # 今後治す
                 kind = int(boxes.cls[0])
                 conf = int(f'{boxes.conf[0].item()*100:.0f}')
-            else:
+            elif len(boxes.xyxy) > 1:
                 fruit_array = []
+                fruit_array_all = []
                 for box in boxes:
                     x1, y1, x2, y2 = box.xyxy[0]
                     x1, y1, x2, y2 = int(x1), int(y1), int(
@@ -225,28 +213,29 @@ def detect():
                     center_y = (y1 + y2) / 2 / height
                     kind = int(box.cls[0])
                     state = 1
-                    # ryouiki ni haitteiruka kakunin
-                    print("ccccccccccccccccccccccccccccccccccccccccccccc")
-                    print(margin[1])
-                    print(center_x)
-                    if margin[1] < center_x:
-                        print(1111111111111111111111111111111111)
-                    if margin[3] > center_x:
-                        print(3333333333333333333333333333333333)
-                    if margin[0] > center_y:
-                        print(0000000000000000000000000000000000)
-                    if margin[2] < center_y:
-                        print(2222222222222222222222222222222222)
-                    if(margin[1] > center_x and margin[3] < center_x and margin[0] > center_y and margin[2] < center_y):
+                    fruit_array_all.append([center_x, center_y, kind])
+                    if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
                         print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
                         fruit_array.append([center_x, center_y, kind])
-                        # rennsouhairetu ni box naino mono wo tuika siteiku
-                for i in range(len(fruit_array)):
-                    if fruit_array[i][1] < fruit_array[i][1]:
-                        fruit_array[i][1].pop
-                print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-                print(fruit_array)
-                conf = 0
+                if len(fruit_array) == 0:
+                    # y wo hikakusuur
+                    for i in range(len(fruit_array_all)-1):
+                        if fruit_array_all[i][1] < fruit_array_all[i+1][1]:
+                            fruit_array_all.pop(i)
+                    x = fruit_array_all[0][0]
+                    y = fruit_array_all[0][1]
+                    kind = fruit_array_all[0][2]
+                if len(fruit_array) > 1:
+                    for i in range(len(fruit_array)-1):
+                        if fruit_array[i][1] < fruit_array[i+1][1]:
+                            fruit_array.pop(i)
+                    x = fruit_array[0][0]
+                    y = fruit_array[0][1]
+                    kind = fruit_array[0][2]
+            x = x * 100 - 50
+            y = y * 100
+            print([x,y,kind])
+            conf = 0
 
         if show == True:
             resized = cv2.resize(img, None, None, 0.8, 0.8)
