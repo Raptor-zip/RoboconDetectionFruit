@@ -34,7 +34,8 @@ void Xmove_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    RCLCPP_INFO(this->get_logger(), "x:fruit: %d  ", recognition_msg->data[3]); //10/9 turn off
+    // RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
+
     float gain = 6;
     if(recognition_msg->data[3] == 0){
         // blueberry

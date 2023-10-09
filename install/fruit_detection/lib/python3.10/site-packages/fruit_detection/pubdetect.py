@@ -46,7 +46,7 @@ class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
         self.publisher_ = self.create_publisher(Int16MultiArray, 'image_recognition', 10)
-        timer_period = 0.03  # seconds 33fps設定
+        timer_period = 0.05  # seconds 20fps設定
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
@@ -59,7 +59,7 @@ class MinimalPublisher(Node):
         msg = Int16MultiArray()
         msg.data = [state, x, y, kind, conf]
         self.publisher_.publish(msg)
-        # self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
 
 
@@ -98,7 +98,7 @@ def detect():
         LOGGER.info("カメラ kidou sippai")
         state = 2
     fps_setting = cap.get(cv2.CAP_PROP_FPS)
-    LOGGER.info("FPS(Setting):", '{:11.02f}'.format(fps_setting))
+    LOGGER.info("FPS(Setting): %d" % round(fps_setting))
     timer = cv2.TickMeter()
     timer.start()
     # 各変数の初期値設定
@@ -163,9 +163,9 @@ def detect():
 
             x = 0
             y = 0
-            kind = -1
+            kind = 0
             conf = 0
-            if len(boxes) == 1:
+            if len(boxes.xyxy) == 1:
                 x1, y1, x2, y2 = boxes.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(
                     x2), int(y2)  # convert to int values
@@ -188,33 +188,37 @@ def detect():
                     state = 1
                     fruit_array_all.append([center_x, center_y, kind])
                     if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
-                        LOGGER.info("innnnn")
+                        # LOGGER.info("innnnn")
                         fruit_array.append([center_x, center_y, kind])
                 if len(fruit_array) == 0:
                     # y wo hikakusuur
+                    # LOGGER.info(fruit_array_all)
                     for i in range(len(fruit_array_all)-1):
                         if fruit_array_all[i][1] < fruit_array_all[i+1][1]:
-                            fruit_array_all.pop(i)
-                    x = fruit_array_all[0][0]
-                    y = fruit_array_all[0][1]
+                            fruit_array_all.pop(i + 1)
+                    # LOGGER.info(fruit_array_all)
+                    x = round(fruit_array_all[0][0] * 100 - 50)
+                    y = round(fruit_array_all[0][1] * 100)
                     kind = fruit_array_all[0][2]
                 if len(fruit_array) > 1:
-                    LOGGER.info("kiteruyooooooooooooo")
+                    # LOGGER.info("kiteruyooooooooooooo")
+                    # LOGGER.info(fruit_array)
                     for i in range(len(fruit_array)-1):
                         if fruit_array[i][1] < fruit_array[i+1][1]:
-                            fruit_array.pop(i)
-                    x = fruit_array[0][0]
-                    y = fruit_array[0][1]
+                            fruit_array.pop(i + 1)
+                    # LOGGER.info(fruit_array)
+                    x = round(fruit_array[0][0] * 100 - 50)
+                    # LOGGER.info(x)
+                    y = round(fruit_array[0][1] * 100)
+                    # LOGGER.info(y)
                     kind = fruit_array[0][2]
-                    LOGGER.info("21666666666666666666666666")
-                x = (x * 100) - 50
-                LOGGER.info(218888888888888888888)
-                y = y * 100
-            if kind == -1:
-                LOGGER.info("NO fps:%d" % fps)
-            else:
-                fruit = classNames[kind]
-                LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+                    # LOGGER.info("21666666666666666666666666")
+                # LOGGER.info("217777777777777777777")
+            # if y == 0:
+            #     LOGGER.info("NO fps:%d" % fps)
+            # else:
+            #     fruit = classNames[kind]
+            #     LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
             state = 1
             conf = 0
 
