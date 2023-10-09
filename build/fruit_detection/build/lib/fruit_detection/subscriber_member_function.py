@@ -1,4 +1,4 @@
-# dousakakuninzumi 10/5
+# dousakakuninzumi 10/9
 
 import rclpy
 from rclpy.node import Node
@@ -16,8 +16,8 @@ class MinimalSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        # self.get_logger().info('  raw  : "%s"' % msg.data)
-        self.get_logger().info('   x   : "%s"' % msg.data[1])
+        self.get_logger().info('Sub: "%s"' % msg.data)
+        # self.get_logger().info('   x   : "%s"' % msg.data[1])
         # self.get_logger().info('   y   : "%s"' % msg.data[2])
         # self.get_logger().info(' kind  : "%s"' % msg.data[3])
         # self.get_logger().info('"%s":' % msg.data[3] % msg.data[1])

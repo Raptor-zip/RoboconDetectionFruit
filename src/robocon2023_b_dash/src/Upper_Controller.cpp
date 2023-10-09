@@ -1,6 +1,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "Upper_Controller.hpp"
 
+int gONOFF = 1; //0:OFF 1:ON
+
 Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller")
 {
     this->option = 0;
@@ -16,6 +18,10 @@ Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller"
     this->upper_msg.M = 250;
 
     this->JoySubscription = this->create_subscription<sensor_msgs::msg::Joy>("joy", rclcpp::QoS(10), std::bind(&Upper_Controller_Node::Joy_Callback, this, std::placeholders::_1));
+
+    this->ImageRecognition_Subscription = this->create_subscription<std_msgs::msg::Int16MultiArray>(
+        "image_recognition", rclcpp::QoS(10),
+        std::bind(&Upper_Controller_Node::ImageRecognition_Callback, this, std::placeholders::_1));
 
     this->Upper_publisher = this->create_publisher<std_msgs::msg::ByteMultiArray>("UpperOut", rclcpp::QoS(10));
     this->timer_ = this->create_wall_timer(1ms, std::bind(&Upper_Controller_Node::timer_callback, this));
@@ -64,6 +70,28 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
     else
     {
         this->button_state &= ~(0b0001 << 3);
+    }
+}
+
+void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
+{
+    RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
+    if(gONOFF == 1){
+        if (recognition_msg->data[3] == 0) // blueberry
+        {
+            this->upper_msg.M = 194; // blueberry
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 1) // grape
+        {
+            this->upper_msg.M = 118; // grape
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 2) // mix
+        {
+            this->upper_msg.M = 95; // mix
+            this->up_flag = 0;
+        }
     }
 }
 

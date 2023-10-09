@@ -39,8 +39,22 @@ def generate_launch_description():
                 package="fruit_detection",
                 namespace="robocon2023_b_dash",
                 executable="pubdetect",
-                prefix= "xterm -e",
+                # prefix= "xterm -e",
                 output = "screen", # print wo hyouzi
             ),
+            # Node(
+            #     package="fruit_detection",
+            #     namespace="robocon2023_b_dash",
+            #     executable="listener",
+            #     # prefix= "xterm -e",
+            #     output = "screen", # print wo hyouzi
+            # ),
+            # Node(
+            #     package="fruit_detection",
+            #     namespace="robocon2023_b_dash",
+            #     executable="talker",
+            #     # prefix= "xterm -e",
+            #     output = "screen", # print wo hyouzi
+            # ),
         ]
     )

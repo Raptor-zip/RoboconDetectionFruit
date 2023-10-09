@@ -15,6 +15,8 @@ y = 0
 kind = 0
 conf = 0
 
+rclpy.init()
+
 # Areas of absolute recognition
 margin = [0.1, 0.8, 0.8 , 0.2]
 save = False
@@ -26,7 +28,7 @@ cap.set(4, 1080)  # 縦
 cap.set(5, 60)  # fps
 # show = True
 show = False #true ni dekinai
-cap.set(11, 480) # コントラスト
+# cap.set(11, 480) # コントラスト
 # cap.set(15, 100)
 
 # CV_CAP_PROP_CONTRAST 画像のコントラスト（カメラの場合のみ）．11
@@ -38,13 +40,13 @@ cap.set(11, 480) # コントラスト
 
 def main():
     with ThreadPoolExecutor(max_workers=2) as executor:
-        executor.submit(pub)
+        # executor.submit(pub)
         executor.submit(detect)
 
 
 class MinimalPublisher(Node):
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('fruit_detect_node')
         self.publisher_ = self.create_publisher(Int16MultiArray, 'image_recognition', 10)
         timer_period = 0.05  # seconds 20fps設定
         self.timer = self.create_timer(timer_period, self.timer_callback)
@@ -59,7 +61,7 @@ class MinimalPublisher(Node):
         msg = Int16MultiArray()
         msg.data = [state, x, y, kind, conf]
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
+        # self.get_logger().info('Pub:"%s"' % msg.data)
         self.i += 1
 
 
@@ -133,33 +135,12 @@ def detect():
         success, img = cap.read()
         results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
+        height = img.shape[0]
+        width = img.shape[1]
         # value reset
-        cls = 0
-        center_x = 0
-        move_value = 0
-        x1, y1, x2, y2 = 0, 0, 0, 0
+        center_x, x1, y1, x2, y2 = 0, 0, 0, 0, 0
         for r in results:
             boxes = r.boxes
-            # 読み込んだ画像の高さと幅を取得
-            height = img.shape[0]
-            width = img.shape[1]
-
-            if show == True:
-                # object details
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                fontScale = 1.3
-                color = (255, 255, 255)
-                thickness = 3
-
-                # センターライン
-                # cv2.line(img, pt1=(int(width / 2) , 0), pt2=(int(width / 2), height), color=(255 , 255 , 255), thickness=1)
-                # FPS表示
-                cv2.putText(img, str(
-                    f'{fps:.0f}')+"FPS", [30, 110], font, fontScale, (0, 0, 0), int(thickness + 10))
-                cv2.putText(img, str(f'{fps:.0f}')+"FPS",
-                            [30, 110], font, fontScale, color, thickness)
-                cv2.putText(img, str(len(boxes))+" of fruits",
-                            [30, 150], font, fontScale, color, thickness)
 
             x = 0
             y = 0
@@ -188,41 +169,52 @@ def detect():
                     state = 1
                     fruit_array_all.append([center_x, center_y, kind])
                     if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
-                        # LOGGER.info("innnnn")
                         fruit_array.append([center_x, center_y, kind])
                 if len(fruit_array) == 0:
                     # y wo hikakusuur
-                    # LOGGER.info(fruit_array_all)
-                    for i in range(len(fruit_array_all)-1):
-                        if fruit_array_all[i][1] < fruit_array_all[i+1][1]:
+                    for i in range(len(fruit_array_all)-1)[::-1]:
+                        if fruit_array_all[i][1] > fruit_array_all[i+1][1]:
                             fruit_array_all.pop(i + 1)
-                    # LOGGER.info(fruit_array_all)
                     x = round(fruit_array_all[0][0] * 100 - 50)
                     y = round(fruit_array_all[0][1] * 100)
                     kind = fruit_array_all[0][2]
                 if len(fruit_array) > 1:
-                    # LOGGER.info("kiteruyooooooooooooo")
-                    # LOGGER.info(fruit_array)
-                    for i in range(len(fruit_array)-1):
-                        if fruit_array[i][1] < fruit_array[i+1][1]:
+                    for i in range(len(fruit_array)-1)[::-1]:
+                        if fruit_array[i][1] > fruit_array[i+1][1]:
                             fruit_array.pop(i + 1)
-                    # LOGGER.info(fruit_array)
                     x = round(fruit_array[0][0] * 100 - 50)
-                    # LOGGER.info(x)
                     y = round(fruit_array[0][1] * 100)
-                    # LOGGER.info(y)
                     kind = fruit_array[0][2]
-                    # LOGGER.info("21666666666666666666666666")
-                # LOGGER.info("217777777777777777777")
-            # if y == 0:
-            #     LOGGER.info("NO fps:%d" % fps)
-            # else:
-            #     fruit = classNames[kind]
-            #     LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+            if y == 0:
+                # LOGGER.info("NO fps:%d" % fps)
+                tmp = 1
+            else:
+                # fruit = classNames[kind]
+                # LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+                node = Node("talker")
+                pub = node.create_publisher(Int16MultiArray, "image_recognition", 10)
+                msg = Int16MultiArray()
+                msg.data = [state,x,y,kind,conf]
+                pub.publish(msg)
             state = 1
             conf = 0
 
         if show == True:
+            # object details
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            fontScale = 1.3
+            color = (255, 255, 255)
+            thickness = 3
+
+            # センターライン
+            # cv2.line(img, pt1=(int(width / 2) , 0), pt2=(int(width / 2), height), color=(255 , 255 , 255), thickness=1)
+            # FPS表示
+            cv2.putText(img, str(
+                f'{fps:.0f}')+"FPS", [30, 110], font, fontScale, (0, 0, 0), int(thickness + 10))
+            cv2.putText(img, str(f'{fps:.0f}')+"FPS",
+                        [30, 110], font, fontScale, color, thickness)
+            cv2.putText(img, str(len(boxes))+" of fruits",
+                        [30, 150], font, fontScale, color, thickness)
             resized = cv2.resize(img, None, None, 0.8, 0.8)
             cv2.imshow('Webcam', resized)
 
