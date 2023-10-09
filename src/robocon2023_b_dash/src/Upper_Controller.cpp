@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "Upper_Controller.hpp"
+#include <unistd.h> //sleep wo tukau
 
 int gONOFF = 1; //0:OFF 1:ON
 
@@ -77,22 +78,23 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
     RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
-    if(gONOFF == 1){
-        if (recognition_msg->data[3] == 0) // blueberry
-        {
-            this->upper_msg.M = 194 * this->option;
-            this->up_flag = 0;
-        }
-        if (recognition_msg->data[3] == 1) // grape
-        {
-            this->upper_msg.M = 118 * this->option;
-            this->up_flag = 0;
-        }
-        if (recognition_msg->data[3] == 2) // mix
-        {
-            this->upper_msg.M = 95 * this->option;
-            this->up_flag = 0;
-        }
+    if (recognition_msg->data[3] == 0) // blueberry
+    {
+        this->upper_msg.M = 194 * this->option * gONOFF;
+        this->up_flag = 0;
+        Sleep(2000)
+    }
+    if (recognition_msg->data[3] == 1) // grape
+    {
+        this->upper_msg.M = 118 * this->option * gONOFF;
+        this->up_flag = 0;
+        Sleep(2000)
+    }
+    if (recognition_msg->data[3] == 2) // mix
+    {
+        this->upper_msg.M = 95 * this->option * gONOFF;
+        this->up_flag = 0;
+        Sleep(2000)
     }
 }
 
