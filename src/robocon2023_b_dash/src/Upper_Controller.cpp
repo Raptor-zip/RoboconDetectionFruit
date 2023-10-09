@@ -35,6 +35,7 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 {
     this->option = joy_msg->buttons[9]; // option
     this->share = joy_msg->buttons[8];  // share
+    this->l2 = joy_msg->buttons[6] // l2
 
     if (joy_msg->axes[6] == 1) // left
     {
@@ -79,17 +80,17 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
     if(gONOFF == 1){
         if (recognition_msg->data[3] == 0) // blueberry
         {
-            this->upper_msg.M = 194; // blueberry
+            this->upper_msg.M = 194 * this->option;
             this->up_flag = 0;
         }
         if (recognition_msg->data[3] == 1) // grape
         {
-            this->upper_msg.M = 118; // grape
+            this->upper_msg.M = 118 * this->option;
             this->up_flag = 0;
         }
         if (recognition_msg->data[3] == 2) // mix
         {
-            this->upper_msg.M = 95; // mix
+            this->upper_msg.M = 95 * this->option;
             this->up_flag = 0;
         }
     }

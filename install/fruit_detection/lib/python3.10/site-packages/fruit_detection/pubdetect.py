@@ -1,4 +1,4 @@
-# dousakakunizumi 10/5
+# dousakakunin mati  10/9
 
 from ultralytics import YOLO
 import cv2
@@ -14,8 +14,6 @@ x = 0
 y = 0
 kind = 0
 conf = 0
-
-rclpy.init()
 
 # Areas of absolute recognition
 margin = [0.1, 0.8, 0.8 , 0.2]
@@ -40,7 +38,7 @@ show = False #true ni dekinai
 
 def main():
     with ThreadPoolExecutor(max_workers=2) as executor:
-        # executor.submit(pub)
+        executor.submit(pub)
         executor.submit(detect)
 
 
@@ -186,16 +184,10 @@ def detect():
                     y = round(fruit_array[0][1] * 100)
                     kind = fruit_array[0][2]
             if y == 0:
-                # LOGGER.info("NO fps:%d" % fps)
-                tmp = 1
+                LOGGER.info("NO fps:%d" % fps)
             else:
-                # fruit = classNames[kind]
-                # LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
-                node = Node("talker")
-                pub = node.create_publisher(Int16MultiArray, "image_recognition", 10)
-                msg = Int16MultiArray()
-                msg.data = [state,x,y,kind,conf]
-                pub.publish(msg)
+                fruit = classNames[kind]
+                LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
             state = 1
             conf = 0
 
