@@ -1,0 +1,29 @@
+In file included from [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In constructor ‘[01m[KUpper_Controller_Node::Upper_Controller_Node()[m[K’:
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:11:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Upper_Controller_Node[m[K’ has no member named ‘[01m[Kl2[m[K’
+   11 |     this->[01;31m[Kl2[m[K = 0;
+      |           [01;31m[K^~[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:41:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Upper_Controller_Node[m[K’ has no member named ‘[01m[Kl2[m[K’
+   41 |     this->[01;31m[Kl2[m[K = joy_msg->buttons[6]; // l2
+      |           [01;31m[K^~[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:118:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  118 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+      |                                     [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:124:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  124 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:129:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  129 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:134:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  134 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/Upper_Controller.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2

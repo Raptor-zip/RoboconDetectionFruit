@@ -36,14 +36,17 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 {
     this->option = joy_msg->buttons[9]; // option
     this->share = joy_msg->buttons[8];  // share
-    this->l2 = joy_msg->buttons[6] // l2
-
+    
+    if (joy_msg->buttons[6] == 1) // l2
+    {
+        this->button_state |= 0b0001 << 4;
+    }else{
+        this->button_state &= ~(0b0001 << 4);
+    }
     if (joy_msg->axes[6] == 1) // left
     {
         this->button_state |= 0b0001 << 0;
-    }
-    else
-    {
+    }else{
         this->button_state &= ~(0b0001 << 0);
     }
 
@@ -77,24 +80,22 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
-    if (recognition_msg->data[3] == 0) // blueberry
-    {
-        this->upper_msg.M = 194 * this->option * gONOFF;
-        this->up_flag = 0;
-        Sleep(2000)
-    }
-    if (recognition_msg->data[3] == 1) // grape
-    {
-        this->upper_msg.M = 118 * this->option * gONOFF;
-        this->up_flag = 0;
-        Sleep(2000)
-    }
-    if (recognition_msg->data[3] == 2) // mix
-    {
-        this->upper_msg.M = 95 * this->option * gONOFF;
-        this->up_flag = 0;
-        Sleep(2000)
+    if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0){ // l2 button is on and y=0 denakereba
+        if (recognition_msg->data[3] == 0) // blueberry
+        {
+            this->upper_msg.M = 194;
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 1) // grape
+        {
+            this->upper_msg.M = 118;
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 2) // mix
+        {
+            this->upper_msg.M = 95;
+            this->up_flag = 0;
+        }
     }
 }
 
@@ -134,8 +135,8 @@ void Upper_Controller_Node::timer_callback(void)
         }
     }
 
-    // RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M); //10/9 turn off
-    // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 3 & 0b001);
+    RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);
     for (int i = 0; i < 8; i++)

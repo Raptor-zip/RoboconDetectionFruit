@@ -34,12 +34,13 @@ def generate_launch_description():
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
                 executable="Upper_Controller",
+                output = "screen", # print wo hyouzi
             ),
             Node(
                 package="fruit_detection",
                 namespace="robocon2023_b_dash",
                 executable="pubdetect",
-                # prefix= "xterm -e",
+                prefix= "xterm -e",
                 output = "screen", # print wo hyouzi
             ),
             # Node(
