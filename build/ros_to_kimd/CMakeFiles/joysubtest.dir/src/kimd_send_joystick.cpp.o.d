@@ -1,5 +1,5 @@
 CMakeFiles/joysubtest.dir/src/kimd_send_joystick.cpp.o: \
- /home/roboconb/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp \
+ /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd/src/kimd_send_joystick.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
