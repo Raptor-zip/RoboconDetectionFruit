@@ -36,7 +36,7 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 {
     this->option = joy_msg->buttons[9]; // option
     this->share = joy_msg->buttons[8];  // share
-    
+
     if (joy_msg->buttons[6] == 1) // l2
     {
         this->button_state |= 0b0001 << 4;
@@ -135,7 +135,7 @@ void Upper_Controller_Node::timer_callback(void)
         }
     }
 
-    RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
     // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);

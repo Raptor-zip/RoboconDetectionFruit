@@ -103,12 +103,13 @@ def detect():
     timer.start()
     # 各変数の初期値設定
     count = 0
-    max_count = 5
+    max_count = 30
     fps = 0
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
-    model = YOLO("/home/roboconb/detection-model/v8-v24-1007.pt")
+    # model = YOLO("/home/kaibuchisoma/ダウンロード/v8-v9-0917.pt")
+    model = YOLO("/home/kaibuchisoma/python-fruit-detection/robocon2023_fruit_detection/train2/weights/v8-v25-1012.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917_"+str(imgsize)+"_openvino_model")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005-openvino-model")
     # model = YOLO("/home/roboconb/python/fruits/640int8_openvino_model")
@@ -131,7 +132,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=736, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         height = img.shape[0]
         width = img.shape[1]
