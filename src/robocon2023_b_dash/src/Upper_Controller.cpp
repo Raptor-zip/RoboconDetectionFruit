@@ -1,9 +1,10 @@
 #include "rclcpp/rclcpp.hpp"
 #include "Upper_Controller.hpp"
 #include <unistd.h> //sleep wo tukau
+#include <cmath>
 
 int gONOFF = 1; //0:OFF 1:ON
-int
+int joy_moving_distance = 0;
 
 Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller")
 {
@@ -42,12 +43,15 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
     // this->ly = (float)(joy_msg->axes[1]);
     // this->ry = (float)(joy_msg->axes[4]);
 
-    if(joy_msg->axes[1] > 0.2){
-        RCLCPP_INFO(this->get_logger(), "%f", joy_msg->axes[1]);
+    if(joy_msg->axes[1] > 0.2)
+    {
+        RCLCPP_INFO(this->get_logger(), "%f", abs(joy_msg->axes[1]));
+        joy_moving_distance += joy_msg->axes[1];
     }
     if (joy_msg->axes[4] > 0.2)
     {
         RCLCPP_INFO(this->get_logger(), "%f", joy_msg->axes[4]);
+        joy_moving_distance += joy_msg->axes[4];
     }
 
     if (joy_msg->buttons[6] == 1) // l2
@@ -93,31 +97,45 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    if (recognition_msg->data[1] > 100 && recognition_msg->data[2] > 100){
-        this
-    }
-        if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0)
-        {                                      // l2 button is on and y=0 denakereba
-            if (recognition_msg->data[3] == 0) // blueberry
-            {
-                this->upper_msg.M = 194;
-                this->up_flag = 0;
-            }
-            if (recognition_msg->data[3] == 1) // grape
-            {
-                this->upper_msg.M = 118;
-                this->up_flag = 0;
-            }
-            if (recognition_msg->data[3] == 2) // mix
-            {
-                this->upper_msg.M = 95;
-                this->up_flag = 0;
-            }
+    if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 50){
+        joy_moving_distance = 0; // 自動で下降しないようにする
+        // 自動上昇
+        if (abs(recognition_msg->data[1]) < 10 && recognition_msg->data[2] < 10)
+        {
+            this->upper_msg.M -= 30;
+            this->up_flag = 1; // 押しっぱなしになっても一回しか動作しないらしい
         }
+    }
+    if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0)
+    {                                      // l2 button is on and y=0 denakereba
+        if (recognition_msg->data[3] == 0) // blueberry
+        {
+            this->upper_msg.M = 194;
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 1) // grape
+        {
+            this->upper_msg.M = 118;
+            this->up_flag = 0;
+        }
+        if (recognition_msg->data[3] == 2) // mix
+        {
+            this->upper_msg.M = 95;
+            this->up_flag = 0;
+        }
+    }
 }
 
 void Upper_Controller_Node::timer_callback(void)
 {
+    // 自動下降
+    if (joy_moving_distance > 1 && this->button_state >> 4 == 1) // ある程度前進しているかつ、l2ボタン押してある
+    {
+        this->upper_msg.M = 230; // てきとうにきめたからあってるかちぇっくする
+        this->up_flag = 0;
+        joy_moving_distance = 0;
+    }
+
     if (this->upper_msg.M > 64)
     {
         this->upper_msg.M -= 0.05 * this->option;

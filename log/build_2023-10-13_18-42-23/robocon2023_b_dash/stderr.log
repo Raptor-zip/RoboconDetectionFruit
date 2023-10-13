@@ -1,0 +1,34 @@
+In file included from [01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:7:1:[m[K [01;31m[Kerror: [m[Kreturn type specification for constructor invalid
+    7 | [01;31m[Kint[m[K
+      | [01;31m[K^~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::ImageRecognition_Callback(std_msgs::msg::Int16MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:98:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   98 |         this
+      |             [01;31m[K^[m[K
+      |             [32m[K;[m[K
+   99 |     [32m[K}[m[K
+      |     [32m[K~[m[K        
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:98:9:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   98 |         [01;35m[Kthis[m[K
+      |         [01;35m[K^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:131:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  131 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+      |                                     [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:137:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  137 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:142:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  142 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:147:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  147 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/Upper_Controller.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2
