@@ -184,11 +184,11 @@ def detect():
                     x = round(fruit_array[0][0] * 100 - 50)
                     y = round(fruit_array[0][1] * 100)
                     kind = fruit_array[0][2]
-            if y == 0:
-                LOGGER.info("NO fps:%d" % fps)
-            else:
-                fruit = classNames[kind]
-                LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+            # if y == 0:
+            #     LOGGER.info("NO fps:%d" % fps)
+            # else:
+            #     fruit = classNames[kind]
+            #     LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
             state = 1
             conf = 0
 

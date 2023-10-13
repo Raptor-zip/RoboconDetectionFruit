@@ -3,6 +3,7 @@
 #include <unistd.h> //sleep wo tukau
 
 int gONOFF = 1; //0:OFF 1:ON
+int
 
 Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller")
 {
@@ -36,6 +37,18 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 {
     this->option = joy_msg->buttons[9]; // option
     this->share = joy_msg->buttons[8];  // share
+    // RCLCPP_INFO(this->get_logger(), "button value %d  ", joy_msg->axes[0]);
+    // RCLCPP_INFO(this->get_logger(), "button %f %f ", joy_msg->axes[1], joy_msg->axes[4]);
+    // this->ly = (float)(joy_msg->axes[1]);
+    // this->ry = (float)(joy_msg->axes[4]);
+
+    if(joy_msg->axes[1] > 0.2){
+        RCLCPP_INFO(this->get_logger(), "%f", joy_msg->axes[1]);
+    }
+    if (joy_msg->axes[4] > 0.2)
+    {
+        RCLCPP_INFO(this->get_logger(), "%f", joy_msg->axes[4]);
+    }
 
     if (joy_msg->buttons[6] == 1) // l2
     {
@@ -80,23 +93,27 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0){ // l2 button is on and y=0 denakereba
-        if (recognition_msg->data[3] == 0) // blueberry
-        {
-            this->upper_msg.M = 194;
-            this->up_flag = 0;
-        }
-        if (recognition_msg->data[3] == 1) // grape
-        {
-            this->upper_msg.M = 118;
-            this->up_flag = 0;
-        }
-        if (recognition_msg->data[3] == 2) // mix
-        {
-            this->upper_msg.M = 95;
-            this->up_flag = 0;
-        }
+    if (recognition_msg->data[1] > 100 && recognition_msg->data[2] > 100){
+        this
     }
+        if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0)
+        {                                      // l2 button is on and y=0 denakereba
+            if (recognition_msg->data[3] == 0) // blueberry
+            {
+                this->upper_msg.M = 194;
+                this->up_flag = 0;
+            }
+            if (recognition_msg->data[3] == 1) // grape
+            {
+                this->upper_msg.M = 118;
+                this->up_flag = 0;
+            }
+            if (recognition_msg->data[3] == 2) // mix
+            {
+                this->upper_msg.M = 95;
+                this->up_flag = 0;
+            }
+        }
 }
 
 void Upper_Controller_Node::timer_callback(void)
@@ -130,7 +147,7 @@ void Upper_Controller_Node::timer_callback(void)
     {
         if (this->up_flag == 0)
         {
-            this->upper_msg.M -= 20;
+            this->upper_msg.M -= 30; // motomotoha 20
             this->up_flag = 1;
         }
     }

@@ -1,0 +1,27 @@
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:168:2:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "RCLCPP_INFO"
+  168 | }
+      |  [01;31m[K^[m[K
+In file included from [01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:45:9:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_INFO[m[K’ was not declared in this scope
+   45 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "%f", joy_msg->axes[1];
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:45:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   45 |         RCLCPP_INFO[01;31m[K([m[Kthis->get_logger(), "%f", joy_msg->axes[1];
+      |                    [01;31m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:44:31:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   44 |     if(joy_msg->axes[1] > 0.2)[01;36m[K{[m[K
+      |                               [01;36m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:45:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   45 |         RCLCPP_INFO[01;31m[K([m[Kthis->get_logger(), "%f", joy_msg->axes[1];
+      |                    [01;31m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/Upper_Controller.cpp:36:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   36 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/Upper_Controller.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2
