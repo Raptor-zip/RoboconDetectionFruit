@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 CMAKE_PROGRESS_1 = 11
 CMAKE_PROGRESS_2 = 12
-=======
-CMAKE_PROGRESS_1 = 5
-CMAKE_PROGRESS_2 = 6
->>>>>>> origin/master
 

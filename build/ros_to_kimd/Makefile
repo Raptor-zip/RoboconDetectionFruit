@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd
+CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/src/ros_to_kimd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd
+CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/build/ros_to_kimd
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/CMakeFiles /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/build/ros_to_kimd/CMakeFiles /home/kaibuchisoma/robocon_ws/build/ros_to_kimd//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/build/ros_to_kimd/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

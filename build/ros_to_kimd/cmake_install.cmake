@@ -1,8 +1,8 @@
-# Install script for directory: /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd
+# Install script for directory: /home/kaibuchisoma/robocon_ws/src/ros_to_kimd
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/install/ros_to_kimd")
+  set(CMAKE_INSTALL_PREFIX "/home/kaibuchisoma/robocon_ws/install/ros_to_kimd")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/joysubtest"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/joysubtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/joysubtest")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/joysubtest" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/joysubtest")
     file(RPATH_CHANGE
@@ -69,7 +69,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/ControlKimd"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ControlKimd")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ControlKimd")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/ControlKimd" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros_to_kimd/ControlKimd")
     file(RPATH_CHANGE
@@ -83,11 +83,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ros_to_kimd")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ros_to_kimd")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ros_to_kimd")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ros_to_kimd")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -95,7 +95,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -103,42 +103,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/packages/ros_to_kimd")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_index/share/ament_index/resource_index/packages/ros_to_kimd")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd/cmake" TYPE FILE FILES
-    "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_core/ros_to_kimdConfig.cmake"
-    "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_core/ros_to_kimdConfig-version.cmake"
+    "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_core/ros_to_kimdConfig.cmake"
+    "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_core/ros_to_kimdConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_to_kimd" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/src/ros_to_kimd/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -149,5 +149,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

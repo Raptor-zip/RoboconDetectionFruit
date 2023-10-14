@@ -93,9 +93,9 @@ def detect():
             '%H%M%S')+'.mp4', fourcc, fps, (w, h))
 
     if cap.isOpened():
-        LOGGER.info("カメラの初期化に成功")
+        LOGGER.info("カメラの起動に成功")
     else:
-        LOGGER.info("カメラ kidou sippai")
+        LOGGER.info("カメラの起動に失敗")
         state = 2
     fps_setting = cap.get(cv2.CAP_PROP_FPS)
     LOGGER.info("FPS(Setting): %d" % round(fps_setting))
@@ -105,6 +105,20 @@ def detect():
     count = 0
     max_count = 30
     fps = 0
+
+    frame = 8 # *フレームの平均を取る
+    past_frame_array = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]] # states, x, y, kind
+    past_frame_weight_array = [1,2,3,4,5,6,7,8] # 8フレームの重み 新しいほうが重い
+    range_threshold_value = 100 #距離のしきい値
+
+    # 8個の配列と座標の差を求める
+    # 求めた座標の差をpast_frame_weight_arrayでわる
+    # 最も差が小さいもの kindは考えない 差がしきい値より大きいときは、8フレーム無視する
+
+
+
+    past_frame_array.pop(0) # 配列の先頭を削除
+    past_frame_array.append(100) #
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
@@ -132,7 +146,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=736, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=1536, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         height = img.shape[0]
         width = img.shape[1]
@@ -184,11 +198,11 @@ def detect():
                     x = round(fruit_array[0][0] * 100 - 50)
                     y = round(fruit_array[0][1] * 100)
                     kind = fruit_array[0][2]
-            # if y == 0:
-            #     LOGGER.info("NO fps:%d" % fps)
-            # else:
-            #     fruit = classNames[kind]
-            #     LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+            if y == 0:
+                LOGGER.info("NO fps:%d" % fps)
+            else:
+                fruit = classNames[kind]
+                LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
             state = 1
             conf = 0
 
