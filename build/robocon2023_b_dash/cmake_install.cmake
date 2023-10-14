@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash")
+=======
+# Install script for directory: /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/install/robocon2023_b_dash")
+>>>>>>> origin/master
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +57,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/SerialKIMD"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/SerialKIMD")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/SerialKIMD")
+>>>>>>> origin/master
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/SerialKIMD" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/SerialKIMD")
     file(RPATH_CHANGE
@@ -69,7 +81,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Xmove_Controller"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/Xmove_Controller")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/Xmove_Controller")
+>>>>>>> origin/master
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Xmove_Controller" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Xmove_Controller")
     file(RPATH_CHANGE
@@ -89,7 +105,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/DriveMotion"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/DriveMotion")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/DriveMotion")
+>>>>>>> origin/master
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/DriveMotion" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/DriveMotion")
     file(RPATH_CHANGE
@@ -109,7 +129,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Drive_Controller"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/Drive_Controller")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/Drive_Controller")
+>>>>>>> origin/master
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Drive_Controller" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Drive_Controller")
     file(RPATH_CHANGE
@@ -129,7 +153,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Upper_Controller"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/Upper_Controller")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash" TYPE EXECUTABLE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/Upper_Controller")
+>>>>>>> origin/master
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Upper_Controller" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/Upper_Controller")
     file(RPATH_CHANGE
@@ -143,6 +171,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/WallUpMotion" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robocon2023_b_dash/WallUpMotion")
     file(RPATH_CHECK
@@ -268,6 +297,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash")
+>>>>>>> origin/master
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -275,7 +311,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+>>>>>>> origin/master
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -283,6 +323,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_environment_hooks/path.dsv")
 endif()
 
@@ -308,17 +349,53 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_index/share/ament_index/resource_index/packages/robocon2023_b_dash")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash/environment" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_index/share/ament_index/resource_index/packages/robocon2023_b_dash")
+>>>>>>> origin/master
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash/cmake" TYPE FILE FILES
+<<<<<<< HEAD
     "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_core/robocon2023_b_dashConfig.cmake"
     "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_core/robocon2023_b_dashConfig-version.cmake"
+=======
+    "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_core/robocon2023_b_dashConfig.cmake"
+    "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/ament_cmake_core/robocon2023_b_dashConfig-version.cmake"
+>>>>>>> origin/master
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/package.xml")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robocon2023_b_dash" TYPE FILE FILES "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/package.xml")
+>>>>>>> origin/master
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -329,5 +406,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> origin/master
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

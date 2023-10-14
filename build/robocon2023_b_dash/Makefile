@@ -57,10 +57,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash
+=======
+CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash
+>>>>>>> origin/master
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +149,15 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/CMakeFiles /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/CMakeFiles /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/CMakeFiles 0
+>>>>>>> origin/master
 .PHONY : all
 
 # The main clean target
@@ -262,6 +275,7 @@ Upper_Controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/build
 .PHONY : Upper_Controller/fast
 
+<<<<<<< HEAD
 #=============================================================================
 # Target rules for targets named WallUpMotion
 
@@ -388,6 +402,8 @@ src/Crawl_Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Crawl_Controller.dir/build.make CMakeFiles/Crawl_Controller.dir/src/Crawl_Controller.cpp.s
 .PHONY : src/Crawl_Controller.cpp.s
 
+=======
+>>>>>>> origin/master
 src/Drive_Controller.o: src/Drive_Controller.cpp.o
 .PHONY : src/Drive_Controller.o
 
@@ -436,6 +452,7 @@ src/Drive_Motion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriveMotion.dir/build.make CMakeFiles/DriveMotion.dir/src/Drive_Motion.cpp.s
 .PHONY : src/Drive_Motion.cpp.s
 
+<<<<<<< HEAD
 src/Rope_Motion.o: src/Rope_Motion.cpp.o
 .PHONY : src/Rope_Motion.o
 
@@ -460,6 +477,8 @@ src/Rope_Motion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RopeMotion.dir/build.make CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.s
 .PHONY : src/Rope_Motion.cpp.s
 
+=======
+>>>>>>> origin/master
 src/SerialKIMD.o: src/SerialKIMD.cpp.o
 .PHONY : src/SerialKIMD.o
 
@@ -484,6 +503,7 @@ src/SerialKIMD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SerialKIMD.dir/build.make CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.s
 .PHONY : src/SerialKIMD.cpp.s
 
+<<<<<<< HEAD
 src/Solenoid_Controller.o: src/Solenoid_Controller.cpp.o
 .PHONY : src/Solenoid_Controller.o
 
@@ -508,6 +528,8 @@ src/Solenoid_Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Solenoid_Controller.dir/build.make CMakeFiles/Solenoid_Controller.dir/src/Solenoid_Controller.cpp.s
 .PHONY : src/Solenoid_Controller.cpp.s
 
+=======
+>>>>>>> origin/master
 src/Upper_Controller.o: src/Upper_Controller.cpp.o
 .PHONY : src/Upper_Controller.o
 
@@ -532,6 +554,7 @@ src/Upper_Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Upper_Controller.dir/build.make CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.s
 .PHONY : src/Upper_Controller.cpp.s
 
+<<<<<<< HEAD
 src/WallUp_Motion.o: src/WallUp_Motion.cpp.o
 .PHONY : src/WallUp_Motion.o
 
@@ -556,6 +579,8 @@ src/WallUp_Motion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WallUpMotion.dir/build.make CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.s
 .PHONY : src/WallUp_Motion.cpp.s
 
+=======
+>>>>>>> origin/master
 src/Xmove_Controller.o: src/Xmove_Controller.cpp.o
 .PHONY : src/Xmove_Controller.o
 
@@ -580,6 +605,7 @@ src/Xmove_Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Xmove_Controller.dir/build.make CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.s
 .PHONY : src/Xmove_Controller.cpp.s
 
+<<<<<<< HEAD
 src/receiver.o: src/receiver.cpp.o
 .PHONY : src/receiver.o
 
@@ -604,6 +630,8 @@ src/receiver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/receiver.dir/build.make CMakeFiles/receiver.dir/src/receiver.cpp.s
 .PHONY : src/receiver.cpp.s
 
+=======
+>>>>>>> origin/master
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -619,6 +647,7 @@ help:
 	@echo "... test"
 	@echo "... robocon2023_b_dash_uninstall"
 	@echo "... uninstall"
+<<<<<<< HEAD
 	@echo "... BeltLiner_Controller"
 	@echo "... Crawl_Controller"
 	@echo "... DriveMotion"
@@ -636,12 +665,20 @@ help:
 	@echo "... src/Crawl_Controller.o"
 	@echo "... src/Crawl_Controller.i"
 	@echo "... src/Crawl_Controller.s"
+=======
+	@echo "... DriveMotion"
+	@echo "... Drive_Controller"
+	@echo "... SerialKIMD"
+	@echo "... Upper_Controller"
+	@echo "... Xmove_Controller"
+>>>>>>> origin/master
 	@echo "... src/Drive_Controller.o"
 	@echo "... src/Drive_Controller.i"
 	@echo "... src/Drive_Controller.s"
 	@echo "... src/Drive_Motion.o"
 	@echo "... src/Drive_Motion.i"
 	@echo "... src/Drive_Motion.s"
+<<<<<<< HEAD
 	@echo "... src/Rope_Motion.o"
 	@echo "... src/Rope_Motion.i"
 	@echo "... src/Rope_Motion.s"
@@ -663,6 +700,17 @@ help:
 	@echo "... src/receiver.o"
 	@echo "... src/receiver.i"
 	@echo "... src/receiver.s"
+=======
+	@echo "... src/SerialKIMD.o"
+	@echo "... src/SerialKIMD.i"
+	@echo "... src/SerialKIMD.s"
+	@echo "... src/Upper_Controller.o"
+	@echo "... src/Upper_Controller.i"
+	@echo "... src/Upper_Controller.s"
+	@echo "... src/Xmove_Controller.o"
+	@echo "... src/Xmove_Controller.i"
+	@echo "... src/Xmove_Controller.s"
+>>>>>>> origin/master
 .PHONY : help
 
 

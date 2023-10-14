@@ -1,5 +1,9 @@
 sudo modprobe v4l2loopback video_nr=9
+<<<<<<< HEAD
 scrcpy --v4l2-sink=/dev/video9 -m 1000 --max-fps=60 --window-x=100 --always-on-top --lock-video-orientation=2  #gamen haten
+=======
+scrcpy --v4l2-sink=/dev/video9 -m 1000 --max-fps=60 --window-x=100 --always-on-top  #gamen haten
+>>>>>>> origin/master
 # ros2 launch robocon_ws/src/robocon2023_b_dash/launch/all_launch.py
 # scrcpy --v4l2-sink=/dev/video9 -m 700 --max-fps=20 --lock-video-orientation=2 #gamen haten
 # cd /home/roboconb/robocon_ws &

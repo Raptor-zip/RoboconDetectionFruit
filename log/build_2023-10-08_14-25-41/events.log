@@ -1,0 +1,250 @@
+[0.000000] (-) TimerEvent: {}
+[0.000600] (fruit_detection) JobQueued: {'identifier': 'fruit_detection', 'dependencies': OrderedDict()}
+[0.000739] (robocon2023_b_dash) JobQueued: {'identifier': 'robocon2023_b_dash', 'dependencies': OrderedDict()}
+[0.000785] (ros_to_kimd) JobQueued: {'identifier': 'ros_to_kimd', 'dependencies': OrderedDict()}
+[0.000828] (fruit_detection) JobStarted: {'identifier': 'fruit_detection'}
+[0.013475] (robocon2023_b_dash) JobStarted: {'identifier': 'robocon2023_b_dash'}
+[0.019929] (ros_to_kimd) JobStarted: {'identifier': 'ros_to_kimd'}
+[0.099273] (-) TimerEvent: {}
+[0.199604] (-) TimerEvent: {}
+[0.299939] (-) TimerEvent: {}
+[0.342426] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'cmake'}
+[0.343310] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'build'}
+[0.344518] (robocon2023_b_dash) Command: {'cmd': ['/home/roboconb/.local/bin/cmake', '--build', '/home/roboconb/robocon_ws/build/robocon2023_b_dash', '--', '-j8', '-l8'], 'cwd': '/home/roboconb/robocon_ws/build/robocon2023_b_dash', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'roboconb'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/roboconb'), ('OLDPWD', '/home/roboconb'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1444'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6244'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/roboconb/robocon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'roboconb'), ('JOURNAL_STREAM', '8:32997'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'roboconb'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/roboconb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/roboconb:@/tmp/.ICE-unix/1635,unix/roboconb:/tmp/.ICE-unix/1635'), ('INVOCATION_ID', '6bb45c944bc34bc3ac4124d3a85f43f5'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q7ETC2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:e2e07f94-c39f-422a-aae0-1afbe491b8b4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/roboconb/robocon_ws/build/robocon2023_b_dash'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble')]), 'shell': False}
+[0.348983] (ros_to_kimd) JobProgress: {'identifier': 'ros_to_kimd', 'progress': 'cmake'}
+[0.349819] (ros_to_kimd) JobProgress: {'identifier': 'ros_to_kimd', 'progress': 'build'}
+[0.350617] (ros_to_kimd) Command: {'cmd': ['/home/roboconb/.local/bin/cmake', '--build', '/home/roboconb/robocon_ws/build/ros_to_kimd', '--', '-j8', '-l8'], 'cwd': '/home/roboconb/robocon_ws/build/ros_to_kimd', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'roboconb'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/roboconb'), ('OLDPWD', '/home/roboconb'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1444'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6244'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/roboconb/robocon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'roboconb'), ('JOURNAL_STREAM', '8:32997'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'roboconb'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/roboconb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/roboconb:@/tmp/.ICE-unix/1635,unix/roboconb:/tmp/.ICE-unix/1635'), ('INVOCATION_ID', '6bb45c944bc34bc3ac4124d3a85f43f5'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q7ETC2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:e2e07f94-c39f-422a-aae0-1afbe491b8b4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/roboconb/robocon_ws/build/ros_to_kimd'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble')]), 'shell': False}
+[0.400050] (-) TimerEvent: {}
+[0.433169] (robocon2023_b_dash) StdoutLine: {'line': b'[ 20%] Built target SerialKIMD\n'}
+[0.435764] (ros_to_kimd) StdoutLine: {'line': b'[ 50%] Built target joysubtest\n'}
+[0.445084] (ros_to_kimd) StdoutLine: {'line': b'[100%] Built target ControlKimd\n'}
+[0.450117] (robocon2023_b_dash) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o\x1b[0m\n'}
+[0.466404] (ros_to_kimd) CommandEnded: {'returncode': 0}
+[0.470035] (robocon2023_b_dash) StdoutLine: {'line': b'[ 50%] Built target Upper_Controller\n'}
+[0.498600] (robocon2023_b_dash) StdoutLine: {'line': b'[ 70%] Built target Drive_Controller\n'}
+[0.500137] (-) TimerEvent: {}
+[0.522929] (robocon2023_b_dash) StdoutLine: {'line': b'[ 90%] Built target DriveMotion\n'}
+[0.570452] (ros_to_kimd) JobProgress: {'identifier': 'ros_to_kimd', 'progress': 'install'}
+[0.600244] (-) TimerEvent: {}
+[0.637988] (ros_to_kimd) Command: {'cmd': ['/home/roboconb/.local/bin/cmake', '--install', '/home/roboconb/robocon_ws/build/ros_to_kimd'], 'cwd': '/home/roboconb/robocon_ws/build/ros_to_kimd', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'roboconb'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/roboconb'), ('OLDPWD', '/home/roboconb'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1444'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6244'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/roboconb/robocon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'roboconb'), ('JOURNAL_STREAM', '8:32997'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'roboconb'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/roboconb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/roboconb:@/tmp/.ICE-unix/1635,unix/roboconb:/tmp/.ICE-unix/1635'), ('INVOCATION_ID', '6bb45c944bc34bc3ac4124d3a85f43f5'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q7ETC2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:e2e07f94-c39f-422a-aae0-1afbe491b8b4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/roboconb/robocon_ws/build/ros_to_kimd'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble')]), 'shell': False}
+[0.677164] (ros_to_kimd) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.677606] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/lib/ros_to_kimd/joysubtest\n'}
+[0.678331] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/lib/ros_to_kimd/ControlKimd\n'}
+[0.678751] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ament_index/resource_index/package_run_dependencies/ros_to_kimd\n'}
+[0.679142] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ament_index/resource_index/parent_prefix_path/ros_to_kimd\n'}
+[0.679380] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/environment/ament_prefix_path.sh\n'}
+[0.679597] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/environment/ament_prefix_path.dsv\n'}
+[0.679764] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/environment/path.sh\n'}
+[0.680021] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/environment/path.dsv\n'}
+[0.680251] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/local_setup.bash\n'}
+[0.680409] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/local_setup.sh\n'}
+[0.680827] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/local_setup.zsh\n'}
+[0.681020] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/local_setup.dsv\n'}
+[0.681194] (ros_to_kimd) StdoutLine: {'line': b'-- Installing: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.dsv\n'}
+[0.681367] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ament_index/resource_index/packages/ros_to_kimd\n'}
+[0.681616] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/cmake/ros_to_kimdConfig.cmake\n'}
+[0.681844] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/cmake/ros_to_kimdConfig-version.cmake\n'}
+[0.682019] (ros_to_kimd) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.xml\n'}
+[0.688798] (ros_to_kimd) CommandEnded: {'returncode': 0}
+[0.700433] (-) TimerEvent: {}
+[0.801124] (-) TimerEvent: {}
+[0.815027] (ros_to_kimd) JobEnded: {'identifier': 'ros_to_kimd', 'rc': 0}
+[0.893820] (fruit_detection) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/fruit_detection', 'build', '--build-base', '/home/roboconb/robocon_ws/build/fruit_detection/build', 'install', '--record', '/home/roboconb/robocon_ws/build/fruit_detection/install.log', '--single-version-externally-managed'], 'cwd': '/home/roboconb/robocon_ws/src/fruit_detection', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'ja:en', 'USER': 'roboconb', 'LC_TIME': 'ja_JP.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/roboconb', 'OLDPWD': '/home/roboconb', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ja_JP.UTF-8', 'MANAGERPID': '1444', 'SYSTEMD_EXEC_PID': '1670', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '6244', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/roboconb/robocon_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'roboconb', 'JOURNAL_STREAM': '8:32997', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'roboconb', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/roboconb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/roboconb:@/tmp/.ICE-unix/1635,unix/roboconb:/tmp/.ICE-unix/1635', 'INVOCATION_ID': '6bb45c944bc34bc3ac4124d3a85f43f5', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ja_JP.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'ja_JP.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'LC_TELEPHONE': 'ja_JP.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Q7ETC2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ja_JP.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:e2e07f94-c39f-422a-aae0-1afbe491b8b4', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ja_JP.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ja_JP.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/roboconb/robocon_ws/build/fruit_detection', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/roboconb/robocon_ws/build/fruit_detection/prefix_override:/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ja_JP.UTF-8', 'LC_PAPER': 'ja_JP.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash'}, 'shell': False}
+[0.901217] (-) TimerEvent: {}
+[1.001571] (-) TimerEvent: {}
+[1.101897] (-) TimerEvent: {}
+[1.180771] (fruit_detection) StdoutLine: {'line': b'running egg_info\n'}
+[1.181693] (fruit_detection) StdoutLine: {'line': b'writing ../../build/fruit_detection/fruit_detection.egg-info/PKG-INFO\n'}
+[1.182032] (fruit_detection) StdoutLine: {'line': b'writing dependency_links to ../../build/fruit_detection/fruit_detection.egg-info/dependency_links.txt\n'}
+[1.182263] (fruit_detection) StdoutLine: {'line': b'writing entry points to ../../build/fruit_detection/fruit_detection.egg-info/entry_points.txt\n'}
+[1.182438] (fruit_detection) StdoutLine: {'line': b'writing requirements to ../../build/fruit_detection/fruit_detection.egg-info/requires.txt\n'}
+[1.182591] (fruit_detection) StdoutLine: {'line': b'writing top-level names to ../../build/fruit_detection/fruit_detection.egg-info/top_level.txt\n'}
+[1.185399] (fruit_detection) StdoutLine: {'line': b"reading manifest file '../../build/fruit_detection/fruit_detection.egg-info/SOURCES.txt'\n"}
+[1.185806] (fruit_detection) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.187229] (fruit_detection) StdoutLine: {'line': b"writing manifest file '../../build/fruit_detection/fruit_detection.egg-info/SOURCES.txt'\n"}
+[1.187395] (fruit_detection) StdoutLine: {'line': b'running build\n'}
+[1.187476] (fruit_detection) StdoutLine: {'line': b'running build_py\n'}
+[1.188199] (fruit_detection) StdoutLine: {'line': b'running install\n'}
+[1.188355] (fruit_detection) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.188463] (fruit_detection) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.188843] (fruit_detection) StdoutLine: {'line': b'running install_lib\n'}
+[1.191583] (fruit_detection) StdoutLine: {'line': b'running install_data\n'}
+[1.192508] (fruit_detection) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.194571] (fruit_detection) StdoutLine: {'line': b"removing '/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages/fruit_detection-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[1.195036] (fruit_detection) StdoutLine: {'line': b'Copying ../../build/fruit_detection/fruit_detection.egg-info to /home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages/fruit_detection-0.0.1-py3.10.egg-info\n'}
+[1.196318] (fruit_detection) StdoutLine: {'line': b'running install_scripts\n'}
+[1.202023] (-) TimerEvent: {}
+[1.228962] (fruit_detection) StdoutLine: {'line': b'Installing listener script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.229246] (fruit_detection) StdoutLine: {'line': b'Installing onnx script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.229402] (fruit_detection) StdoutLine: {'line': b'Installing pubdetect script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.229733] (fruit_detection) StdoutLine: {'line': b'Installing talker script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.229875] (fruit_detection) StdoutLine: {'line': b'Installing torch script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.229988] (fruit_detection) StdoutLine: {'line': b'Installing vino script to /home/roboconb/robocon_ws/install/fruit_detection/lib/fruit_detection\n'}
+[1.230438] (fruit_detection) StdoutLine: {'line': b"writing list of installed files to '/home/roboconb/robocon_ws/build/fruit_detection/install.log'\n"}
+[1.262160] (fruit_detection) CommandEnded: {'returncode': 0}
+[1.272958] (fruit_detection) JobEnded: {'identifier': 'fruit_detection', 'rc': 0}
+[1.302187] (-) TimerEvent: {}
+[1.402515] (-) TimerEvent: {}
+[1.502868] (-) TimerEvent: {}
+[1.603286] (-) TimerEvent: {}
+[1.703669] (-) TimerEvent: {}
+[1.804074] (-) TimerEvent: {}
+[1.904506] (-) TimerEvent: {}
+[2.004937] (-) TimerEvent: {}
+[2.105292] (-) TimerEvent: {}
+[2.205606] (-) TimerEvent: {}
+[2.305971] (-) TimerEvent: {}
+[2.406429] (-) TimerEvent: {}
+[2.506995] (-) TimerEvent: {}
+[2.607280] (-) TimerEvent: {}
+[2.707591] (-) TimerEvent: {}
+[2.807964] (-) TimerEvent: {}
+[2.908264] (-) TimerEvent: {}
+[3.008605] (-) TimerEvent: {}
+[3.108930] (-) TimerEvent: {}
+[3.209271] (-) TimerEvent: {}
+[3.295003] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8\x1b[m\x1b[K,\n'}
+[3.295445] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[3.295722] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.295971] (robocon2023_b_dash) StderrLine: {'line': b'   14 |         struct \x1b[01;35m\x1b[K{\x1b[m\x1b[K\n'}
+[3.296204] (robocon2023_b_dash) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[3.309363] (-) TimerEvent: {}
+[3.409688] (-) TimerEvent: {}
+[3.506128] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Xmove_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.506376] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:29:81:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kjoy_msg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.506542] (robocon2023_b_dash) StderrLine: {'line': b'   29 | void Xmove_Controller_Node::Joy_Callback(\x1b[01;35m\x1b[Kconst sensor_msgs::msg::Joy::SharedPtr joy_msg\x1b[m\x1b[K)\n'}
+[3.506690] (robocon2023_b_dash) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[3.509774] (-) TimerEvent: {}
+[3.610082] (-) TimerEvent: {}
+[3.710417] (-) TimerEvent: {}
+[3.810727] (-) TimerEvent: {}
+[3.911116] (-) TimerEvent: {}
+[4.011469] (-) TimerEvent: {}
+[4.111796] (-) TimerEvent: {}
+[4.212117] (-) TimerEvent: {}
+[4.312564] (-) TimerEvent: {}
+[4.412908] (-) TimerEvent: {}
+[4.513247] (-) TimerEvent: {}
+[4.613543] (-) TimerEvent: {}
+[4.713853] (-) TimerEvent: {}
+[4.814166] (-) TimerEvent: {}
+[4.914484] (-) TimerEvent: {}
+[5.014824] (-) TimerEvent: {}
+[5.115133] (-) TimerEvent: {}
+[5.215465] (-) TimerEvent: {}
+[5.315800] (-) TimerEvent: {}
+[5.416093] (-) TimerEvent: {}
+[5.516411] (-) TimerEvent: {}
+[5.616772] (-) TimerEvent: {}
+[5.717072] (-) TimerEvent: {}
+[5.817392] (-) TimerEvent: {}
+[5.917708] (-) TimerEvent: {}
+[6.018042] (-) TimerEvent: {}
+[6.118379] (-) TimerEvent: {}
+[6.218731] (-) TimerEvent: {}
+[6.319027] (-) TimerEvent: {}
+[6.419522] (-) TimerEvent: {}
+[6.519989] (-) TimerEvent: {}
+[6.620295] (-) TimerEvent: {}
+[6.720676] (-) TimerEvent: {}
+[6.821019] (-) TimerEvent: {}
+[6.921366] (-) TimerEvent: {}
+[7.021725] (-) TimerEvent: {}
+[7.122118] (-) TimerEvent: {}
+[7.222511] (-) TimerEvent: {}
+[7.322901] (-) TimerEvent: {}
+[7.423250] (-) TimerEvent: {}
+[7.523560] (-) TimerEvent: {}
+[7.623973] (-) TimerEvent: {}
+[7.724363] (-) TimerEvent: {}
+[7.824733] (-) TimerEvent: {}
+[7.925085] (-) TimerEvent: {}
+[8.025425] (-) TimerEvent: {}
+[8.125758] (-) TimerEvent: {}
+[8.226130] (-) TimerEvent: {}
+[8.326516] (-) TimerEvent: {}
+[8.426914] (-) TimerEvent: {}
+[8.527293] (-) TimerEvent: {}
+[8.627798] (-) TimerEvent: {}
+[8.728177] (-) TimerEvent: {}
+[8.828607] (-) TimerEvent: {}
+[8.929041] (-) TimerEvent: {}
+[9.029453] (-) TimerEvent: {}
+[9.129819] (-) TimerEvent: {}
+[9.230244] (-) TimerEvent: {}
+[9.330582] (-) TimerEvent: {}
+[9.430993] (-) TimerEvent: {}
+[9.531414] (-) TimerEvent: {}
+[9.631824] (-) TimerEvent: {}
+[9.732234] (-) TimerEvent: {}
+[9.832643] (-) TimerEvent: {}
+[9.933033] (-) TimerEvent: {}
+[10.033449] (-) TimerEvent: {}
+[10.133836] (-) TimerEvent: {}
+[10.234208] (-) TimerEvent: {}
+[10.334579] (-) TimerEvent: {}
+[10.434910] (-) TimerEvent: {}
+[10.535291] (-) TimerEvent: {}
+[10.635663] (-) TimerEvent: {}
+[10.736036] (-) TimerEvent: {}
+[10.836410] (-) TimerEvent: {}
+[10.936797] (-) TimerEvent: {}
+[11.037222] (-) TimerEvent: {}
+[11.137578] (-) TimerEvent: {}
+[11.237934] (-) TimerEvent: {}
+[11.338292] (-) TimerEvent: {}
+[11.438646] (-) TimerEvent: {}
+[11.538967] (-) TimerEvent: {}
+[11.639271] (-) TimerEvent: {}
+[11.739614] (-) TimerEvent: {}
+[11.839960] (-) TimerEvent: {}
+[11.940276] (-) TimerEvent: {}
+[12.040660] (-) TimerEvent: {}
+[12.140946] (-) TimerEvent: {}
+[12.241316] (-) TimerEvent: {}
+[12.341677] (-) TimerEvent: {}
+[12.442054] (-) TimerEvent: {}
+[12.542448] (-) TimerEvent: {}
+[12.642894] (-) TimerEvent: {}
+[12.743280] (-) TimerEvent: {}
+[12.843670] (-) TimerEvent: {}
+[12.944026] (-) TimerEvent: {}
+[13.044343] (-) TimerEvent: {}
+[13.123510] (robocon2023_b_dash) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Xmove_Controller\x1b[0m\n'}
+[13.144446] (-) TimerEvent: {}
+[13.244816] (-) TimerEvent: {}
+[13.345202] (-) TimerEvent: {}
+[13.445558] (-) TimerEvent: {}
+[13.545910] (-) TimerEvent: {}
+[13.646195] (-) TimerEvent: {}
+[13.725257] (robocon2023_b_dash) StdoutLine: {'line': b'[100%] Built target Xmove_Controller\n'}
+[13.734461] (robocon2023_b_dash) CommandEnded: {'returncode': 0}
+[13.746319] (-) TimerEvent: {}
+[13.796538] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'install'}
+[13.796873] (robocon2023_b_dash) Command: {'cmd': ['/home/roboconb/.local/bin/cmake', '--install', '/home/roboconb/robocon_ws/build/robocon2023_b_dash'], 'cwd': '/home/roboconb/robocon_ws/build/robocon2023_b_dash', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'roboconb'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/roboconb'), ('OLDPWD', '/home/roboconb'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('MANAGERPID', '1444'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6244'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/roboconb/robocon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'roboconb'), ('JOURNAL_STREAM', '8:32997'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'roboconb'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/roboconb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/roboconb:@/tmp/.ICE-unix/1635,unix/roboconb:/tmp/.ICE-unix/1635'), ('INVOCATION_ID', '6bb45c944bc34bc3ac4124d3a85f43f5'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q7ETC2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:e2e07f94-c39f-422a-aae0-1afbe491b8b4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/roboconb/robocon_ws/build/robocon2023_b_dash'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/roboconb/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/roboconb/robocon_ws/install/ros_to_kimd:/home/roboconb/robocon_ws/install/robocon2023_b_dash:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble')]), 'shell': False}
+[13.824406] (robocon2023_b_dash) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.824708] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD\n'}
+[13.824996] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller\n'}
+[13.834555] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller" to ""\n'}
+[13.834779] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion\n'}
+[13.835186] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller\n'}
+[13.835609] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller\n'}
+[13.835866] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash\n'}
+[13.836296] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash\n'}
+[13.836429] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh\n'}
+[13.836546] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv\n'}
+[13.836619] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh\n'}
+[13.836698] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv\n'}
+[13.836792] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash\n'}
+[13.836914] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh\n'}
+[13.837010] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh\n'}
+[13.837081] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv\n'}
+[13.837151] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv\n'}
+[13.837221] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash\n'}
+[13.837310] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake\n'}
+[13.837382] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake\n'}
+[13.837477] (robocon2023_b_dash) StdoutLine: {'line': b'-- Up-to-date: /home/roboconb/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml\n'}
+[13.845717] (robocon2023_b_dash) CommandEnded: {'returncode': 0}
+[13.846410] (-) TimerEvent: {}
+[13.928207] (robocon2023_b_dash) JobEnded: {'identifier': 'robocon2023_b_dash', 'rc': 0}
+[13.928961] (-) EventReactorShutdown: {}

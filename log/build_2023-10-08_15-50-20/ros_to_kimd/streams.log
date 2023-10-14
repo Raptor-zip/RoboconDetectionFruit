@@ -1,0 +1,55 @@
+[0.461s] Invoking command in '/home/roboconb/robocon_ws/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble /home/roboconb/.local/bin/cmake --build /home/roboconb/robocon_ws/build/ros_to_kimd -- -j8 -l8
+[0.587s] [ 50%] Built target joysubtest
+[0.595s] [100%] Built target ControlKimd
+[0.613s] Invoked command in '/home/roboconb/robocon_ws/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble /home/roboconb/.local/bin/cmake --build /home/roboconb/robocon_ws/build/ros_to_kimd -- -j8 -l8
+[0.682s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 67, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 110, in build
+    if await has_target(args.build_base, 'install'):
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 57, in has_target
+    return target in await get_makefile_targets(path)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 77, in get_makefile_targets
+    output = await check_output([
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 128, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/home/roboconb/.local/bin/cmake', '--build', '/home/roboconb/robocon_ws/build/ros_to_kimd', '--target', 'help'] to pass: Traceback (most recent call last):
+  File "/home/roboconb/.local/bin/cmake", line 5, in <module>
+    from cmake import cmake
+  File "/home/roboconb/.local/lib/python3.10/site-packages/cmake/__init__.py", line 3, in <module>
+    import subprocess
+  File "/usr/lib/python3.10/subprocess.py", line 48, in <module>
+    import signal
+  File "/usr/lib/python3.10/signal.py", line 19, in <module>
+    _IntEnum._convert_(
+  File "/usr/lib/python3.10/enum.py", line 563, in _convert_
+    cls = cls(name, members, module=module)
+  File "/usr/lib/python3.10/enum.py", line 387, in __call__
+    return cls._create_(
+  File "/usr/lib/python3.10/enum.py", line 518, in _create_
+    enum_class = metacls.__new__(metacls, class_name, bases, classdict)
+  File "/usr/lib/python3.10/enum.py", line 198, in __new__
+    enum_members = {k: classdict[k] for k in classdict._member_names}
+  File "/usr/lib/python3.10/enum.py", line 198, in <dictcomp>
+    enum_members = {k: classdict[k] for k in classdict._member_names}
+KeyboardInterrupt
+

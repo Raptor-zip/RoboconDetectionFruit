@@ -17,6 +17,7 @@ SerialKIMD_Node::SerialKIMD_Node() : rclcpp::Node("SerialKIMD_Node")
     this->solenoid_msg.type[0] = 23;
     this->solenoid_msg.type[1] = 151;
     this->solenoid_msg.ID = 0;
+<<<<<<< HEAD
     this->solenoid_msg.cmd = 0;
 
     this->BeltSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("BeltOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::BeltOut_Callback, this, std::placeholders::_1));
@@ -25,6 +26,15 @@ SerialKIMD_Node::SerialKIMD_Node() : rclcpp::Node("SerialKIMD_Node")
     this->UpperSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("UpperOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Upper_Callback, this, std::placeholders::_1));
     this->XmoveSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("XmoveOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Xmove_Callback, this, std::placeholders::_1));
     this->SolenoidSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("SolenoidOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Solenoid_Callback, this, std::placeholders::_1));
+=======
+    this->solenoid_msg.cmd = 1;
+
+    this->BeltSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("BeltOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::BeltOut_Callback, this, std::placeholders::_1));
+    this->CrowlSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("CrowlOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Crowl_Callback, this, std::placeholders::_1));
+    this->DriveSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("DriveOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Drive_Callback, this, std::placeholders::_1));
+    this->UpperSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("UpperOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Upper_Callback, this, std::placeholders::_1));
+    this->XmoveSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("XmoveOut", rclcpp::QoS(10), std::bind(&SerialKIMD_Node::Xmove_Callback, this, std::placeholders::_1));
+>>>>>>> origin/master
 
     this->timer_ = this->create_wall_timer(10ms, std::bind(&SerialKIMD_Node::timer_callback, this));
     this->SerialOpen();
@@ -54,11 +64,14 @@ void SerialKIMD_Node::Crowl_Callback(const std_msgs::msg::ByteMultiArray::Shared
         this->send_msg[2].bin[i] = md_msg->data[i + 16];
         this->send_msg[3].bin[i] = md_msg->data[i + 24];
     }
+<<<<<<< HEAD
     // for (int i = 0; i < 4; i++)
     // {
     //     RCLCPP_INFO(this->get_logger(), " %dtype1,type2,id,cmd,m   %d,%d,%d,%d,%f  ", i,
     //                 this->send_msg[i].type[0], this->send_msg[i].type[1], this->send_msg[i].ID, this->send_msg[i].cmd, this->send_msg[i].M);
     // }
+=======
+>>>>>>> origin/master
 }
 
 void SerialKIMD_Node::Drive_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
@@ -86,6 +99,7 @@ void SerialKIMD_Node::Xmove_Callback(const std_msgs::msg::ByteMultiArray::Shared
     }
 }
 
+<<<<<<< HEAD
 void SerialKIMD_Node::Solenoid_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
     for (int i = 0; i < 8; i++)
@@ -94,6 +108,8 @@ void SerialKIMD_Node::Solenoid_Callback(const std_msgs::msg::ByteMultiArray::Sha
     }
 }
 
+=======
+>>>>>>> origin/master
 void SerialKIMD_Node::SerialOpen(void)
 {
     this->serial_port = open("/dev/ttyACM0", O_RDWR);
@@ -134,10 +150,13 @@ void SerialKIMD_Node::SerialWrite(uint8_t type2)
         }
         write(this->serial_port, send_data, sizeof(send_data));
 
+<<<<<<< HEAD
         // RCLCPP_INFO(this->get_logger(), " type1,type2,id,cmd,m   %d,%d,%d,%d,%f  ",
         //             this->send_msg[0].type[0], this->send_msg[0].type[1], this->send_msg[0].ID, this->send_msg[0].cmd, this->send_msg[0].M);
         // RCLCPP_INFO(this->get_logger(), "%d,%d,%d,%d,%d,%d,%d,%d", send_data[8], send_data[9], send_data[10], send_data[11], send_data[12], send_data[13], send_data[14], send_data[15]);
 
+=======
+>>>>>>> origin/master
         this->motos_msg_header.cmd = 5;
         memcpy(send_data, this->motos_msg_header.bin, sizeof(ABU2023_GenericOutput_Header_Typedef));
         for (int i = 7; i < 12; i++)

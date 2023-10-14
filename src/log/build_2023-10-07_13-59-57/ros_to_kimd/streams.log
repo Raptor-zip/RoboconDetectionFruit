@@ -1,0 +1,23 @@
+[0.260s] Invoking command in '/home/roboconb/robocon_ws/src/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble /home/roboconb/.local/bin/cmake --build /home/roboconb/robocon_ws/src/build/ros_to_kimd -- -j8 -l8
+[0.311s] [ 25%] [32mBuilding CXX object CMakeFiles/joysubtest.dir/src/kimd_send_joystick.cpp.o[0m
+[0.311s] [ 50%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+[4.654s] In file included from [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:15[m[K:
+[4.654s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[4.654s]    14 |         struct [01;35m[K{[m[K
+[4.654s]       |                [01;35m[K^[m[K
+[4.703s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.703s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:33:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.703s]    33 |   void topic_callback([01;35m[Ksensor_msgs::msg::Joy::SharedPtr msg[m[K)
+[4.704s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[4.709s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[4.709s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:72:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.710s]    72 | void signal_handler([01;35m[Kint signum[m[K)
+[4.710s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[4.758s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[4.758s] [01m[K/home/roboconb/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:234:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.758s]   234 | void signal_handler([01;35m[Kint signum[m[K)
+[4.758s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[13.569s] [ 75%] [32m[1mLinking CXX executable joysubtest[0m
+[13.976s] [100%] [32m[1mLinking CXX executable ControlKimd[0m
+[14.061s] [100%] Built target joysubtest
+[14.436s] [100%] Built target ControlKimd

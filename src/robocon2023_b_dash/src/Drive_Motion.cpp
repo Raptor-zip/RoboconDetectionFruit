@@ -19,10 +19,15 @@ DriveMotion_Node::DriveMotion_Node() : rclcpp::Node("Drive_Motion")
     this->DriveMotion_msg[1].M = 0;
 
     this->JoySubscription = this->create_subscription<sensor_msgs::msg::Joy>("joy", rclcpp::QoS(10), std::bind(&DriveMotion_Node::Joy_Callback, this, std::placeholders::_1));
+<<<<<<< HEAD
     this->DriveMotion_publisher = this->create_publisher<std_msgs::msg::ByteMultiArray>("DriveMotion_DriveOut", rclcpp::QoS(10));
     this->timer_ = this->create_wall_timer(10ms, std::bind(&DriveMotion_Node::timer_callback, this));
 
 
+=======
+    this->DriveMotion_publisher = this->create_publisher<std_msgs::msg::ByteMultiArray>("DriveMotionOut", rclcpp::QoS(10));
+    this->timer_ = this->create_wall_timer(10ms, std::bind(&DriveMotion_Node::timer_callback, this));
+>>>>>>> origin/master
 }
 
 DriveMotion_Node::~DriveMotion_Node()
@@ -37,8 +42,13 @@ void DriveMotion_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr joy_m
 
 void DriveMotion_Node::timer_callback(void)
 {
+<<<<<<< HEAD
     this->DriveMotion_msg[0].M = this->ly * -100.0;
     this->DriveMotion_msg[1].M = this->ry * 100.0;
+=======
+    this->DriveMotion_msg[0].M = this->ly * 100.0;
+    this->DriveMotion_msg[1].M = this->ry * -100.0;
+>>>>>>> origin/master
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(16 + 1);
     for (int i = 0; i < 8; i++)

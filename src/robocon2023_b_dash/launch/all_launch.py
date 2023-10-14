@@ -1,16 +1,27 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+<<<<<<< HEAD
 from launch.substitutions import LaunchConfiguration
+=======
+>>>>>>> origin/master
 
 
 def generate_launch_description():
     return LaunchDescription(
         [
+<<<<<<< HEAD
             # Node(
             #     package="joy",
             #     namespace="robocon2023_b_dash",
             #     executable="joy_node",
             # ),
+=======
+            Node(
+                package="joy",
+                namespace="robocon2023_b_dash",
+                executable="joy_node",
+            ),
+>>>>>>> origin/master
             Node(
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
@@ -44,6 +55,7 @@ def generate_launch_description():
                 prefix= "xterm -e",
                 output = "screen", # print wo hyouzi
             ),
+<<<<<<< HEAD
             Node(
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
@@ -79,5 +91,21 @@ def generate_launch_description():
                 namespace="robocon2023_b_dash",
                 executable="receiver",
             )
+=======
+            # Node(
+            #     package="fruit_detection",
+            #     namespace="robocon2023_b_dash",
+            #     executable="listener",
+            #     # prefix= "xterm -e",
+            #     output = "screen", # print wo hyouzi
+            # ),
+            # Node(
+            #     package="fruit_detection",
+            #     namespace="robocon2023_b_dash",
+            #     executable="talker",
+            #     # prefix= "xterm -e",
+            #     output = "screen", # print wo hyouzi
+            # ),
+>>>>>>> origin/master
         ]
     )

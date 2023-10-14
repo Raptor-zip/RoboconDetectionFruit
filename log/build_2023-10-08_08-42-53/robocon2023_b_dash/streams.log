@@ -1,0 +1,33 @@
+[0.260s] Invoking command in '/home/roboconb/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble /home/roboconb/.local/bin/cmake --build /home/roboconb/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.349s] [ 70%] Built target DriveMotion
+[0.349s] [ 70%] Built target SerialKIMD
+[0.349s] [ 70%] Built target Upper_Controller
+[0.349s] [ 70%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+[0.350s] [ 90%] Built target Drive_Controller
+[2.692s] In file included from [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8[m[K,
+[2.692s]                  from [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[2.692s] [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[2.692s]    14 |         struct [01;35m[K{[m[K
+[2.692s]       |                [01;35m[K^[m[K
+[2.785s] [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.785s] [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:29:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjoy_msg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.785s]    29 | void Xmove_Controller_Node::Joy_Callback([01;35m[Kconst sensor_msgs::msg::Joy::SharedPtr joy_msg[m[K)
+[2.786s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[2.788s] [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::ImageRecognition_Callback(std_msgs::msg::Int16MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.788s] [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:38:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdata[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::data[m[K’?
+[2.788s]    38 |     if([01;31m[Kdata[m[K[3] == 4){
+[2.788s]       |        [01;31m[K^~~~[m[K
+[2.788s]       |        [32m[Kstd::data[m[K
+[2.788s] In file included from [01m[K/usr/include/c++/11/array:41[m[K,
+[2.788s]                  from [01m[K/usr/include/c++/11/tuple:39[m[K,
+[2.788s]                  from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+[2.788s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[2.788s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[2.789s]                  from [01m[K/home/roboconb/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:1[m[K:
+[2.789s] [01m[K/usr/include/c++/11/bits/range_access.h:319:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::data[m[K’ declared here
+[2.789s]   319 |     [01;36m[Kdata[m[K(initializer_list<_Tp> __il) noexcept
+[2.789s]       |     [01;36m[K^~~~[m[K
+[5.850s] gmake[2]: *** [CMakeFiles/Xmove_Controller.dir/build.make:76: CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o] エラー 1
+[5.850s] gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/Xmove_Controller.dir/all] エラー 2
+[5.850s] gmake: *** [Makefile:146: all] エラー 2
+[5.856s] Invoked command in '/home/roboconb/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/robocon_ws/install/fruit_detection:/opt/ros/humble /home/roboconb/.local/bin/cmake --build /home/roboconb/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
