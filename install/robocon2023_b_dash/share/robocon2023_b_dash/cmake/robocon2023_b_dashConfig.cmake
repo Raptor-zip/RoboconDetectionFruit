@@ -1,0 +1,1 @@
+/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/ament_cmake_core/robocon2023_b_dashConfig.cmake

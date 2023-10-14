@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/joysubtest" "/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ControlKimd" "TARGETS" "joysubtest" "ControlKimd" "DESTINATION" "lib/ros_to_kimd")
