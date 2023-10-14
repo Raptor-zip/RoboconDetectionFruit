@@ -1,5 +1,5 @@
 CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o: \
- /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd/src/ControlKimd.cpp \
+ /home/kaibuchisoma/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -646,4 +646,4 @@ CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o: \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__builder.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joy__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
- /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h
+ /home/kaibuchisoma/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h

@@ -45,7 +45,6 @@ add_executable(Upper_Controller src/Upper_Controller.cpp)
 ament_target_dependencies(Upper_Controller rclcpp std_msgs sensor_msgs)
 install(TARGETS Upper_Controller DESTINATION lib/${PROJECT_NAME})
 
-<<<<<<< HEAD
 add_executable(WallUpMotion src/WallUp_Motion.cpp)
 ament_target_dependencies(WallUpMotion rclcpp std_msgs sensor_msgs)
 install(TARGETS WallUpMotion DESTINATION lib/${PROJECT_NAME})
@@ -70,8 +69,6 @@ add_executable(receiver src/receiver.cpp)
 ament_target_dependencies(receiver rclcpp std_msgs sensor_msgs)
 install(TARGETS receiver DESTINATION lib/${PROJECT_NAME})
 
-=======
->>>>>>> origin/master
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

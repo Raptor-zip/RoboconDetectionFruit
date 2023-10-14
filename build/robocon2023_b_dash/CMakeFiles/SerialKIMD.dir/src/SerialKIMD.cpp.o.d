@@ -1,9 +1,5 @@
 CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o: \
-<<<<<<< HEAD
  /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.cpp \
-=======
- /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/SerialKIMD.cpp \
->>>>>>> origin/master
  /usr/include/stdc-predef.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \
@@ -603,11 +599,7 @@ CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
-<<<<<<< HEAD
  /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.hpp \
-=======
- /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/SerialKIMD.hpp \
->>>>>>> origin/master
  /opt/ros/humble/include/std_msgs/std_msgs/msg/byte_multi_array.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/byte_multi_array__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -653,8 +645,4 @@ CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-<<<<<<< HEAD
  /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h
-=======
- /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h
->>>>>>> origin/master

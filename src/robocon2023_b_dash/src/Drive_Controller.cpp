@@ -3,11 +3,7 @@
 
 Drive_Controller_Node::Drive_Controller_Node() : rclcpp::Node("Drive_Controller")
 {
-<<<<<<< HEAD
     this->motion_flag = 0;
-=======
-    int motion_flag = 0;
->>>>>>> origin/master
 
     this->Drive_Controller_msg[0].type[0] = 23;
     this->Drive_Controller_msg[0].type[1] = 180;
@@ -21,15 +17,9 @@ Drive_Controller_Node::Drive_Controller_Node() : rclcpp::Node("Drive_Controller"
     this->Drive_Controller_msg[1].cmd = 0;
     this->Drive_Controller_msg[1].M = 0;
 
-<<<<<<< HEAD
     this->WallMotionSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("WallMotion_DriveOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::WallMotionOut_Callback, this, std::placeholders::_1));
     this->RopeMotionOutSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("RopeMotion_DriveOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::RopeMotionOut_Callback, this, std::placeholders::_1));
     this->DriveMotionOutSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("DriveMotion_DriveOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::DriveMotionOut_Callback, this, std::placeholders::_1));
-=======
-    this->WallMotionSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("WallMotionOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::WallMotionOut_Callback, this, std::placeholders::_1));
-    this->RopeMotionOutSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("RopeMotionOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::RopeMotionOut_Callback, this, std::placeholders::_1));
-    this->DriveMotionOutSubscription = this->create_subscription<std_msgs::msg::ByteMultiArray>("DriveMotionOut", rclcpp::QoS(10), std::bind(&Drive_Controller_Node::DriveMotionOut_Callback, this, std::placeholders::_1));
->>>>>>> origin/master
 
     this->Drive_Controller_publisher = this->create_publisher<std_msgs::msg::ByteMultiArray>("DriveOut", rclcpp::QoS(10));
     this->timer_ = this->create_wall_timer(1ms, std::bind(&Drive_Controller_Node::timer_callback, this));
@@ -41,7 +31,6 @@ Drive_Controller_Node::~Drive_Controller_Node()
 
 void Drive_Controller_Node::WallMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
-<<<<<<< HEAD
     if (md_msg->data[16] == 1)
     {
         if (this->motion_flag <= 3)
@@ -52,18 +41,6 @@ void Drive_Controller_Node::WallMotionOut_Callback(const std_msgs::msg::ByteMult
     else if (this->motion_flag == 3)
     {
         this->motion_flag = 0;
-=======
-    if (this->motion_flag <= 3)
-    {
-        if (md_msg->data[16] == 1)
-        {
-            this->motion_flag = 3;
-        }
-        else
-        {
-            this->motion_flag = 0;
-        }
->>>>>>> origin/master
     }
 
     for (int i = 0; i < 8; i++)
@@ -75,7 +52,6 @@ void Drive_Controller_Node::WallMotionOut_Callback(const std_msgs::msg::ByteMult
 
 void Drive_Controller_Node::RopeMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
-<<<<<<< HEAD
     if (md_msg->data[16] == 1)
     {
         if (this->motion_flag <= 2)
@@ -86,18 +62,6 @@ void Drive_Controller_Node::RopeMotionOut_Callback(const std_msgs::msg::ByteMult
     else if (this->motion_flag == 2)
     {
         this->motion_flag = 0;
-=======
-    if (this->motion_flag <= 2)
-    {
-        if (md_msg->data[16] == 1)
-        {
-            this->motion_flag = 2;
-        }
-        else
-        {
-            this->motion_flag = 0;
-        }
->>>>>>> origin/master
     }
 
     for (int i = 0; i < 8; i++)
@@ -109,7 +73,6 @@ void Drive_Controller_Node::RopeMotionOut_Callback(const std_msgs::msg::ByteMult
 
 void Drive_Controller_Node::DriveMotionOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg)
 {
-<<<<<<< HEAD
     if (md_msg->data[16] == 1)
     {
         if (this->motion_flag <= 1)
@@ -120,18 +83,6 @@ void Drive_Controller_Node::DriveMotionOut_Callback(const std_msgs::msg::ByteMul
     else if (this->motion_flag == 1)
     {
         this->motion_flag = 0;
-=======
-    if (this->motion_flag <= 1)
-    {
-        if (md_msg->data[16] == 1)
-        {
-            this->motion_flag = 1;
-        }
-        else
-        {
-            this->motion_flag = 0;
-        }
->>>>>>> origin/master
     }
 
     for (int i = 0; i < 8; i++)
@@ -166,11 +117,8 @@ void Drive_Controller_Node::timer_callback(void)
         this->Drive_Controller_msg[1].M = 0;
     }
 
-<<<<<<< HEAD
     // RCLCPP_INFO(this->get_logger(), "motion flag %d", this->motion_flag);
 
-=======
->>>>>>> origin/master
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(16);
     for (int i = 0; i < 8; i++)

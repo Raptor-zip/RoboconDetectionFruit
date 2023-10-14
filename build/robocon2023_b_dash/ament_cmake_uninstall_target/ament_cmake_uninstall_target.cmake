@@ -2,11 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-<<<<<<< HEAD
   set(install_space "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash")
-=======
-  set(install_space "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/install/robocon2023_b_dash")
->>>>>>> origin/master
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -33,11 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-<<<<<<< HEAD
 set(install_manifest "/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash/install_manifest.txt")
-=======
-set(install_manifest "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/robocon2023_b_dash/install_manifest.txt")
->>>>>>> origin/master
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()

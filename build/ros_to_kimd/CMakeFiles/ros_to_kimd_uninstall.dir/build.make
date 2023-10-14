@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd
+CMAKE_SOURCE_DIR = /home/kaibuchisoma/robocon_ws/src/ros_to_kimd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd
+CMAKE_BINARY_DIR = /home/kaibuchisoma/robocon_ws/build/ros_to_kimd
 
 # Utility rule file for ros_to_kimd_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ros_to_kimd_uninstall.dir/compiler_depend.make
 include CMakeFiles/ros_to_kimd_uninstall.dir/progress.make
 
 CMakeFiles/ros_to_kimd_uninstall:
-	/usr/bin/cmake -P /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 ros_to_kimd_uninstall: CMakeFiles/ros_to_kimd_uninstall
 ros_to_kimd_uninstall: CMakeFiles/ros_to_kimd_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ros_to_kimd_uninstall.dir/clean:
 .PHONY : CMakeFiles/ros_to_kimd_uninstall.dir/clean
 
 CMakeFiles/ros_to_kimd_uninstall.dir/depend:
-	cd /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/ros_to_kimd /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd /home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/build/ros_to_kimd/CMakeFiles/ros_to_kimd_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kaibuchisoma/robocon_ws/build/ros_to_kimd && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaibuchisoma/robocon_ws/src/ros_to_kimd /home/kaibuchisoma/robocon_ws/src/ros_to_kimd /home/kaibuchisoma/robocon_ws/build/ros_to_kimd /home/kaibuchisoma/robocon_ws/build/ros_to_kimd /home/kaibuchisoma/robocon_ws/build/ros_to_kimd/CMakeFiles/ros_to_kimd_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ros_to_kimd_uninstall.dir/depend
 

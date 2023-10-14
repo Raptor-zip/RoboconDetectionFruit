@@ -18,11 +18,7 @@ using namespace std::chrono_literals;
 class SerialKIMD_Node : public rclcpp::Node
 {
 private:
-<<<<<<< HEAD
     rclcpp::Subscription<std_msgs::msg::ByteMultiArray>::SharedPtr BeltSubscription, CrowlSubscription, DriveSubscription, UpperSubscription, XmoveSubscription,SolenoidSubscription;
-=======
-    rclcpp::Subscription<std_msgs::msg::ByteMultiArray>::SharedPtr BeltSubscription, CrowlSubscription, DriveSubscription, UpperSubscription, XmoveSubscription;
->>>>>>> origin/master
     ABU2023_GenericOutput_Header_Typedef send_msg[12], motos_msg_header, solenoid_msg;
 
     void BeltOut_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg); // 2 data
@@ -30,10 +26,7 @@ private:
     void Drive_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg);   // 2 data
     void Upper_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg);   // 1 data
     void Xmove_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg);   // 1 data
-<<<<<<< HEAD
     void Solenoid_Callback(const std_msgs::msg::ByteMultiArray::SharedPtr md_msg);   // 1 data
-=======
->>>>>>> origin/master
 
     int serial_port;
     rclcpp::TimerBase::SharedPtr timer_;

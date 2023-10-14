@@ -12,13 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "ament_cmake_core/package.cmake"
   "ament_cmake_package_templates/templates.cmake"
-<<<<<<< HEAD
   "/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/CMakeLists.txt"
   "/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/package.xml"
-=======
-  "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/CMakeLists.txt"
-  "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/package.xml"
->>>>>>> origin/master
   "/opt/ros/humble/cmake/yamlConfig.cmake"
   "/opt/ros/humble/cmake/yamlConfigVersion.cmake"
   "/opt/ros/humble/cmake/yamlTargets-none.cmake"
@@ -793,13 +788,10 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/DriveMotion.dir/DependInfo.cmake"
   "CMakeFiles/Drive_Controller.dir/DependInfo.cmake"
   "CMakeFiles/Upper_Controller.dir/DependInfo.cmake"
-<<<<<<< HEAD
   "CMakeFiles/WallUpMotion.dir/DependInfo.cmake"
   "CMakeFiles/Crawl_Controller.dir/DependInfo.cmake"
   "CMakeFiles/Solenoid_Controller.dir/DependInfo.cmake"
   "CMakeFiles/BeltLiner_Controller.dir/DependInfo.cmake"
   "CMakeFiles/RopeMotion.dir/DependInfo.cmake"
   "CMakeFiles/receiver.dir/DependInfo.cmake"
-=======
->>>>>>> origin/master
   )
