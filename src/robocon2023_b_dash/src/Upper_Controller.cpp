@@ -2,9 +2,12 @@
 #include "Upper_Controller.hpp"
 #include <unistd.h> //sleep wo tukau
 #include <cmath>
+#include <time.h>
 
 int gONOFF = 1; //0:OFF 1:ON
-int joy_moving_distance = 0;
+
+clock_t start, end; // 開始時刻と終了時刻を格納する変数
+double elapsed;     // 経過時間を格納する変数
 
 Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller")
 {
@@ -38,23 +41,9 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 {
     this->option = joy_msg->buttons[9]; // option
     this->share = joy_msg->buttons[8];  // share
-    // RCLCPP_INFO(this->get_logger(), "button value %d  ", joy_msg->axes[0]);
-    // RCLCPP_INFO(this->get_logger(), "button %f %f ", joy_msg->axes[1], joy_msg->axes[4]);
-    // this->ly = (float)(joy_msg->axes[1]);
-    // this->ry = (float)(joy_msg->axes[4]);
+    // ジョイコンを読み取りたいならjoy_msg->axes[1]
 
-    if(joy_msg->axes[1] > 0.2)
-    {
-        RCLCPP_INFO(this->get_logger(), "%f", abs(joy_msg->axes[1]));
-        joy_moving_distance += joy_msg->axes[1];
-    }
-    if (joy_msg->axes[4] > 0.2)
-    {
-        RCLCPP_INFO(this->get_logger(), "%f", joy_msg->axes[4]);
-        joy_moving_distance += joy_msg->axes[4];
-    }
-
-    if (joy_msg->buttons[6] == 1) // l2
+    if (joy_msg->buttons[4] == 1) // l1
     {
         this->button_state |= 0b0001 << 4;
     }else{
@@ -97,45 +86,44 @@ void Upper_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 
 void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
-    if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 50){
-        joy_moving_distance = 0; // 自動で下降しないようにする
-        // 自動上昇
-        if (abs(recognition_msg->data[1]) < 10 && recognition_msg->data[2] < 10)
-        {
-            this->upper_msg.M -= 30;
-            this->up_flag = 1; // 押しっぱなしになっても一回しか動作しないらしい
-        }
-    }
+    // RCLCPP_INFO(this->get_logger(), "AAAAA %lf\n", static_cast<double>start / CLOCKS_PER_SEC * 1000.0);
+    end = clock();
+    // RCLCPP_INFO(this->get_logger(), "%f", (double)(end - start) / CLOCKS_PER_SEC);
     if (this->button_state >> 4 == 1 && recognition_msg->data[2] != 0)
-    {                                      // l2 button is on and y=0 denakereba
-        if (recognition_msg->data[3] == 0) // blueberry
-        {
-            this->upper_msg.M = 194;
-            this->up_flag = 0;
+    {
+        if ((double)(end - start) / CLOCKS_PER_SEC > 0.12){ // 今の所4秒くらいにしてる
+            if (recognition_msg->data[3] == 0) // blueberry
+            {
+                this->upper_msg.M = 194;
+                this->up_flag = 0;
+            }
+            if (recognition_msg->data[3] == 1) // grape
+            {
+                this->upper_msg.M = 118;
+                this->up_flag = 0;
+            }
+            if (recognition_msg->data[3] == 2) // mix
+            {
+                this->upper_msg.M = 95;
+                this->up_flag = 0;
+            }
+
+            if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 15 && recognition_msg->data[2] != 0)
+            {
+                this->upper_msg.M -= 20;
+                this->up_flag = 1; // 押しっぱなしになっても一回しか動作しないらしい
+                start = clock(); // 開始時刻を取得
+            }
         }
-        if (recognition_msg->data[3] == 1) // grape
+        if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 15 && recognition_msg->data[2] != 0)
         {
-            this->upper_msg.M = 118;
-            this->up_flag = 0;
-        }
-        if (recognition_msg->data[3] == 2) // mix
-        {
-            this->upper_msg.M = 95;
-            this->up_flag = 0;
+            start = clock(); // 開始時刻を取得
         }
     }
 }
 
 void Upper_Controller_Node::timer_callback(void)
 {
-    // 自動下降
-    if (joy_moving_distance > 1 && this->button_state >> 4 == 1) // ある程度前進しているかつ、l2ボタン押してある
-    {
-        this->upper_msg.M = 230; // てきとうにきめたからあってるかちぇっくする
-        this->up_flag = 0;
-        joy_moving_distance = 0;
-    }
-
     if (this->upper_msg.M > 64)
     {
         this->upper_msg.M -= 0.05 * this->option;
@@ -165,12 +153,12 @@ void Upper_Controller_Node::timer_callback(void)
     {
         if (this->up_flag == 0)
         {
-            this->upper_msg.M -= 30; // motomotoha 20
+            this->upper_msg.M -= 20;
             this->up_flag = 1;
         }
     }
 
-    // RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
+    RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
     // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);
