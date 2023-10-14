@@ -1,1 +1,0 @@
-/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_environment_hooks/local_setup.sh

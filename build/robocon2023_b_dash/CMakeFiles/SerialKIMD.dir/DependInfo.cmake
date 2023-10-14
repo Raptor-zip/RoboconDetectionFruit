@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/kaibuchisoma/robocon_ws/RoboconDetectionFruit/src/robocon2023_b_dash/src/SerialKIMD.cpp" "CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o" "gcc" "CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o.d"
+  "/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.cpp" "CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o" "gcc" "CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o.d"
   )
 
 # Targets to which this target links.

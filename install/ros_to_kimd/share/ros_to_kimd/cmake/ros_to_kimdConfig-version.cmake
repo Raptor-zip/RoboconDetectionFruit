@@ -1,1 +1,0 @@
-/home/kaibuchisoma/robocon_ws/build/ros_to_kimd/ament_cmake_core/ros_to_kimdConfig-version.cmake
