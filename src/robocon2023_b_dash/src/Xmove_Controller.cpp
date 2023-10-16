@@ -36,10 +36,10 @@ void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
 {
     // RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
 
-    float gain = 4;
+    float gain = 4.0;
     if(recognition_msg->data[3] == 0){
         // blueberry
-        gain = 4;
+        gain = 4.0;
     }else if(recognition_msg->data[3] == 1){
         // grape
         gain = 3.1;
