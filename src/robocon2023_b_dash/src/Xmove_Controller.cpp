@@ -63,7 +63,7 @@ void Xmove_Controller_Node::timer_callback(void)
 {
     this->xmove_msg.M = this->l1 * -10.0;
     this->xmove_msg.M += this->r1 * 10.0;
-    RCLCPP_INFO(this->get_logger(), "Xmove value %f  ", this->xmove_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "Xmove value %f  ", this->xmove_msg.M);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);
     for (int i = 0; i < 8; i++)

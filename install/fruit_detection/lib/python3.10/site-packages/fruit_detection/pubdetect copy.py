@@ -1,4 +1,4 @@
-# dousakakunizumi 10/5
+# dousakakuninzumi  10/16
 
 from ultralytics import YOLO
 import cv2
@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16MultiArray
+from ultralytics.utils import LOGGER # logger wo tukautameni pakutta
 
 state = 0
 x = 0
@@ -16,18 +17,15 @@ conf = 0
 
 # Areas of absolute recognition
 margin = [0.1, 0.8, 0.8 , 0.2]
-
 save = False
 # start webcam
 cap = cv2.VideoCapture(9)
-# cap.set(3, 1920)  # 横
-# cap.set(4, 1080)  # 縦
-cap.set(3, 480)
-cap.set(4, 360)
+# cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')) # korega nai to  timeout site kamera ga ninsiki sare nai kamo 10/9
+cap.set(3, 1920)  # 横
+cap.set(4, 1080)  # 縦
 cap.set(5, 60)  # fps
-conf_threshold = 80  # confidence threshold(信頼度の閾値)
 # show = True
-# show = False #true ni dekinai
+show = False #true ni dekinai
 # cap.set(11, 480) # コントラスト
 # cap.set(15, 100)
 
@@ -46,9 +44,9 @@ def main():
 
 class MinimalPublisher(Node):
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('fruit_detect_node')
         self.publisher_ = self.create_publisher(Int16MultiArray, 'image_recognition', 10)
-        timer_period = 0.03  # seconds 33fps設定
+        timer_period = 0.05  # seconds 20fps設定
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
@@ -61,7 +59,7 @@ class MinimalPublisher(Node):
         msg = Int16MultiArray()
         msg.data = [state, x, y, kind, conf]
         self.publisher_.publish(msg)
-        # self.get_logger().info('Publishing: "%s"' % msg.data)
+        # self.get_logger().info('Pub:"%s"' % msg.data)
         self.i += 1
 
 
@@ -95,23 +93,37 @@ def detect():
             '%H%M%S')+'.mp4', fourcc, fps, (w, h))
 
     if cap.isOpened():
-        print("カメラの初期化に成功")
+        LOGGER.info("カメラの起動に成功")
     else:
-        print("カメラkidousippai")
+        LOGGER.info("カメラの起動に失敗")
         state = 2
-
     fps_setting = cap.get(cv2.CAP_PROP_FPS)
-    print("FPS(Setting):", '{:11.02f}'.format(fps_setting))
+    LOGGER.info("FPS(Setting): %d" % round(fps_setting))
     timer = cv2.TickMeter()
     timer.start()
     # 各変数の初期値設定
     count = 0
     max_count = 30
     fps = 0
+
+    frame = 8 # *フレームの平均を取る
+    past_frame_array = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]] # states, x, y, kind
+    past_frame_weight_array = [1,2,3,4,5,6,7,8] # 8フレームの重み 新しいほうが重い
+    range_threshold_value = 100 #距離のしきい値
+
+    # 8個の配列と座標の差を求める
+    # 求めた座標の差をpast_frame_weight_arrayでわる
+    # 最も差が小さいもの kindは考えない 差がしきい値より大きいときは、8フレーム無視する
+
+
+
+    past_frame_array.pop(0) # 配列の先頭を削除
+    past_frame_array.append(100) #
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v23-1005.pt")
-    model = YOLO("/home/roboconb/detection-model/v8-v24-1007.pt")
+    # model = YOLO("/home/kaibuchisoma/ダウンロード/v8-v9-0917.pt")
+    model = YOLO("/home/kaibuchisoma/python-fruit-detection/robocon2023_fruit_detection/train2/weights/v8-v25-1012.pt")
     # model = YOLO("/home/roboconb/python/fruits/v8-v9-0917_"+str(imgsize)+"_openvino_model")
     # model = YOLO("/home/roboconb/python/fruits/v8-v22-1005-openvino-model")
     # model = YOLO("/home/roboconb/python/fruits/640int8_openvino_model")
@@ -124,8 +136,6 @@ def detect():
 
     # classNames = ["kiwi", "orange", "peach", "blueberry", "grape", "mix"]
     classNames = ["blueberry", "grape", "mix"]
-
-
     while True:
         if count == max_count:
             timer.stop()
@@ -138,64 +148,25 @@ def detect():
         success, img = cap.read()
         results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
+        height = img.shape[0]
+        width = img.shape[1]
         # value reset
-        cls = 0
-        center_x = 0
-        move_value = 0
-        x1, y1, x2, y2 = 0, 0, 0, 0
-        # coordinates
+        center_x, x1, y1, x2, y2 = 0, 0, 0, 0, 0
         for r in results:
             boxes = r.boxes
-
-            # 読み込んだ画像の高さと幅を取得
-            height = img.shape[0]
-            width = img.shape[1]
-            width_threshold = 0.05  # 真ん中10%
-
-            if show == True:
-                # object details
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                fontScale = 1.3
-                color = (255, 255, 255)
-                thickness = 3
-
-                # センターライン
-                # cv2.line(img, pt1=(int(width / 2) , 0), pt2=(int(width / 2), height), color=(255 , 255 , 255), thickness=1)
-                cv2.line(img, pt1=(int(width / 2 + width * width_threshold / 2), 0), pt2=(int(
-                    width / 2 + width * width_threshold / 2), height), color=(0, 255, 255), thickness=2)
-                # 中央左の線
-                cv2.line(img, pt1=(int(width / 2 - width * width_threshold / 2), 0), pt2=(int(
-                    width / 2 - width * width_threshold / 2), height), color=(0, 255, 255), thickness=2)
-
-                # FPS表示
-                cv2.putText(img, str(
-                    f'{fps:.0f}')+"FPS", [30, 110], font, fontScale, (0, 0, 0), int(thickness + 10))
-                cv2.putText(img, str(f'{fps:.0f}')+"FPS",
-                            [30, 110], font, fontScale, color, thickness)
-                cv2.putText(img, str(len(boxes))+" of fruits",
-                            [30, 150], font, fontScale, color, thickness)
-            else:
-                print(str(f'{fps:.0f}')+"FPS")
 
             x = 0
             y = 0
             kind = 0
             conf = 0
-            print(boxes.xyxy)
-            if len(boxes) == 1:
+            if len(boxes.xyxy) == 1:
                 x1, y1, x2, y2 = boxes.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(
                     x2), int(y2)  # convert to int values
-                state = 1
-                center_x = (x1 + x2) / 2 / width
-                center_y = (y1 + y2) / 2 / height
                 kind = int(boxes.cls[0])
                 state = 1
-                # ryouiki ni haitteiruka kakunin
-                center_x = (x1 + x2) / 2
-                move_value = round(center_x / width * 100 - 50)
-                x = move_value
-                y = round((y1+y2)/2/height*100)  # 今後治す
+                x = round((x1 + x2) / 2 / width * 100 - 50)
+                y = round((y1 + y2) / 2 / height * 100)
                 kind = int(boxes.cls[0])
                 conf = int(f'{boxes.conf[0].item()*100:.0f}')
             elif len(boxes.xyxy) > 1:
@@ -205,39 +176,52 @@ def detect():
                     x1, y1, x2, y2 = box.xyxy[0]
                     x1, y1, x2, y2 = int(x1), int(y1), int(
                         x2), int(y2)  # convert to int values
-                    print(x1)
-                    print(x2)
-                    print(y1)
-                    print(y2)
                     center_x = (x1 + x2) / 2 / width
                     center_y = (y1 + y2) / 2 / height
                     kind = int(box.cls[0])
                     state = 1
                     fruit_array_all.append([center_x, center_y, kind])
                     if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
-                        print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
                         fruit_array.append([center_x, center_y, kind])
                 if len(fruit_array) == 0:
                     # y wo hikakusuur
-                    for i in range(len(fruit_array_all)-1):
-                        if fruit_array_all[i][1] < fruit_array_all[i+1][1]:
-                            fruit_array_all.pop(i)
-                    x = fruit_array_all[0][0]
-                    y = fruit_array_all[0][1]
+                    for i in range(len(fruit_array_all)-1)[::-1]:
+                        if fruit_array_all[i][1] > fruit_array_all[i+1][1]:
+                            fruit_array_all.pop(i + 1)
+                    x = round(fruit_array_all[0][0] * 100 - 50)
+                    y = round(fruit_array_all[0][1] * 100)
                     kind = fruit_array_all[0][2]
                 if len(fruit_array) > 1:
-                    for i in range(len(fruit_array)-1):
-                        if fruit_array[i][1] < fruit_array[i+1][1]:
-                            fruit_array.pop(i)
-                    x = fruit_array[0][0]
-                    y = fruit_array[0][1]
+                    for i in range(len(fruit_array)-1)[::-1]:
+                        if fruit_array[i][1] > fruit_array[i+1][1]:
+                            fruit_array.pop(i + 1)
+                    x = round(fruit_array[0][0] * 100 - 50)
+                    y = round(fruit_array[0][1] * 100)
                     kind = fruit_array[0][2]
-            x = x * 100 - 50
-            y = y * 100
-            print([x,y,kind])
+            if y == 0:
+                LOGGER.info("NO fps:%d" % fps)
+            else:
+                fruit = classNames[kind]
+                LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
+            state = 1
             conf = 0
 
         if show == True:
+            # object details
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            fontScale = 1.3
+            color = (255, 255, 255)
+            thickness = 3
+
+            # センターライン
+            # cv2.line(img, pt1=(int(width / 2) , 0), pt2=(int(width / 2), height), color=(255 , 255 , 255), thickness=1)
+            # FPS表示
+            cv2.putText(img, str(
+                f'{fps:.0f}')+"FPS", [30, 110], font, fontScale, (0, 0, 0), int(thickness + 10))
+            cv2.putText(img, str(f'{fps:.0f}')+"FPS",
+                        [30, 110], font, fontScale, color, thickness)
+            cv2.putText(img, str(len(boxes))+" of fruits",
+                        [30, 150], font, fontScale, color, thickness)
             resized = cv2.resize(img, None, None, 0.8, 0.8)
             cv2.imshow('Webcam', resized)
 
