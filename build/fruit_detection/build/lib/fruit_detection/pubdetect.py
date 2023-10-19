@@ -194,7 +194,6 @@ def detect():
                 # そもそも、おかしくね？これだと、認識しなったらkind更新されない
                 # 何も認識しなかったら
                 past_frame_array_x.append([0,0,0]) # none代入したほうが良くない？
-                # kind = 0 # 本当は0だとだめ
             else:
                 for i in range(len(fruit_array_all)-1)[::-1]:
                     # 1子しかないときどうなるの？
@@ -202,6 +201,7 @@ def detect():
                     range_from_top_central_2 = fruit_array_all[i+1][0]/2**2 + fruit_array_all[i+1][1]**2 # 距離
                     if range_from_top_central_1 > range_from_top_central_2:
                         fruit_array_all.pop(i+1)
+                y = fruit_array_all[0][1] # yは途切れてもいいため、補正する前に出す
                 past_frame_array_x.append(fruit_array_all[0])
             if len(past_frame_array_x) > 10: # フレーム変更
                 past_frame_array_x.pop(0)
@@ -215,7 +215,6 @@ def detect():
                     else:
                         # -なら
                         past_frame_minus_array.append(past_frame_array_x[i][0])
-
             x_past_median = 0
 
             if len(past_frame_plus_array) > len(past_frame_minus_array):
@@ -230,22 +229,18 @@ def detect():
                 # LOGGER.info("----------------------------------------------")
                 if abs(fruit_array_all[0][0] - x_past_median) > 20 and fruit_array_all[0][0] / x_past_median < 0 and abs(x_past_median) > 8 and abs(fruit_array_all[0][0]) > 8: # 動画の30秒ぐらいに注目
                     # 変化量が大きい、かつ、異符号 かつ センターよりじゃないなら
-                    # if x_past_median > 0:
-                        # x_past_median = fruit_array_all[0][0] + 30
-                    # else:
-                        # x_past_median = fruit_array_all[0][0] - 30
-                    LOGGER.info("------------------------------ %d     %d" % (fruit_array_all[0][0] , x_past_median))
+                    # LOGGER.info("------------------------------ %d     %d" % (fruit_array_all[0][0] , x_past_median))
+                    x_past_median = x_past_median
                 else:
                 # if abs(fruit_array_all[0][0] - x_past_median) > 20 and fruit_array_all[0][0] / x_past_median < 0:
-                    LOGGER.info("                               %d     %d" % (fruit_array_all[0][0] , x_past_median))
+                    # LOGGER.info("                               %d     %d" % (fruit_array_all[0][0] , x_past_median))
                     x_past_median = fruit_array_all[0][0]
-            # LOGGER.info(round(x_past_median))
             x = round(x_past_median) # x_tempと明確に区別する
 
-            # if x == 0:
-            #     LOGGER.info("-----------------NO fps:%d" % fps)
-            # else:
-            # LOGGER.info("-----------------x:%d y:%d fruit:%s fps:%d" % (x,y,kind,fps))
+            if x == 0:
+                LOGGER.info("-----------------NO fps:%d" % fps)
+            else:
+                LOGGER.info("-----------------x:%d y:%d fruit:%s fps:%d" % (x,y,kind,fps))
             state = 1
 
         if show == True:
