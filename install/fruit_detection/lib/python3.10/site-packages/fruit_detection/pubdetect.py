@@ -56,7 +56,7 @@ class MinimalPublisher(Node):
         global x
         global y
         global kind
-        # print("kinddddddddddddddddddddddddddddddd %d" % kind)
+        # LOGGER.info("kinddddddddddddddddddddddddddddddd %d" % kind)
         msg = Int16MultiArray()
         msg.data = [state, x, y, kind, 0]
         self.publisher_.publish(msg)
@@ -103,10 +103,9 @@ def detect():
     timer.start()
     # 各変数の初期値設定
     count = 0
-    max_count = 30
+    max_count = 10
     fps = 0
 
-    frame = 8 # *フレームの平均を取る
     past_frame_array = [] # states, x, y, kind
     # past_frame_weight_array = [1,2,3,4,5,6,7,8] # 8フレームの重み 新しいほうが重い
     # range_threshold_value = 100 #距離のしきい値
@@ -118,6 +117,9 @@ def detect():
     # 1フレームごとの最も、一番上中央と近い物を配列に入れる
     # その配列のなかでの最瀕値のフルーツに、高さを合わせる
     model = YOLO("src/fruit_detection/fruit_detection/v8-v26-1017.pt")
+
+    past_frame_array_x = []
+    past_frame_array= [] # 過去のフレームのデータの10フレーム平均と、新しく認識したxがはなれすぎていたら、無視する
 
     while True:
         if count == max_count:
@@ -133,12 +135,9 @@ def detect():
 
         height = img.shape[0]
         width = img.shape[1]
-        # value reset
-        center_x, x1, y1, x2, y2 = 0, 0, 0, 0, 0
+
         for r in results:
             boxes = r.boxes
-
-            fruit_array = []
             fruit_array_all = []
             for box in boxes:
                 x1, y1, x2, y2 = box.xyxy[0]
@@ -148,36 +147,24 @@ def detect():
                 center_y = round((y1 + y2) / 2 / height * 100)
                 state = 1
                 fruit_array_all.append([center_x, center_y, int(box.cls[0])])
-            print(fruit_array_all)
-            if len(fruit_array_all) == 0:
-                # そもそも、おかしくね？これだと、認識しなったらkind更新されない
+            # LOGGER.info(fruit_array_all)
+            if fruit_array_all == []:
                 # 何も認識しなかったら
-                print("認識なしーー")
-                # kind = 0 # 本当は0だとだめ
+                past_frame_array.append(None)
             else:
                 for i in range(len(fruit_array_all)-1)[::-1]:
                     # 1子しかないときどうなるの？
                     range_from_top_central_1 = fruit_array_all[i][0]/2**2 + fruit_array_all[i][1]**2 # 距離
-                    print("kind:%d %d " %(fruit_array_all[i][2],range_from_top_central_1))
                     range_from_top_central_2 = fruit_array_all[i+1][0]/2**2 + fruit_array_all[i+1][1]**2 # 距離
-                    print("kind:%d %d " %(fruit_array_all[i+1][2],range_from_top_central_2))
                     if range_from_top_central_1 > range_from_top_central_2:
-                        fruit_array_all.pop(i + 1)
-                print(fruit_array_all)
-                past_frame_array.append(fruit_array_all[0])
-            # print(past_frame_array)
-            if(len(past_frame_array) > 20):
-                # past_frame_array.pop(0)
-                past_frame_array.clear()
-            kind_array = []
-            for past_frame_array_temp in past_frame_array:
-                # 配列がなにもないときどうなるの？
-                kind_array.append(past_frame_array_temp[2]) # 種類のみの配列を作る
-            # print(kind_array)
-            if len(kind_array) == 20:
-                kind = statistics.multimode(kind_array)[0] # kind_arrayの最瀕値を求める
-                print("kind更新---------------------")
-
+                        fruit_array_all.pop(i+1)
+                past_frame_array.append(fruit_array_all[0][2])
+            if len(past_frame_array) == 10:
+                past_frame_array = [x for x in past_frame_array if x is not None]
+                if len(past_frame_array) > 0:
+                    kind = statistics.mode(past_frame_array) # kind_arrayの最瀕値を求める
+                    past_frame_array.clear()
+                    # LOGGER.info("kind更新---------------------")
 
             # あるはずの配列
             predict_existing_array  = []
@@ -185,47 +172,81 @@ def detect():
             # [x,y,kind]
             # predict_existing_array.append()
 
+            fruit_array = []
 
+            #トラッキングする条件
+            # if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
+            #     fruit_array.append([center_x, center_y, kind])
 
-            # 以下古いプログラム
-            # if len(boxes.xyxy) == 1:
-            #     x1, y1, x2, y2 = boxes.xyxy[0]
-            #     x1, y1, x2, y2 = int(x1), int(y1), int(
-            #         x2), int(y2)  # convert to int values
-            #     state = 1
-            #     x = round((x1 + x2) / 2 / width * 100 - 50)
-            #     y = round((y1 + y2) / 2 / height * 100)
-            # elif len(boxes.xyxy) > 1:
-            #     fruit_array = []
-            #     fruit_array_all = []
-            #     for box in boxes:
-            #         x1, y1, x2, y2 = box.xyxy[0]
-            #         x1, y1, x2, y2 = int(x1), int(y1), int(
-            #             x2), int(y2)  # convert to int values
-            #         center_x = (x1 + x2) / 2 / width
-            #         center_y = (y1 + y2) / 2 / height
-            #         state = 1
-            #         fruit_array_all.append([center_x, center_y, kind])
-            #         if(margin[1] > center_x and margin[3] < center_x and margin[0] < center_y and margin[2] > center_y):
-            #             fruit_array.append([center_x, center_y, kind])
-            #     if len(fruit_array) == 0:
-            #         for i in range(len(fruit_array_all)-1)[::-1]:
-            #             if fruit_array_all[i][1] > fruit_array_all[i+1][1]:
-            #                 fruit_array_all.pop(i + 1)
-            #         x = round(fruit_array_all[0][0] * 100 - 50)
-            #         y = round(fruit_array_all[0][1] * 100)
-            #     if len(fruit_array) > 1:
-            #         for i in range(len(fruit_array)-1)[::-1]:
-            #             if fruit_array[i][1] > fruit_array[i+1][1]:
-            #                 fruit_array.pop(i + 1)
-            #         x = round(fruit_array[0][0] * 100 - 50)
-            #         y = round(fruit_array[0][1] * 100)
-            # if y == 0:
-            #     LOGGER.info("NO fps:%d" % fps)
+            # xmoveのプログラム
+            # 20フレームの配列がプラスかマイナスで頻出したものの、同符号のなかで中央値(平均)を出す。それと、最新を比べて、変化量が大きすぎたら→変化量を小さくする。
+            fruit_array_all = []
+            for box in boxes:
+                x1, y1, x2, y2 = box.xyxy[0]
+                x1, y1, x2, y2 = int(x1), int(y1), int(
+                    x2), int(y2)  # convert to int values
+                center_x = round((x1 + x2) / 2 / width * 100 - 50)
+                center_y = round((y1 + y2) / 2 / height * 100)
+                state = 1
+                fruit_array_all.append([center_x, center_y, int(box.cls[0])])
+
+            if len(fruit_array_all) == 0:
+                # そもそも、おかしくね？これだと、認識しなったらkind更新されない
+                # 何も認識しなかったら
+                past_frame_array_x.append([0,0,0]) # none代入したほうが良くない？
+                # kind = 0 # 本当は0だとだめ
+            else:
+                for i in range(len(fruit_array_all)-1)[::-1]:
+                    # 1子しかないときどうなるの？
+                    range_from_top_central_1 = fruit_array_all[i][0]/2**2 + fruit_array_all[i][1]**2 # 距離
+                    range_from_top_central_2 = fruit_array_all[i+1][0]/2**2 + fruit_array_all[i+1][1]**2 # 距離
+                    if range_from_top_central_1 > range_from_top_central_2:
+                        fruit_array_all.pop(i+1)
+                past_frame_array_x.append(fruit_array_all[0])
+            if len(past_frame_array_x) > 10: # フレーム変更
+                past_frame_array_x.pop(0)
+            past_frame_plus_array = []
+            past_frame_minus_array = []
+            if past_frame_array_x != []:
+                for i in range(len(past_frame_array_x))[::-1]:
+                    if past_frame_array_x[i][0] > 0:
+                        # +なら
+                        past_frame_plus_array.append(past_frame_array_x[i][0])
+                    else:
+                        # -なら
+                        past_frame_minus_array.append(past_frame_array_x[i][0])
+
+            x_past_median = 0
+
+            if len(past_frame_plus_array) > len(past_frame_minus_array):
+                x_past_median = statistics.median(past_frame_plus_array)
+            else:
+                if len(past_frame_minus_array) != 0:# どっちも0ではないなら
+                    x_past_median = statistics.median(past_frame_minus_array)
+
+            # ぜんぜんよくないって
+
+            if x_past_median != 0 and fruit_array_all != []: # fruit_array_allがあったらだめながきがする
+                # LOGGER.info("----------------------------------------------")
+                if abs(fruit_array_all[0][0] - x_past_median) > 20 and fruit_array_all[0][0] / x_past_median < 0 and abs(x_past_median) > 8 and abs(fruit_array_all[0][0]) > 8: # 動画の30秒ぐらいに注目
+                    # 変化量が大きい、かつ、異符号 かつ センターよりじゃないなら
+                    # if x_past_median > 0:
+                        # x_past_median = fruit_array_all[0][0] + 30
+                    # else:
+                        # x_past_median = fruit_array_all[0][0] - 30
+                    LOGGER.info("------------------------------ %d     %d" % (fruit_array_all[0][0] , x_past_median))
+                else:
+                # if abs(fruit_array_all[0][0] - x_past_median) > 20 and fruit_array_all[0][0] / x_past_median < 0:
+                    LOGGER.info("                               %d     %d" % (fruit_array_all[0][0] , x_past_median))
+                    x_past_median = fruit_array_all[0][0]
+            # LOGGER.info(round(x_past_median))
+            x = round(x_past_median) # x_tempと明確に区別する
+
+            # if x == 0:
+            #     LOGGER.info("-----------------NO fps:%d" % fps)
             # else:
-            #     fruit = classNames[kind]
-            #     LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,fruit,fps))
-            # state = 1
+            # LOGGER.info("-----------------x:%d y:%d fruit:%s fps:%d" % (x,y,kind,fps))
+            state = 1
 
         if show == True:
             # object details

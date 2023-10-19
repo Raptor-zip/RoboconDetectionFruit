@@ -1,0 +1,71 @@
+[  9%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+[ 13%] Built target SerialKIMD
+[ 22%] Built target receiver
+[ 31%] Built target RopeMotion
+[ 40%] Built target BeltLiner_Controller
+[ 50%] Built target Solenoid_Controller
+[ 59%] Built target Crawl_Controller
+[ 68%] Built target WallUpMotion
+[ 72%] [32mBuilding CXX object CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o[0m
+In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8[m[K,
+                 from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:29:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjoy_msg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   29 | void Xmove_Controller_Node::Joy_Callback([01;35m[Kconst sensor_msgs::msg::Joy::SharedPtr joy_msg[m[K)
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:158:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  158 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+      |                                     [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:164:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  164 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:169:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  169 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:174:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  174 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[ 77%] [32m[1mLinking CXX executable Xmove_Controller[0m
+[ 81%] [32m[1mLinking CXX executable Upper_Controller[0m
+[ 81%] Built target Xmove_Controller
+[100%] Built target DriveMotion
+[100%] Built target Drive_Controller
+[100%] Built target Upper_Controller
+-- Install configuration: ""
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+-- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+-- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller" to ""
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+-- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller
+-- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller" to ""
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/receiver
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+-- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+-- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
