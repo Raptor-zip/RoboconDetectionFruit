@@ -28,6 +28,12 @@ Xmove_Controller_Node::~Xmove_Controller_Node()
 
 void Xmove_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr joy_msg)
 {
+    if (joy_msg->buttons[5] == 1) // R1ボタン
+    {
+        this->button_state |= 0b0001 << 5;
+    }else{
+        this->button_state &= ~(0b0001 << 5);
+    }
     // this->l1 = (float)(joy_msg->buttons[4]); // L1
     // this->r1 = (float)(joy_msg->buttons[5]); // R1
 }
@@ -35,27 +41,29 @@ void Xmove_Controller_Node::Joy_Callback(const sensor_msgs::msg::Joy::SharedPtr 
 void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg)
 {
     // RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
-
-    float gain = 4.0;
-    if(recognition_msg->data[3] == 0){
-        // blueberry
-        gain = 4.0;
-    }else if(recognition_msg->data[3] == 1){
-        // grape
-        gain = 3.1;
-    }else if(recognition_msg->data[3] == 2){
-        // mix
-        gain = 3.1;
-    }
-    if (recognition_msg->data[1] > 0)
+    if (this->button_state >> 5 != 1)
     {
-        this->l1 = 0;
-        this->r1 = (float)recognition_msg->data[1] / gain;
-    }
-    else
-    {
-        this->l1 = (float)recognition_msg->data[1] / gain * -1;
-        this->r1 = 0;
+        float gain = 4.0;
+        if(recognition_msg->data[3] == 0){
+            // blueberry
+            gain = 4.0;
+        }else if(recognition_msg->data[3] == 1){
+            // grape
+            gain = 3.1;
+        }else if(recognition_msg->data[3] == 2){
+            // mix
+            gain = 3.1;
+        }
+        if (recognition_msg->data[1] > 0)
+        {
+            this->l1 = 0;
+            this->r1 = (float)recognition_msg->data[1] / gain;
+        }
+        else
+        {
+            this->l1 = (float)recognition_msg->data[1] / gain * -1;
+            this->r1 = 0;
+        }
     }
 }
 
@@ -63,7 +71,7 @@ void Xmove_Controller_Node::timer_callback(void)
 {
     this->xmove_msg.M = this->l1 * -10.0;
     this->xmove_msg.M += this->r1 * 10.0;
-    RCLCPP_INFO(this->get_logger(), "Xmove value %f  ", this->xmove_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "Xmove value %f  ", this->xmove_msg.M);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);
     for (int i = 0; i < 8; i++)

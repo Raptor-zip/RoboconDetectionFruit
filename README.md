@@ -6,8 +6,11 @@
 
 ```
 sh setup.sh # スマホ画面をカメラ化
-ros2 launch src/robocon2023_b_dash/launch/all_launch.py # プログラム起動
+```
+
+```
 colcon build --cmake-clean-cache
+ros2 launch src/robocon2023_b_dash/launch/all_launch.py # プログラム起動
 ```
 
 ## topic

@@ -23,6 +23,7 @@ private:
     ABU2023_GenericOutput_Header_Typedef xmove_msg;
 
     float l1, r1;
+    uint8_t button_state;
     rclcpp::TimerBase::SharedPtr timer_;
 
 public:
