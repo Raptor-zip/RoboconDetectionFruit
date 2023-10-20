@@ -89,8 +89,9 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
     end_collection = clock();
     end_alignment = clock();
     // RCLCPP_INFO(this->get_logger(), "%d", recognition_msg->data[3]);
-    // if (this->button_state >> 4 != 1) //  && recognition_msg->data[2] != 0
-    // {
+    // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
+    if (this->button_state >> 4 != 1) //  && recognition_msg->data[2] != 0
+    {
         if ((double)(end_collection - start_collection) / CLOCKS_PER_SEC > 0.2){ // 今の所4秒と1秒くらいにしてる  && (double)(end_alignment - start_alignment) / CLOCKS_PER_SEC > 0.12
             // RCLCPP_INFO(this->get_logger(), "上下変更可能");
             if (recognition_msg->data[3] == 0) // blueberry
@@ -137,7 +138,7 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
             //     start_collection = clock(); // 開始時刻を取得
             // }
         }
-    // }
+    }
 }
 
 void Upper_Controller_Node::timer_callback(void)
@@ -180,7 +181,7 @@ void Upper_Controller_Node::timer_callback(void)
         }
     }
 
-    RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
+    // RCLCPP_INFO(this->get_logger(), "Upper value %f  ", this->upper_msg.M);
     // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
     std_msgs::msg::ByteMultiArray pub_msg;
     pub_msg.data.resize(8);

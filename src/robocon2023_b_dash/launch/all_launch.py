@@ -6,11 +6,11 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     return LaunchDescription(
         [
-            # Node(
-            #     package="joy",
-            #     namespace="robocon2023_b_dash",
-            #     executable="joy_node",
-            # ),
+            Node(
+                package="joy",
+                namespace="robocon2023_b_dash",
+                executable="joy_node",
+            ),
             Node(
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
