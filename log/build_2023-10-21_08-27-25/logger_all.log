@@ -1,0 +1,268 @@
+[2.351s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--cmake-clean-cache']
+[2.351s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fa36855d870>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fa3689e3940>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fa3689e3940>>)
+[2.454s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.455s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.455s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/roboconb/RoboconDetectionFruit-master'
+[2.455s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.455s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.455s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.456s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.477s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.478s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.478s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.478s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.478s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.478s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.479s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['ignore', 'ignore_ament_install']
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ignore'
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ignore_ament_install'
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['colcon_pkg']
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'colcon_pkg'
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['colcon_meta']
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'colcon_meta'
+[2.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['ros']
+[2.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ros'
+[2.486s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fruit_detection' with type 'ros.ament_python' and name 'fruit_detection'
+[2.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[2.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[2.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[2.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['ignore', 'ignore_ament_install']
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ignore'
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ignore_ament_install'
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['colcon_pkg']
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'colcon_pkg'
+[2.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['colcon_meta']
+[2.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'colcon_meta'
+[2.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['ros']
+[2.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ros'
+[2.489s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robocon2023_b_dash' with type 'ros.ament_cmake' and name 'robocon2023_b_dash'
+[2.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['ignore', 'ignore_ament_install']
+[2.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ignore'
+[2.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ignore_ament_install'
+[2.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['colcon_pkg']
+[2.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'colcon_pkg'
+[2.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['colcon_meta']
+[2.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'colcon_meta'
+[2.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['ros']
+[2.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ros'
+[2.491s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_to_kimd' with type 'ros.ament_cmake' and name 'ros_to_kimd'
+[2.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.727s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/roboconb/RoboconDetectionFruit-master/install
+[2.760s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[2.762s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_args' from command line to 'None'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_target' from command line to 'None'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_clean_cache' from command line to 'True'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_clean_first' from command line to 'False'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_force_configure' from command line to 'False'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'ament_cmake_args' from command line to 'None'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'catkin_cmake_args' from command line to 'None'
+[2.951s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.951s] DEBUG:colcon.colcon_core.verb:Building package 'fruit_detection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roboconb/RoboconDetectionFruit-master/build/fruit_detection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection', 'merge_install': False, 'path': '/home/roboconb/RoboconDetectionFruit-master/src/fruit_detection', 'symlink_install': False, 'test_result_base': None}
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_args' from command line to 'None'
+[2.980s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_target' from command line to 'None'
+[2.980s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.980s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_clean_cache' from command line to 'True'
+[2.980s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_clean_first' from command line to 'False'
+[2.981s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_force_configure' from command line to 'False'
+[2.981s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'ament_cmake_args' from command line to 'None'
+[2.981s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'catkin_cmake_args' from command line to 'None'
+[2.981s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.981s] DEBUG:colcon.colcon_core.verb:Building package 'robocon2023_b_dash' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash', 'merge_install': False, 'path': '/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash', 'symlink_install': False, 'test_result_base': None}
+[3.013s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_args' from command line to 'None'
+[3.013s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_target' from command line to 'None'
+[3.013s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.013s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_clean_cache' from command line to 'True'
+[3.014s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_clean_first' from command line to 'False'
+[3.014s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_force_configure' from command line to 'False'
+[3.014s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'ament_cmake_args' from command line to 'None'
+[3.014s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'catkin_cmake_args' from command line to 'None'
+[3.014s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.015s] DEBUG:colcon.colcon_core.verb:Building package 'ros_to_kimd' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd', 'merge_install': False, 'path': '/home/roboconb/RoboconDetectionFruit-master/src/ros_to_kimd', 'symlink_install': False, 'test_result_base': None}
+[3.044s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.079s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/roboconb/RoboconDetectionFruit-master/src/fruit_detection' with build type 'ament_python'
+[3.079s] Level 1:colcon.colcon_core.shell:create_environment_hook('fruit_detection', 'ament_prefix_path')
+[3.128s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.ps1'
+[3.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.dsv'
+[3.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.sh'
+[3.165s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.165s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.262s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash' with build type 'ament_cmake'
+[3.263s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash'
+[3.294s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.294s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.402s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/roboconb/RoboconDetectionFruit-master/src/ros_to_kimd' with build type 'ament_cmake'
+[3.402s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/roboconb/RoboconDetectionFruit-master/src/ros_to_kimd'
+[3.468s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.468s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.067s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/roboconb/RoboconDetectionFruit-master/src/fruit_detection'
+[4.098s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.098s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash -DCMAKE_INSTALL_PREFIX=/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash
+[4.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/roboconb/RoboconDetectionFruit-master/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd
+[5.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/src/fruit_detection': PYTHONPATH=/home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/prefix_override:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fruit_detection build --build-base /home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/build install --record /home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/install.log --single-version-externally-managed
+[5.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/src/fruit_detection' returned '0': PYTHONPATH=/home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/prefix_override:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fruit_detection build --build-base /home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/build install --record /home/roboconb/RoboconDetectionFruit-master/build/fruit_detection/install.log --single-version-externally-managed
+[5.758s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection' for CMake module files
+[5.759s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection' for CMake config files
+[5.761s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/lib'
+[5.762s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/bin'
+[5.762s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/lib/pkgconfig/fruit_detection.pc'
+[5.763s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/lib/python3.10/site-packages'
+[5.763s] Level 1:colcon.colcon_core.shell:create_environment_hook('fruit_detection', 'pythonpath')
+[5.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/pythonpath.ps1'
+[5.820s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/pythonpath.dsv'
+[5.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/hook/pythonpath.sh'
+[5.821s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/bin'
+[5.822s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fruit_detection)
+[5.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/package.ps1'
+[5.859s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/package.dsv'
+[5.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/package.sh'
+[5.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/package.bash'
+[5.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/fruit_detection/package.zsh'
+[5.888s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection/share/colcon-core/packages/fruit_detection)
+[8.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/roboconb/RoboconDetectionFruit-master/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd
+[8.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd -- -j8 -l8
+[8.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd -- -j8 -l8
+[8.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash -DCMAKE_INSTALL_PREFIX=/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash
+[8.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash -- -j8 -l8
+[8.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd
+[8.938s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_to_kimd)
+[8.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/roboconb/RoboconDetectionFruit-master/build/ros_to_kimd
+[9.042s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd' for CMake module files
+[9.055s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd' for CMake config files
+[9.055s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_to_kimd', 'cmake_prefix_path')
+[9.165s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.ps1'
+[9.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.dsv'
+[9.188s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.sh'
+[9.189s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib'
+[9.189s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/bin'
+[9.189s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib/pkgconfig/ros_to_kimd.pc'
+[9.189s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib/python3.10/site-packages'
+[9.190s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/bin'
+[9.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.ps1'
+[9.288s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.dsv'
+[9.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.sh'
+[9.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.bash'
+[9.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.zsh'
+[9.291s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/colcon-core/packages/ros_to_kimd)
+[9.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash -- -j8 -l8
+[9.492s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_to_kimd)
+[9.540s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd' for CMake module files
+[9.541s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd' for CMake config files
+[9.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_to_kimd', 'cmake_prefix_path')
+[9.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.ps1'
+[9.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.dsv'
+[9.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.sh'
+[9.600s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib'
+[9.600s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/bin'
+[9.600s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib/pkgconfig/ros_to_kimd.pc'
+[9.602s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/lib/python3.10/site-packages'
+[9.603s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/bin'
+[9.642s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.ps1'
+[9.642s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.dsv'
+[9.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.sh'
+[9.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.bash'
+[9.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/ros_to_kimd/package.zsh'
+[9.645s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboconb/RoboconDetectionFruit-master/install/ros_to_kimd/share/colcon-core/packages/ros_to_kimd)
+[9.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash
+[9.699s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash)
+[9.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/roboconb/RoboconDetectionFruit-master/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/roboconb/RoboconDetectionFruit-master/build/robocon2023_b_dash
+[9.765s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash' for CMake module files
+[9.766s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash' for CMake config files
+[9.766s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'cmake_prefix_path')
+[9.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.ps1'
+[9.809s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.dsv'
+[9.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.sh'
+[9.810s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib'
+[9.810s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/bin'
+[9.810s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib/pkgconfig/robocon2023_b_dash.pc'
+[9.811s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib/python3.10/site-packages'
+[9.811s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/bin'
+[9.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.ps1'
+[9.852s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv'
+[9.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.sh'
+[9.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.bash'
+[9.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.zsh'
+[9.856s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/colcon-core/packages/robocon2023_b_dash)
+[10.109s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash)
+[10.173s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash' for CMake module files
+[10.176s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash' for CMake config files
+[10.177s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'cmake_prefix_path')
+[10.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.ps1'
+[10.231s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.dsv'
+[10.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.sh'
+[10.234s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib'
+[10.234s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/bin'
+[10.234s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib/pkgconfig/robocon2023_b_dash.pc'
+[10.235s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/lib/python3.10/site-packages'
+[10.235s] Level 1:colcon.colcon_core.environment:checking '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/bin'
+[10.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.ps1'
+[10.288s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv'
+[10.289s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.sh'
+[10.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.bash'
+[10.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/robocon2023_b_dash/package.zsh'
+[10.292s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboconb/RoboconDetectionFruit-master/install/robocon2023_b_dash/share/colcon-core/packages/robocon2023_b_dash)
+[10.293s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.294s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.345s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.345s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.345s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.377s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.427s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboconb/RoboconDetectionFruit-master/install/local_setup.ps1'
+[10.428s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roboconb/RoboconDetectionFruit-master/install/_local_setup_util_ps1.py'
+[10.431s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboconb/RoboconDetectionFruit-master/install/setup.ps1'
+[10.473s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboconb/RoboconDetectionFruit-master/install/local_setup.sh'
+[10.475s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roboconb/RoboconDetectionFruit-master/install/_local_setup_util_sh.py'
+[10.476s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboconb/RoboconDetectionFruit-master/install/setup.sh'
+[10.522s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboconb/RoboconDetectionFruit-master/install/local_setup.bash'
+[10.524s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboconb/RoboconDetectionFruit-master/install/setup.bash'
+[10.575s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboconb/RoboconDetectionFruit-master/install/local_setup.zsh'
+[10.576s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboconb/RoboconDetectionFruit-master/install/setup.zsh'

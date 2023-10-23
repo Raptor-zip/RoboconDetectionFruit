@@ -1,0 +1,76 @@
+[0.431s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12
+[0.480s] [35m[1mConsolidate compiler generated dependencies of target Upper_Controller[0m
+[0.509s] [  9%] Built target DriveMotion
+[0.510s] [ 18%] Built target Crawl_Controller
+[0.511s] [ 27%] Built target Drive_Controller
+[0.512s] [ 36%] Built target SerialKIMD
+[0.513s] [ 45%] Built target Solenoid_Controller
+[0.514s] [ 54%] Built target RopeMotion
+[0.519s] [ 68%] Built target BeltLiner_Controller
+[0.519s] [ 72%] Built target receiver
+[0.519s] [ 77%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+[0.525s] [ 86%] Built target WallUpMotion
+[0.526s] [ 90%] [32mBuilding CXX object CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o[0m
+[2.913s] In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+[2.913s]                  from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[2.913s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[2.913s]    14 |         struct [01;35m[K{[m[K
+[2.913s]       |                [01;35m[K^[m[K
+[2.963s] In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8[m[K,
+[2.963s]                  from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[2.964s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[2.964s]    14 |         struct [01;35m[K{[m[K
+[2.964s]       |                [01;35m[K^[m[K
+[3.012s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[3.013s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:159:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[3.013s]   159 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+[3.013s]       |                                     [01;35m[K~~~~~~^~~~[m[K
+[3.013s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:165:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[3.013s]   165 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+[3.013s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[3.013s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:170:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[3.013s]   170 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+[3.013s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[3.013s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:175:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[3.013s]   175 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+[3.014s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[3.059s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[3.059s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:29:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kjoy_msg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.059s]    29 | void Xmove_Controller_Node::Joy_Callback([01;35m[Kconst sensor_msgs::msg::Joy::SharedPtr joy_msg[m[K)
+[3.059s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[11.899s] [ 95%] [32m[1mLinking CXX executable Upper_Controller[0m
+[11.900s] [100%] [32m[1mLinking CXX executable Xmove_Controller[0m
+[12.482s] [100%] Built target Upper_Controller
+[12.484s] [100%] Built target Xmove_Controller
+[12.498s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12
+[12.552s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash
+[12.559s] -- Install configuration: ""
+[12.560s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+[12.560s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+[12.571s] -- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller" to ""
+[12.571s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+[12.572s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+[12.572s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller
+[12.584s] -- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller" to ""
+[12.584s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion
+[12.585s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller
+[12.585s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller
+[12.586s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller
+[12.586s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion
+[12.586s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/receiver
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+[12.587s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+[12.588s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+[12.588s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+[12.589s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
+[12.591s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash

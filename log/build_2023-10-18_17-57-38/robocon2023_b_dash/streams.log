@@ -1,0 +1,41 @@
+[0.412s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12
+[0.492s] [35m[1mConsolidate compiler generated dependencies of target DriveMotion[0m
+[0.492s] [35m[1mConsolidate compiler generated dependencies of target Upper_Controller[0m
+[0.500s] [35m[1mConsolidate compiler generated dependencies of target Xmove_Controller[0m
+[0.502s] [35m[1mConsolidate compiler generated dependencies of target Drive_Controller[0m
+[0.523s] [ 22%] Built target WallUpMotion
+[0.523s] [ 27%] Built target Solenoid_Controller
+[0.523s] [ 27%] Built target BeltLiner_Controller
+[0.524s] [ 36%] Built target DriveMotion
+[0.525s] [ 45%] Built target Xmove_Controller
+[0.525s] [ 54%] Built target Crawl_Controller
+[0.526s] [ 63%] Built target SerialKIMD
+[0.528s] [ 72%] Built target RopeMotion
+[0.528s] [ 77%] [32mBuilding CXX object CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o[0m
+[0.533s] [ 86%] Built target receiver
+[0.539s] [ 95%] Built target Drive_Controller
+[2.546s] In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+[2.546s]                  from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[2.546s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[2.546s]    14 |         struct [01;35m[K{[m[K
+[2.546s]       |                [01;35m[K^[m[K
+[2.630s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:136:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+[2.630s]   136 |         [01;31m[Kif[m[K (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 15)
+[2.630s]       |         [01;31m[K^~[m[K
+[2.631s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[2.631s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:160:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[2.631s]   160 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+[2.631s]       |                                     [01;35m[K~~~~~~^~~~[m[K
+[2.631s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:167:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[2.631s]   167 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+[2.631s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[2.631s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:173:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[2.631s]   173 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+[2.631s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[2.632s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:179:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+[2.632s]   179 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+[2.632s]       |                                          [01;35m[K~~~~~~~^~~~[m[K
+[6.050s] gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] エラー 1
+[6.050s] gmake[1]: *** [CMakeFiles/Makefile2:261: CMakeFiles/Upper_Controller.dir/all] エラー 2
+[6.050s] gmake: *** [Makefile:146: all] エラー 2
+[6.053s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12

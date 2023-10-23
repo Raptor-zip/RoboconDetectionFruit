@@ -1,0 +1,31 @@
+In file included from [01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8[m[K,
+                 from [01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+In file included from [01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::ImageRecognition_Callback(std_msgs::msg::Int16MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:100:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_alignment[m[K’ was not declared in this scope
+  100 |                 [01;31m[Kstart_alignment[m[K = clock();
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:141:43:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  141 |     if ((this->button_state >> 0) & [01;35m[K0b001 == 1[m[K) // left
+      |                                     [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:147:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  147 |     else if ((this->button_state >> 1) & [01;35m[K0b0001 == 1[m[K) // right
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:152:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  152 |     else if ((this->button_state >> 2) & [01;35m[K0b0001 == 1[m[K) // up
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+[01m[K/home/roboconb/RoboconDetectionFruit-master/src/robocon2023_b_dash/src/Upper_Controller.cpp:157:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  157 |     else if ((this->button_state >> 3) & [01;35m[K0b0001 == 1[m[K) // down
+      |                                          [01;35m[K~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:261: CMakeFiles/Upper_Controller.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
