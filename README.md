@@ -78,6 +78,12 @@ colcon build --cmake-clean-cache
 ros2 launch src/robocon2023_b_dash/launch/all_launch.py # プログラム起動
 ```
 
+## 操作方法
+
+このコードは古いので、PC と直接 Bluetooth でコントローラーと接続して操縦する
+
+r1 を押している間は xmove が動作停止し、l1 を教えている間は上昇機構が動作停止する
+
 ## 上下左右が反転しているとき
 
 setup.sh の最後に`--lock-video-orientation=2`を追加する

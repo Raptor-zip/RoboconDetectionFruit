@@ -86,7 +86,7 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
 {
     end_collection = clock();
     // RCLCPP_INFO(this->get_logger(), "button value %d  ", this->button_state >> 4);
-    if (this->button_state >> 4 == 1 && recognition_msg->data[0] == 1)
+    if (this->button_state >> 4 != 1 && recognition_msg->data[0] == 1)
     {
         if ((double)(end_collection - start_collection) / CLOCKS_PER_SEC > 0.3){ // 暴走防止 大体*10した値
             // RCLCPP_INFO(this->get_logger(), "上下変更可能");
@@ -109,13 +109,13 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
                 // RCLCPP_INFO(this->get_logger(), "ミックス検出");
             }
 
-            if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 35)
-            {
-                this->upper_msg.M -= 20;
-                this->up_flag = 1; // 押しっぱなしになっても一回しか動作しないらしい
-                start_collection = clock(); // 開始時刻を取得
-                RCLCPP_INFO(this->get_logger(), "20UPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
-            }
+            // if (abs(recognition_msg->data[1]) < 20 && recognition_msg->data[2] < 35)
+            // {
+            //     this->upper_msg.M -= 20;
+            //     this->up_flag = 1; // 押しっぱなしになっても一回しか動作しないらしい
+            //     start_collection = clock(); // 開始時刻を取得
+            //     RCLCPP_INFO(this->get_logger(), "20UPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+            // }
         }
     }
 }

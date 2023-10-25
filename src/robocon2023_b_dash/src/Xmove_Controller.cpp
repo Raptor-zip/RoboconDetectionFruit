@@ -42,7 +42,7 @@ void Xmove_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
 {
     // RCLCPP_INFO(this->get_logger(), "x:%d y:%d fruit:%d", recognition_msg->data[1],recognition_msg->data[2],recognition_msg->data[3]);
     // RCLCPP_INFO(this->get_logger(), "x:%d", recognition_msg->data[1]);
-    if (this->button_state >> 5 == 1)
+    if (this->button_state >> 5 != 1)
     {
         float gain = 5.0;
         if(recognition_msg->data[3] == 0){

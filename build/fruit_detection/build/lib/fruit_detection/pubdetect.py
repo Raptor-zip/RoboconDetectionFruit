@@ -1,5 +1,3 @@
-# dousakakunin mati  10/9
-
 from ultralytics import YOLO
 import cv2
 import datetime
@@ -16,26 +14,13 @@ x = 0
 y = 0
 kind = 0
 
-# Areas of absolute recognition
-margin = [0.1, 0.8, 0.8 , 0.2]
 save = True
-# start webcam
+show = False #true ni dekinai
+
 cap = cv2.VideoCapture(9)
-# cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')) # korega nai to  timeout site kamera ga ninsiki sare nai kamo 10/9
 cap.set(3, 640)  # 横
 cap.set(4, 480)  # 縦
-cap.set(5, 50)  # fps
-# show = True
-show = False #true ni dekinai
-# cap.set(11, 480) # コントラスト
-# cap.set(15, 100)
-
-# CV_CAP_PROP_CONTRAST 画像のコントラスト（カメラの場合のみ）．11
-# CV_CAP_PROP_SATURATION 画像の彩度（カメラの場合のみ）．12
-# CV_CAP_PROP_HUE 画像の色相（カメラの場合のみ）．13
-# CV_CAP_PROP_GAIN 画像のゲイン（カメラの場合のみ）．14
-# CV_CAP_PROP_EXPOSURE 露出（カメラの場合のみ）．15
-
+cap.set(5, 30)  # fps 50fpsに直す！！
 
 def main():
     with ThreadPoolExecutor(max_workers=2) as executor:
@@ -91,7 +76,7 @@ def detect():
         # 動画の仕様（ファイル名、fourcc, FPS, サイズ）
         dt_now = datetime.datetime.now()
         video = cv2.VideoWriter(dt_now.strftime(
-            '%H%M%S')+'.mp4', fourcc, 30, (w, h))
+            '%H%M%S')+'.mp4', fourcc, 15, (w, h))
 
     if cap.isOpened():
         LOGGER.info("カメラの起動に成功")
@@ -105,7 +90,7 @@ def detect():
     # 各変数の初期値設定
     count = 0
     max_count = 30
-    fps = 0
+    fps = 30
 
     count_video = 0
 
@@ -120,6 +105,9 @@ def detect():
 
     x_temp = 0
     x_temp_count = 0
+    x_temp_count_2 = 0
+
+    margin_top = [0,30,35,40] # 上からの余白。認識しても無視する。何もないとき,ブルーベリー,ぶどう,ミックス
 
     while True:
         if count == max_count:
@@ -131,7 +119,7 @@ def detect():
             timer.start()
 
         success, img = cap.read()
-        results = model(img, stream=True, int8=False, half=False, show=False, imgsz=640, classes=(0,1,2), conf=0.75) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
+        results = model(img, stream=True, int8=False, half=False, show=True, imgsz=640, classes=(0,1,2), conf=0.6) # 416 de 30fps v23 pt 576(27) 544(30) 512(30) 480(30)
 
         height = img.shape[0]
         width = img.shape[1]
@@ -147,7 +135,7 @@ def detect():
                 center_y = round((y1 + y2) / 2 / height * 100)
                 fruit_array_all.append([center_x, center_y, int(box.cls[0])])
                 if save == True:
-                    cv2.rectangle(img, (x1,y1),(x2,y2),(246,205,87),3)
+                    cv2.rectangle(img, (x1,y1),(x2,y2),(230,205,87),3)
             if fruit_array_all == []:
                 # 何も認識しなかったら
                 past_frame_array.append(None)
@@ -165,9 +153,10 @@ def detect():
                 past_frame_array = [x for x in past_frame_array if x is not None] # 配列からNoneを取り除く
                 if len(past_frame_array) > 0:
                     state = 1
-                    kind = statistics.mode(past_frame_array) # kind_arrayの最瀕値を求める
+                    # kind = statistics.mode(past_frame_array) # kind_arrayの最瀕値を求める
                     past_frame_array.clear()
                     # LOGGER.info("kind更新---------------------")
+
 
             # xmoveのプログラム
             # 10フレームの配列がプラスかマイナスで頻出したものの、同符号のなかで中央値を出す。それと、最新を比べて、異符号かつ変化量が大きすぎたら、無視する
@@ -176,15 +165,10 @@ def detect():
                 x1, y1, x2, y2 = box.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(
                     x2), int(y2)  # convert to int values
-                center_x = round((x1 + x2) / 2 / width * 100 - 50)
-                center_y = round((y1 + y2) / 2 / height * 100)
-                fruit_array_all.append([center_x, center_y, int(box.cls[0])])
+                fruit_array_all.append([round((x1 + x2) / 2 / width * 100 - 50), round((y1 + y2) / 2 / height * 100), int(box.cls[0])])
 
             # fruit_array_all = [[1,2,3],[-50,99,1],[25,25,2]]
             if fruit_array_all == []:
-                # そもそも、おかしくね？これだと、認識しなったらkind更新されない
-                # 何も認識しなかったら
-                past_frame_array_x.append([0,0,0]) # none代入したほうが良くない？
                 y = 99 # yは途切れてもいいため、補正する前に出す 0にしたいけど、そうすると20UPがずっと続いちゃうかも
                 state = 0
             else:
@@ -202,68 +186,49 @@ def detect():
                 fruit_array_all = fruit_array_all[0]
 
                 y = fruit_array_all[1] # yは途切れてもいいため、補正する前に出す
-                past_frame_array_x.append(fruit_array_all)
-            if len(past_frame_array_x) > fps * 1: # 1秒以上前の情報を評価対象から外す
-                past_frame_array_x.pop(0)
-            past_frame_plus_array = []
-            past_frame_minus_array = []
-            if past_frame_array_x != []:
-                for i in range(len(past_frame_array_x))[::-1]:
-                    if past_frame_array_x[i][0] > 0:
-                        # +なら
-                        past_frame_plus_array.append(past_frame_array_x[i][0])
-                    else:
-                        # -なら
-                        past_frame_minus_array.append(past_frame_array_x[i][0])
-            x_past_median = 0
-
-            if len(past_frame_plus_array) > len(past_frame_minus_array):
-                x_past_median = statistics.median(past_frame_plus_array)
-            else:
-                if len(past_frame_minus_array) != 0:# どっちも0ではないなら
-                    x_past_median = statistics.median(past_frame_minus_array)
             x_last = x_temp # x_tempは前回の情報
+            cv2.putText(img, str(x_last), (0, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
             # fruit_array_allが一個になってない
-            if x_past_median != 0 and fruit_array_all != []: # fruit_array_allがあったらだめながきがする
+            if fruit_array_all != []: # fruit_array_allがあったらだめながきがする x_past_median != 0 and
                 if fruit_array_all[0] != 0:
-                    state = 1
-                    if x_last / fruit_array_all[0] <= 0: # x_past_median / fruit_array_all[0][0] < 0 or
-                        # LOGGER.info("222")
-                        # if abs(fruit_array_all[0][0] - x_past_median) < 20: # 変化量を測定
-                        #     LOGGER.info("225")
-                        #     x = x_past_median
-                        # else:
-                        #     LOGGER.info("無視229")
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (255,0,0), thickness=1, lineType=cv2.LINE_8)
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50+20)/100*width), 0), (int((fruit_array_all[0]+50+20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50-20)/100*width), 0), (int((fruit_array_all[0]+50-20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
+                    if x_last == 0:
+                        x = fruit_array_all[0]
+                        x_temp = x
+
+                        cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (255,255,0), thickness=3, lineType=cv2.LINE_8)
+                    else:
+                        state = 1
                         if abs(fruit_array_all[0] - x_last) < 20:
                             # LOGGER.info("230 %d" % fruit_array_all[0])
                             x = fruit_array_all[0]
+                            kind = fruit_array_all[2]
                             x_temp = x
-                            # x_temp_count += 1
-                            # if x_temp_count > fps * 1.5:
-                            #     x_temp_count = 0
-                            #     x_temp = 0
+
+                            x_temp_count = 0
+                            x_temp_count_2 = 0
+
+                            cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (255,255,0), thickness=3, lineType=cv2.LINE_8)
+                            cv2.rectangle(img, (int((fruit_array_all[0]+50+20)/100*width), 0), (int((fruit_array_all[0]+50+20)/100*width), height), (0,0,255), thickness=2, lineType=cv2.LINE_8)
+                            cv2.rectangle(img, (int((fruit_array_all[0]+50-20)/100*width), 0), (int((fruit_array_all[0]+50-20)/100*width), height), (0,0,255), thickness=2, lineType=cv2.LINE_8)
+
                         else:
+                            LOGGER.info("距離20以上")
                             x = 0
+                            x_temp_count += 1
+                            if x_temp_count > fps * 1:
+                                x_temp_count = 0
+                                x_temp = 0
+                                cv2.putText(img, "00000000000000", (100, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+                                LOGGER.info("xtemp00000000000000000000000000")
                             # LOGGER.info("232                %d" % x)
-                    else:
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (0,255,0), thickness=1, lineType=cv2.LINE_8)
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50+20)/100*width), 0), (int((fruit_array_all[0]+50+20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
-                        cv2.rectangle(img, (int((fruit_array_all[0]+50-20)/100*width), 0), (int((fruit_array_all[0]+50-20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
-                        if abs(fruit_array_all[0] - x_last) < 20:
-                            # fruit_array_allとx_past_medianとlast_arrayが同符号なら
-                            # LOGGER.info("239 %d" % fruit_array_all[0])
-                            x = fruit_array_all[0]
-                            x_temp = x
-                        else:
-                            # LOGGER.info("豆腐号だけど暴走しそう！！！！！！！！！！！！！")
-                            x = 0
+
+                            cv2.rectangle(img, (int((x_last+50)/100*width), 0), (int((x_last+50)/100*width), height), (0,255,255), thickness=3, lineType=cv2.LINE_8)
+                            cv2.rectangle(img, (int((x_last+50+20)/100*width), 0), (int((x_last+50+20)/100*width), height), (0,0,255), thickness=2, lineType=cv2.LINE_8)
+                            cv2.rectangle(img, (int((x_last+50-20)/100*width), 0), (int((x_last+50-20)/100*width), height), (0,0,255), thickness=2, lineType=cv2.LINE_8)
                 else:
-                    x=0
+                    x = 0
             else:
-                x=0
+                x = 0
 
             # LOGGER.info("x:%d y:%d fruit:%s fps:%d" % (x,y,kind,fps))
             # LOGGER.info("x:%d" % x)
@@ -271,27 +236,14 @@ def detect():
             #     LOGGER.info("-----------------NO fps:%d" % fps)
             # else:
             #     LOGGER.info("-----------------x:%d y:%d fruit:%s fps:%d" % (x,y,kind,fps))
+        LOGGER.info("%d fps" % fps)
 
-        if save == True or show == True:
-            # object details
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            fontScale = 1.3
-            color = (255, 255, 255)
-            thickness = 3
-
-            # print(246)
-            # cv2.drawMarker(img, (int((x+50)/100*width), int(y/100*height)),(246,205,87), markerType=cv2.MARKER_STAR, markerSize=30, thickness=4)
-            cv2.rectangle(img, (int((x+50)/100*width), 0), (int((x+50)/100*width), height), (246,205,87), thickness=4, lineType=cv2.LINE_8)
-            # cv2.drawMarker(img, (int((x+50)/100*width), int(y/100*height)),(255,255,255), markerType=cv2.MARKER_STAR, markerSize=30, thickness=1)
-            # print(249)
-            # resized = cv2.resize(img, None, None, 0.8, 0.8)
-            # cv2.imshow('Webcam', resized)
 
         if save == True:
             video.write(img)  # 動画を1フレームずつ保存する
-            LOGGER.info(count_video)
-            # LOGGER.info("%d fps" % fps)
-            if count_video > fps * 20 and count_video > 1500:
+            # LOGGER.info(count_video)
+            # cv2.imwrite(str(count_video)+'.jpg', img)
+            if count_video > 1000:
                 LOGGER.info("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
                 video.release()
 
