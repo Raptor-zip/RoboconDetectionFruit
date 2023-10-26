@@ -20,7 +20,7 @@ def generate_launch_description():
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
                 executable="Xmove_Controller",
-                # output = "screen", # print wo hyouzi
+                output = "screen", # print wo hyouzi
                 # prefix= "xterm -e",
             ),
             Node(
@@ -37,7 +37,7 @@ def generate_launch_description():
                 package="robocon2023_b_dash",
                 namespace="robocon2023_b_dash",
                 executable="Upper_Controller",
-                # output = "screen", # print wo hyouzi
+                output = "screen", # print wo hyouzi
                 # prefix= "xterm -e",
             ),
             Node(
@@ -45,6 +45,7 @@ def generate_launch_description():
                 namespace="robocon2023_b_dash",
                 executable="pubdetect",
                 output = "screen", # print wo hyouzi
+                # prefix= "xterm -e",
             ),
             Node(
                 package="robocon2023_b_dash",
