@@ -12,7 +12,7 @@ import statistics # 最頻値を算出
 state = 2
 x = y = kind = 0
 
-save = False
+save = True
 show = True
 
 cap = cv2.VideoCapture(9)
@@ -89,6 +89,7 @@ def detect():
     count_video = 0
     x_temp = x_temp_count = 0
     fit = False # 上中央にフルーツがいったときに動かないようにする
+    count_fit = 0
 
     margin_top = [0,20,25,30] # 上からの余白。認識しても無視する。何もないとき,ブルーベリー,ぶどう,ミックス
     while True:
@@ -123,67 +124,70 @@ def detect():
                 else:
                     if save == True or show == True:
                         cv2.rectangle(img, (x1,y1),(x2,y2),(255,255,255),2)
-            if fruit_array_all == []:
-                state = 0
+            if fit == True:
+                LOGGER.info("ロック中")
+                count_fit += 1
+                if count_fit > fps * 1 and count_fit > 15:
+                    fit = False
+                    count_fit = 0
             else:
-                state = 1
-                if len(fruit_array_all) > 1:
-                    while 1 < len(fruit_array_all): # fruit_array_allが1個になるまで絞る
-                        range_from_top_central_1 = fruit_array_all[0][0]/2**2 + fruit_array_all[0][1]**2 # 距離
-                        range_from_top_central_2 = fruit_array_all[1][0]/2**2 + fruit_array_all[1][1]**2 # 距離
-                        if range_from_top_central_1 > range_from_top_central_2:
-                            fruit_array_all.pop(0)
-                        else:
-                            fruit_array_all.pop(1)
-                fruit_array_all = fruit_array_all[0]
-
-                # y = fruit_array_all[1] # yは途切れてもいいため、無補正
-                # cv2.rectangle(img, (0, int(fruit_array_all[1]/100*height)), (width, int(fruit_array_all[1]/100*height)), (0,255,255), thickness=1, lineType=cv2.LINE_8)
-            x_last = x_temp # x_tempは前回の情報
-            cv2.putText(img, str(x_last), (0, 50), cv2.FONT_HERSHEY_PLAIN, 2, (255, 255, 255), 2, cv2.LINE_AA)
-            if state == 1:
-                if x_last == 0:
-                    x = fruit_array_all[0]
-                    y = fruit_array_all[1]
-                    kind = fruit_array_all[2]
-                    x_temp = x
-                    cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (0,255,255), thickness=2, lineType=cv2.LINE_8)
+                if fruit_array_all == []:
+                    state = 0
                 else:
-                    cv2.rectangle(img, (int((x_last+50+20)/100*width), 0), (int((x_last+50+20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
-                    cv2.rectangle(img, (int((x_last+50-20)/100*width), 0), (int((x_last+50-20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
-                    if abs(fruit_array_all[0] - x_last) < 20:
-                        # LOGGER.info("230 %d" % fruit_array_all[0])
+                    state = 1
+                    if len(fruit_array_all) > 1:
+                        while 1 < len(fruit_array_all): # fruit_array_allが1個になるまで絞る
+                            range_from_top_central_1 = fruit_array_all[0][0]/2**2 + fruit_array_all[0][1]**2 # 距離
+                            range_from_top_central_2 = fruit_array_all[1][0]/2**2 + fruit_array_all[1][1]**2 # 距離
+                            if range_from_top_central_1 > range_from_top_central_2:
+                                fruit_array_all.pop(0)
+                            else:
+                                fruit_array_all.pop(1)
+                    fruit_array_all = fruit_array_all[0]
+                x_last = x_temp # x_tempは前回の情報
+                cv2.putText(img, str(x_last), (0, 50), cv2.FONT_HERSHEY_PLAIN, 2, (255, 255, 255), 2, cv2.LINE_AA)
+                if state == 1:
+                    if x_last == 0:
                         x = fruit_array_all[0]
                         y = fruit_array_all[1]
-                        kind = fruit_array_all[2] # 消すの忘れないでね
+                        kind = fruit_array_all[2]
                         x_temp = x
-                        x_temp_count = 0
-
                         cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (0,255,255), thickness=2, lineType=cv2.LINE_8)
-
                     else:
-                        # LOGGER.info("距離20以上")
+                        cv2.rectangle(img, (int((x_last+50+20)/100*width), 0), (int((x_last+50+20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
+                        cv2.rectangle(img, (int((x_last+50-20)/100*width), 0), (int((x_last+50-20)/100*width), height), (0,0,255), thickness=1, lineType=cv2.LINE_8)
+                        if abs(fruit_array_all[0] - x_last) < 20:
+                            # LOGGER.info("230 %d" % fruit_array_all[0])
+                            x = fruit_array_all[0]
+                            y = fruit_array_all[1]
+                            kind = fruit_array_all[2] # 消すの忘れないでね
+                            x_temp = x
+                            x_temp_count = 0
+
+                            cv2.rectangle(img, (int((fruit_array_all[0]+50)/100*width), 0), (int((fruit_array_all[0]+50)/100*width), height), (0,255,255), thickness=2, lineType=cv2.LINE_8)
+
+                        else:
+                            # LOGGER.info("距離20以上")
+                            x = 0
+                            y = -1
+                            x_temp_count += 1
+                            if x_temp_count > fps * 1 and x_temp_count > 10:
+                                x_temp = x_temp_count = 0
+                                LOGGER.info("                  x_tempリセット")
+                            # LOGGER.info("232                %d" % x)
+
+
+                    # cv2.rectangle(img, (0, int((y-margin_top[kind+1])/100*height)), (width, int((y-margin_top[kind+1])/100*height)), (255,255,255), thickness=2, lineType=cv2.LINE_8)
+                    # お助けアイテムに近づいたときに移動を制限する
+                    if x != 0 and abs(x) < 5 and y-margin_top[kind+1] < 10:
+                        fit = True
                         x = 0
-                        y = -1
-                        x_temp_count += 1
-                        if x_temp_count > fps * 1 and x_temp_count > 10:
-                            x_temp = x_temp_count = 0
-                            cv2.putText(img, "00000000000000", (100, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
-                            LOGGER.info("                  x_tempリセット")
-                        # LOGGER.info("232                %d" % x)
-
-
-                # cv2.rectangle(img, (0, int((y-margin_top[kind+1])/100*height)), (width, int((y-margin_top[kind+1])/100*height)), (255,255,255), thickness=2, lineType=cv2.LINE_8)
-                # お助けアイテムに近づいたときに移動を制限する
-                if state == 1 and abs(x) < 5 and y-margin_top[kind+1] < 10:
-                    fit = True
+                        cv2.putText(img, str(y-margin_top[kind+1]), (100, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
+                else:
                     x = 0
-                    cv2.putText(img, str(y-margin_top[kind+1]), (100, 50), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 5, cv2.LINE_AA)
-            else:
-                x = 0
-                y = -1
+                    y = -1
 
-            cv2.rectangle(img, (0, int(y/100*height)), (width, int(y/100*height)), (0,255,255), thickness=1, lineType=cv2.LINE_8)
+                cv2.rectangle(img, (0, int(y/100*height)), (width, int(y/100*height)), (0,255,255), thickness=2, lineType=cv2.LINE_8)
 
             LOGGER.info("fruit:%s fps:%d" % (kind,fps))
             # LOGGER.info("states: %d x:%d y:%d fruit:%s fps:%d" % (state,x,y,kind,fps))

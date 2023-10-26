@@ -4,7 +4,7 @@
 
 int gONOFF = 1; //0:OFF 1:ON
 
-clock_t start_collection, end_collection; //自動回収の開始時刻と終了時刻を格納する変数
+clock_t start_collection, end_collection, start_elevating, end_elevating; //自動回収の開始時刻と終了時刻を格納する変数と最後の自動制御した時刻を格納する変数
 double elapsed;     // 経過時間を格納する変数
 
 Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller")
@@ -19,7 +19,7 @@ Upper_Controller_Node::Upper_Controller_Node() : rclcpp::Node("Upper_Controller"
     this->upper_msg.type[1] = 180;
     this->upper_msg.ID = 7;
     this->upper_msg.cmd = 5;
-    this->upper_msg.M = 250;
+    this->upper_msg.M = 300; // 250から300にしたけどいいよね？
 
     this->JoySubscription = this->create_subscription<sensor_msgs::msg::Joy>("joy", rclcpp::QoS(10), std::bind(&Upper_Controller_Node::Joy_Callback, this, std::placeholders::_1));
 
@@ -94,18 +94,21 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
             {
                 this->upper_msg.M = 194;
                 this->up_flag = 0;
+                start_elevating = clock();
                 // RCLCPP_INFO(this->get_logger(), "ブルーベリー検出");
             }
             if (recognition_msg->data[3] == 1) // grape
             {
                 this->upper_msg.M = 118;
                 this->up_flag = 0;
+                start_elevating = clock();
                 // RCLCPP_INFO(this->get_logger(), "ぶどう検出");
             }
             if (recognition_msg->data[3] == 2) // mix
             {
                 this->upper_msg.M = 95;
                 this->up_flag = 0;
+                start_elevating = clock();
                 // RCLCPP_INFO(this->get_logger(), "ミックス検出");
             }
 
@@ -122,6 +125,10 @@ void Upper_Controller_Node::ImageRecognition_Callback(const std_msgs::msg::Int16
 
 void Upper_Controller_Node::timer_callback(void)
 {
+    end_elevating = clock();
+    if ((double)(end_elevating - start_elevating) / CLOCKS_PER_SEC > 0.4){ // 暴走防止 大体*10した値
+        this->upper_msg.M = 300;
+    }
     if (this->upper_msg.M > 64)
     {
         this->upper_msg.M -= 0.05 * this->option;
