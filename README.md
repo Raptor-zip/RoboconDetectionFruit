@@ -25,6 +25,8 @@ cd
 sudo apt install v4l2loopback-dkms
 ```
 
+USB の権限入れる
+
 <!-- pip3 install openvino -->
 
 ## 初期設定が終わったら
