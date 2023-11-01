@@ -172,7 +172,7 @@ def detect():
                         cv2.putText(img, str(abs(fruit_array_all[0] - x_last)), (0, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 255, 255), 2, cv2.LINE_AA)
 
                         # マーカー表示
-                        cv2.drawMarker(img, position=(round((fruit_array_all[0]+50)/100*width), round((fruit_array_all[1])/100*height)),color=(0, 255, 0), markerType=cv2.MARKER_CROSS, markerSize=30, thickness=4, line_type=cv2.LINE_4)
+                        cv2.drawMarker(img, position=(round((fruit_array_all[0]+50)/100*width), round((fruit_array_all[1])/100*height)),color=(0, 255, 0), markerType=cv2.MARKER_CROSS, markerSize=30, thickness=8, line_type=cv2.LINE_4)
                         # 範囲表示
                         cv2.rectangle(img, (int((x_last+50+x_recognition_range)/100*width), int((y_last+y_recognition_range)/100*height)), (int((x_last+50-x_recognition_range)/100*width), int((y_last-y_recognition_range)/100*height)), (0,0,255), thickness=2, lineType=cv2.LINE_8)
 
