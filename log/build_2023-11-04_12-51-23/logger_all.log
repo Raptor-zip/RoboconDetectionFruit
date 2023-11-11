@@ -1,0 +1,628 @@
+[1.298s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--cmake-clean-cache']
+[1.298s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f7c4ecc6cb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f7c4ec8ead0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f7c4ec8ead0>>)
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.357s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.357s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kaibuchisoma/robocon_ws'
+[1.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.357s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.371s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.372s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.372s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.372s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['ignore', 'ignore_ament_install']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ignore'
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ignore_ament_install'
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['colcon_pkg']
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'colcon_pkg'
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['colcon_meta']
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'colcon_meta'
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extensions ['ros']
+[1.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/fruit_detection) by extension 'ros'
+[1.378s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fruit_detection' with type 'ros.ament_python' and name 'fruit_detection'
+[1.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.378s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['ignore', 'ignore_ament_install']
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'ignore'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'ignore_ament_install'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['colcon_pkg']
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'colcon_pkg'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['colcon_meta']
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'colcon_meta'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['ros']
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'ros'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['cmake', 'python']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'cmake'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'python'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extensions ['python_setup_py']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/remove_920mhz) by extension 'python_setup_py'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['ignore', 'ignore_ament_install']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ignore'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ignore_ament_install'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['colcon_pkg']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'colcon_pkg'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['colcon_meta']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'colcon_meta'
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extensions ['ros']
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash) by extension 'ros'
+[1.381s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robocon2023_b_dash' with type 'ros.ament_cmake' and name 'robocon2023_b_dash'
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extensions ['ignore', 'ignore_ament_install']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extension 'ignore'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extension 'ignore_ament_install'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extensions ['colcon_pkg']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extension 'colcon_pkg'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extensions ['colcon_meta']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extension 'colcon_meta'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extensions ['ros']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_receiver) by extension 'ros'
+[1.383s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robocon2023_b_dash_receiver' with type 'ros.ament_cmake' and name 'robocon2023_b_dash_receiver'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extensions ['ignore', 'ignore_ament_install']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extension 'ignore'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extension 'ignore_ament_install'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extensions ['colcon_pkg']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extension 'colcon_pkg'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extensions ['colcon_meta']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extension 'colcon_meta'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extensions ['ros']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/robocon2023_b_dash_transceiver) by extension 'ros'
+[1.384s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robocon2023_b_dash_transceiver' with type 'ros.ament_cmake' and name 'robocon2023_b_dash_transceiver'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['ignore', 'ignore_ament_install']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ignore'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ignore_ament_install'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['colcon_pkg']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'colcon_pkg'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['colcon_meta']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'colcon_meta'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extensions ['ros']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_to_kimd) by extension 'ros'
+[1.385s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_to_kimd' with type 'ros.ament_cmake' and name 'ros_to_kimd'
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore'
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore_ament_install'
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_pkg']
+[1.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_pkg'
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_meta']
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_meta'
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ros']
+[1.386s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ros'
+[1.387s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sllidar_ros2' with type 'ros.ament_cmake' and name 'sllidar_ros2'
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extensions ['ignore', 'ignore_ament_install']
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extension 'ignore'
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extension 'ignore_ament_install'
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extensions ['colcon_pkg']
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extension 'colcon_pkg'
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extensions ['colcon_meta']
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extension 'colcon_meta'
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extensions ['ros']
+[1.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/time_practice) by extension 'ros'
+[1.388s] DEBUG:colcon.colcon_core.package_identification:Package 'src/time_practice' with type 'ros.ament_cmake' and name 'time_practice'
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extensions ['ignore', 'ignore_ament_install']
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extension 'ignore'
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extension 'ignore_ament_install'
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extensions ['colcon_pkg']
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extension 'colcon_pkg'
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extensions ['colcon_meta']
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extension 'colcon_meta'
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extensions ['ros']
+[1.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb920_ver2) by extension 'ros'
+[1.390s] DEBUG:colcon.colcon_core.package_identification:Package 'src/usb920_ver2' with type 'ros.ament_cmake' and name 'usb920_ver2'
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.526s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.526s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.573s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/kaibuchisoma/robocon_ws/install
+[1.597s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.599s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_args' from command line to 'None'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_target' from command line to 'None'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_clean_cache' from command line to 'True'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_clean_first' from command line to 'False'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'cmake_force_configure' from command line to 'False'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'ament_cmake_args' from command line to 'None'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'catkin_cmake_args' from command line to 'None'
+[1.740s] Level 5:colcon.colcon_core.verb:set package 'fruit_detection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.740s] DEBUG:colcon.colcon_core.verb:Building package 'fruit_detection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/fruit_detection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/fruit_detection', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/fruit_detection', 'symlink_install': False, 'test_result_base': None}
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_args' from command line to 'None'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_target' from command line to 'None'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_clean_cache' from command line to 'True'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_clean_first' from command line to 'False'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'cmake_force_configure' from command line to 'False'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'ament_cmake_args' from command line to 'None'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'catkin_cmake_args' from command line to 'None'
+[1.763s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.763s] DEBUG:colcon.colcon_core.verb:Building package 'robocon2023_b_dash' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash', 'symlink_install': False, 'test_result_base': None}
+[1.784s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_args' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_target' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_clean_cache' from command line to 'True'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_clean_first' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'cmake_force_configure' from command line to 'False'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'ament_cmake_args' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.785s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_receiver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.785s] DEBUG:colcon.colcon_core.verb:Building package 'robocon2023_b_dash_receiver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver', 'symlink_install': False, 'test_result_base': None}
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_args' from command line to 'None'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_target' from command line to 'None'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_clean_cache' from command line to 'True'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_clean_first' from command line to 'False'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'cmake_force_configure' from command line to 'False'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'ament_cmake_args' from command line to 'None'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.806s] Level 5:colcon.colcon_core.verb:set package 'robocon2023_b_dash_transceiver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.806s] DEBUG:colcon.colcon_core.verb:Building package 'robocon2023_b_dash_transceiver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_transceiver', 'symlink_install': False, 'test_result_base': None}
+[1.826s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_args' from command line to 'None'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_target' from command line to 'None'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_clean_cache' from command line to 'True'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_clean_first' from command line to 'False'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'cmake_force_configure' from command line to 'False'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'ament_cmake_args' from command line to 'None'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'catkin_cmake_args' from command line to 'None'
+[1.827s] Level 5:colcon.colcon_core.verb:set package 'ros_to_kimd' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.827s] DEBUG:colcon.colcon_core.verb:Building package 'ros_to_kimd' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/ros_to_kimd', 'symlink_install': False, 'test_result_base': None}
+[1.847s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_args' from command line to 'None'
+[1.847s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target' from command line to 'None'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_cache' from command line to 'True'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.848s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.848s] DEBUG:colcon.colcon_core.verb:Building package 'sllidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/sllidar_ros2', 'symlink_install': False, 'test_result_base': None}
+[1.867s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_args' from command line to 'None'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_target' from command line to 'None'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_clean_cache' from command line to 'True'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_clean_first' from command line to 'False'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'cmake_force_configure' from command line to 'False'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'ament_cmake_args' from command line to 'None'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'catkin_cmake_args' from command line to 'None'
+[1.868s] Level 5:colcon.colcon_core.verb:set package 'time_practice' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.868s] DEBUG:colcon.colcon_core.verb:Building package 'time_practice' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/time_practice', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/time_practice', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/time_practice', 'symlink_install': False, 'test_result_base': None}
+[1.890s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_args' from command line to 'None'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_target' from command line to 'None'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_clean_cache' from command line to 'True'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_clean_first' from command line to 'False'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'cmake_force_configure' from command line to 'False'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'ament_cmake_args' from command line to 'None'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.891s] Level 5:colcon.colcon_core.verb:set package 'usb920_ver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.891s] DEBUG:colcon.colcon_core.verb:Building package 'usb920_ver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kaibuchisoma/robocon_ws/build/usb920_ver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kaibuchisoma/robocon_ws/install/usb920_ver2', 'merge_install': False, 'path': '/home/kaibuchisoma/robocon_ws/src/usb920_ver2', 'symlink_install': False, 'test_result_base': None}
+[1.914s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.939s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.939s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/fruit_detection' with build type 'ament_python'
+[1.940s] Level 1:colcon.colcon_core.shell:create_environment_hook('fruit_detection', 'ament_prefix_path')
+[1.970s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.ps1'
+[1.971s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.dsv'
+[1.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/ament_prefix_path.sh'
+[2.004s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.004s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.077s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash' with build type 'ament_cmake'
+[2.077s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash'
+[2.098s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.098s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.166s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver' with build type 'ament_cmake'
+[2.167s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver'
+[2.189s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.190s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.260s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_transceiver' with build type 'ament_cmake'
+[2.260s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_transceiver'
+[2.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.354s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/ros_to_kimd' with build type 'ament_cmake'
+[2.354s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/ros_to_kimd'
+[2.377s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.377s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.444s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/sllidar_ros2' with build type 'ament_cmake'
+[2.444s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/sllidar_ros2'
+[2.466s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.466s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.535s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/time_practice' with build type 'ament_cmake'
+[2.535s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/time_practice'
+[2.557s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.557s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.621s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kaibuchisoma/robocon_ws/src/usb920_ver2' with build type 'ament_cmake'
+[2.621s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kaibuchisoma/robocon_ws/src/usb920_ver2'
+[2.643s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.644s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.026s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kaibuchisoma/robocon_ws/src/fruit_detection'
+[3.047s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.047s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash
+[3.115s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver
+[3.117s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_transceiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver
+[3.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/ros_to_kimd
+[3.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/sllidar_ros2
+[3.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/time_practice': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/time_practice -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/time_practice
+[3.137s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/usb920_ver2 -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/usb920_ver2
+[3.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/src/fruit_detection': PYTHONPATH=/home/kaibuchisoma/robocon_ws/build/fruit_detection/prefix_override:/home/kaibuchisoma/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fruit_detection build --build-base /home/kaibuchisoma/robocon_ws/build/fruit_detection/build install --record /home/kaibuchisoma/robocon_ws/build/fruit_detection/install.log --single-version-externally-managed
+[4.597s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/src/fruit_detection' returned '0': PYTHONPATH=/home/kaibuchisoma/robocon_ws/build/fruit_detection/prefix_override:/home/kaibuchisoma/robocon_ws/install/fruit_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fruit_detection build --build-base /home/kaibuchisoma/robocon_ws/build/fruit_detection/build install --record /home/kaibuchisoma/robocon_ws/build/fruit_detection/install.log --single-version-externally-managed
+[4.632s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection' for CMake module files
+[4.632s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection' for CMake config files
+[4.633s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection/lib'
+[4.634s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection/bin'
+[4.634s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection/lib/pkgconfig/fruit_detection.pc'
+[4.634s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection/lib/python3.10/site-packages'
+[4.634s] Level 1:colcon.colcon_core.shell:create_environment_hook('fruit_detection', 'pythonpath')
+[4.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/pythonpath.ps1'
+[4.665s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/pythonpath.dsv'
+[4.667s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/hook/pythonpath.sh'
+[4.668s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/fruit_detection/bin'
+[4.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fruit_detection)
+[4.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/package.ps1'
+[4.720s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/package.dsv'
+[4.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/package.sh'
+[4.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/package.bash'
+[4.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/fruit_detection/package.zsh'
+[4.726s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/fruit_detection/share/colcon-core/packages/fruit_detection)
+[6.242s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/time_practice' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/time_practice -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/time_practice
+[6.243s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/time_practice': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/time_practice -- -j12 -l12
+[6.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/time_practice' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/time_practice -- -j12 -l12
+[6.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/time_practice': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/time_practice
+[6.543s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(time_practice)
+[6.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/time_practice' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/time_practice
+[6.582s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice' for CMake module files
+[6.583s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice' for CMake config files
+[6.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('time_practice', 'cmake_prefix_path')
+[6.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.ps1'
+[6.616s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.dsv'
+[6.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.sh'
+[6.619s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib'
+[6.619s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/bin'
+[6.619s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib/pkgconfig/time_practice.pc'
+[6.620s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib/python3.10/site-packages'
+[6.620s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/bin'
+[6.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.ps1'
+[6.652s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.dsv'
+[6.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.sh'
+[6.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.bash'
+[6.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.zsh'
+[6.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/time_practice/share/colcon-core/packages/time_practice)
+[6.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/sllidar_ros2
+[6.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/sllidar_ros2 -- -j12 -l12
+[6.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver
+[6.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver -- -j12 -l12
+[6.696s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/usb920_ver2 -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/usb920_ver2
+[6.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/usb920_ver2 -- -j12 -l12
+[6.776s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(time_practice)
+[6.840s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice' for CMake module files
+[6.842s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice' for CMake config files
+[6.842s] Level 1:colcon.colcon_core.shell:create_environment_hook('time_practice', 'cmake_prefix_path')
+[6.878s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.ps1'
+[6.879s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.dsv'
+[6.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/hook/cmake_prefix_path.sh'
+[6.881s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib'
+[6.881s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/bin'
+[6.881s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib/pkgconfig/time_practice.pc'
+[6.881s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/lib/python3.10/site-packages'
+[6.882s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/time_practice/bin'
+[6.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.ps1'
+[6.914s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.dsv'
+[6.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.sh'
+[6.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.bash'
+[6.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/time_practice/share/time_practice/package.zsh'
+[6.917s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/time_practice/share/colcon-core/packages/time_practice)
+[6.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/ros_to_kimd
+[6.922s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/ros_to_kimd -- -j12 -l12
+[6.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash
+[6.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12
+[6.927s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/usb920_ver2 -- -j12 -l12
+[6.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver -- -j12 -l12
+[6.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/sllidar_ros2 -- -j12 -l12
+[6.986s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/usb920_ver2
+[6.993s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver
+[7.011s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb920_ver2)
+[7.014s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/usb920_ver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/usb920_ver2
+[7.049s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2' for CMake module files
+[7.051s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2' for CMake config files
+[7.051s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb920_ver2', 'cmake_prefix_path')
+[7.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.ps1'
+[7.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.dsv'
+[7.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.sh'
+[7.087s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib'
+[7.087s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/bin'
+[7.087s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib/pkgconfig/usb920_ver2.pc'
+[7.088s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib/python3.10/site-packages'
+[7.088s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/bin'
+[7.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.ps1'
+[7.131s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.dsv'
+[7.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.sh'
+[7.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.bash'
+[7.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.zsh'
+[7.133s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/colcon-core/packages/usb920_ver2)
+[7.148s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash_receiver)
+[7.157s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver
+[7.186s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver' for CMake module files
+[7.187s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver' for CMake config files
+[7.188s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_receiver', 'cmake_prefix_path')
+[7.222s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.ps1'
+[7.223s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.dsv'
+[7.224s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.sh'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/bin'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/pkgconfig/robocon2023_b_dash_receiver.pc'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/python3.10/site-packages'
+[7.226s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/bin'
+[7.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.ps1'
+[7.258s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.dsv'
+[7.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.sh'
+[7.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.bash'
+[7.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.zsh'
+[7.260s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/colcon-core/packages/robocon2023_b_dash_receiver)
+[7.262s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_transceiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver
+[7.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver -- -j12 -l12
+[7.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/ros_to_kimd -- -j12 -l12
+[7.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/sllidar_ros2
+[7.316s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb920_ver2)
+[7.344s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2' for CMake module files
+[7.345s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2' for CMake config files
+[7.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb920_ver2', 'cmake_prefix_path')
+[7.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.ps1'
+[7.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.dsv'
+[7.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/hook/cmake_prefix_path.sh'
+[7.375s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib'
+[7.375s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/bin'
+[7.375s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib/pkgconfig/usb920_ver2.pc'
+[7.375s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/lib/python3.10/site-packages'
+[7.376s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/bin'
+[7.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.ps1'
+[7.406s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.dsv'
+[7.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.sh'
+[7.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.bash'
+[7.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.zsh'
+[7.409s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/usb920_ver2/share/colcon-core/packages/usb920_ver2)
+[7.411s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[7.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/sllidar_ros2
+[7.447s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2' for CMake module files
+[7.448s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2' for CMake config files
+[7.448s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[7.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[7.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[7.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[7.481s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib'
+[7.481s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/bin'
+[7.481s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[7.482s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib/python3.10/site-packages'
+[7.482s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/bin'
+[7.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[7.511s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[7.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[7.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[7.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[7.514s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[7.548s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash_receiver)
+[7.580s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver' for CMake module files
+[7.580s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver' for CMake config files
+[7.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_receiver', 'cmake_prefix_path')
+[7.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.ps1'
+[7.616s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.dsv'
+[7.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/hook/cmake_prefix_path.sh'
+[7.617s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib'
+[7.617s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/bin'
+[7.617s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/pkgconfig/robocon2023_b_dash_receiver.pc'
+[7.618s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/python3.10/site-packages'
+[7.618s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/bin'
+[7.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.ps1'
+[7.652s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.dsv'
+[7.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.sh'
+[7.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.bash'
+[7.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.zsh'
+[7.655s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/colcon-core/packages/robocon2023_b_dash_receiver)
+[7.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/ros_to_kimd
+[7.697s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[7.723s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2' for CMake module files
+[7.724s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2' for CMake config files
+[7.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[7.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[7.750s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[7.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[7.751s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib'
+[7.751s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/bin'
+[7.751s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[7.752s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/lib/python3.10/site-packages'
+[7.752s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/bin'
+[7.774s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[7.775s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[7.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[7.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[7.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[7.777s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[7.780s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_to_kimd)
+[7.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver -- -j12 -l12
+[7.780s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/ros_to_kimd
+[7.803s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd' for CMake module files
+[7.804s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd' for CMake config files
+[7.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_to_kimd', 'cmake_prefix_path')
+[7.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.ps1'
+[7.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.dsv'
+[7.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.sh'
+[7.830s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib'
+[7.830s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/bin'
+[7.830s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib/pkgconfig/ros_to_kimd.pc'
+[7.830s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib/python3.10/site-packages'
+[7.831s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/bin'
+[7.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.ps1'
+[7.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.dsv'
+[7.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.sh'
+[7.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.bash'
+[7.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.zsh'
+[7.856s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/colcon-core/packages/ros_to_kimd)
+[7.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver
+[7.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash_transceiver)
+[7.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_transceiver
+[7.900s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver' for CMake module files
+[7.901s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver' for CMake config files
+[7.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_transceiver', 'cmake_prefix_path')
+[7.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.ps1'
+[7.924s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.dsv'
+[7.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.sh'
+[7.925s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib'
+[7.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_transceiver', 'ld_library_path_lib')
+[7.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.ps1'
+[7.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.dsv'
+[7.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.sh'
+[7.948s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/bin'
+[7.948s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib/pkgconfig/robocon2023_b_dash_transceiver.pc'
+[7.948s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib/python3.10/site-packages'
+[7.949s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/bin'
+[7.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.ps1'
+[7.969s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.dsv'
+[7.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.sh'
+[7.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.bash'
+[7.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.zsh'
+[7.971s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/colcon-core/packages/robocon2023_b_dash_transceiver)
+[7.994s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_to_kimd)
+[8.016s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd' for CMake module files
+[8.017s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd' for CMake config files
+[8.017s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_to_kimd', 'cmake_prefix_path')
+[8.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.ps1'
+[8.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.dsv'
+[8.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/hook/cmake_prefix_path.sh'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/bin'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib/pkgconfig/ros_to_kimd.pc'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/lib/python3.10/site-packages'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/bin'
+[8.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.ps1'
+[8.062s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.dsv'
+[8.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.sh'
+[8.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.bash'
+[8.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/ros_to_kimd/package.zsh'
+[8.064s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/ros_to_kimd/share/colcon-core/packages/ros_to_kimd)
+[8.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash -- -j12 -l12
+[8.089s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash_transceiver)
+[8.112s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver' for CMake module files
+[8.113s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver' for CMake config files
+[8.113s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_transceiver', 'cmake_prefix_path')
+[8.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.ps1'
+[8.134s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.dsv'
+[8.134s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/cmake_prefix_path.sh'
+[8.135s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib'
+[8.135s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash_transceiver', 'ld_library_path_lib')
+[8.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.ps1'
+[8.160s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.dsv'
+[8.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/hook/ld_library_path_lib.sh'
+[8.161s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/bin'
+[8.162s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib/pkgconfig/robocon2023_b_dash_transceiver.pc'
+[8.162s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/lib/python3.10/site-packages'
+[8.162s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/bin'
+[8.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.ps1'
+[8.191s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.dsv'
+[8.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.sh'
+[8.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.bash'
+[8.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.zsh'
+[8.194s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_transceiver/share/colcon-core/packages/robocon2023_b_dash_transceiver)
+[8.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash
+[8.220s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash)
+[8.221s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/kaibuchisoma/robocon_ws/install/fruit_detection:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash
+[8.241s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash' for CMake module files
+[8.242s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash' for CMake config files
+[8.242s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'cmake_prefix_path')
+[8.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.ps1'
+[8.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.dsv'
+[8.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.sh'
+[8.264s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib'
+[8.264s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'ld_library_path_lib')
+[8.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.ps1'
+[8.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.dsv'
+[8.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.sh'
+[8.286s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/bin'
+[8.287s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/pkgconfig/robocon2023_b_dash.pc'
+[8.287s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/python3.10/site-packages'
+[8.287s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/bin'
+[8.310s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.ps1'
+[8.311s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv'
+[8.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.sh'
+[8.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.bash'
+[8.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.zsh'
+[8.313s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/colcon-core/packages/robocon2023_b_dash)
+[8.429s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocon2023_b_dash)
+[8.452s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash' for CMake module files
+[8.453s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash' for CMake config files
+[8.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'cmake_prefix_path')
+[8.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.ps1'
+[8.475s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.dsv'
+[8.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/cmake_prefix_path.sh'
+[8.476s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib'
+[8.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocon2023_b_dash', 'ld_library_path_lib')
+[8.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.ps1'
+[8.499s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.dsv'
+[8.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/hook/ld_library_path_lib.sh'
+[8.500s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/bin'
+[8.500s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/pkgconfig/robocon2023_b_dash.pc'
+[8.501s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/lib/python3.10/site-packages'
+[8.501s] Level 1:colcon.colcon_core.environment:checking '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/bin'
+[8.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.ps1'
+[8.531s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv'
+[8.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.sh'
+[8.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.bash'
+[8.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.zsh'
+[8.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash/share/colcon-core/packages/robocon2023_b_dash)
+[8.534s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.534s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.534s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.534s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.567s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.568s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.568s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.580s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.604s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kaibuchisoma/robocon_ws/install/local_setup.ps1'
+[8.605s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kaibuchisoma/robocon_ws/install/_local_setup_util_ps1.py'
+[8.606s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kaibuchisoma/robocon_ws/install/setup.ps1'
+[8.632s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kaibuchisoma/robocon_ws/install/local_setup.sh'
+[8.633s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kaibuchisoma/robocon_ws/install/_local_setup_util_sh.py'
+[8.633s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kaibuchisoma/robocon_ws/install/setup.sh'
+[8.655s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kaibuchisoma/robocon_ws/install/local_setup.bash'
+[8.656s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kaibuchisoma/robocon_ws/install/setup.bash'
+[8.685s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kaibuchisoma/robocon_ws/install/local_setup.zsh'
+[8.686s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kaibuchisoma/robocon_ws/install/setup.zsh'

@@ -1,0 +1,51 @@
+[0.487s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.528s] [35m[1mScanning dependencies of target Drive_Controller[0m
+[0.558s] [ 50%] Built target DriveMotion
+[0.558s] [ 50%] Built target Xmove_Controller
+[0.563s] [ 62%] [32mBuilding CXX object CMakeFiles/Drive_Controller.dir/src/Drive_Controller.cpp.o[0m
+[0.568s] [ 87%] Built target SerialKIMD
+[1.542s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.hpp:6[m[K,
+[1.542s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:2[m[K:
+[1.542s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.542s]    19 |  [01;35m[K}[m[K;
+[1.542s]       |  [01;35m[K^[m[K
+[1.570s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:[m[K In constructor ‘[01m[KDrive_Controller_Node::Drive_Controller_Node()[m[K’:
+[1.570s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:6:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmotion_flag[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.570s]     6 |     int [01;35m[Kmotion_flag[m[K = 0;
+[1.570s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[1.572s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:[m[K In member function ‘[01m[Kvoid Drive_Controller_Node::WallMotionOut_Callback(std_msgs::msg::ByteMultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.572s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:32:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmd_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.572s]    32 | nOut_Callback([01;35m[Kconst std_msgs::msg::ByteMultiArray::SharedPtr md_msg[m[K)
+[1.572s]       |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[1.572s] 
+[1.572s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:[m[K In member function ‘[01m[Kvoid Drive_Controller_Node::RopeMotionOut_Callback(std_msgs::msg::ByteMultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.572s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:36:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmd_msg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.572s]    36 | nOut_Callback([01;35m[Kconst std_msgs::msg::ByteMultiArray::SharedPtr md_msg[m[K)
+[1.572s]       |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[1.573s] 
+[4.360s] [100%] [32m[1mLinking CXX executable Drive_Controller[0m
+[4.525s] [100%] Built target Drive_Controller
+[4.533s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[4.557s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[4.562s] -- Install configuration: ""
+[4.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+[4.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+[4.563s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+[4.563s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+[4.565s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller" to ""
+[4.565s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+[4.565s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+[4.565s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+[4.565s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+[4.566s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+[4.567s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+[4.567s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+[4.567s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+[4.567s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+[4.567s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
+[4.568s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash

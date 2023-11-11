@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+    <name>fruit_detection</name>
+    <version>0.0.1</version>
+    <description>高専ロボコン 2023 では、つり下がっているフルーツを回収するのが競技課題である。ロボットに載せてあるカメラから、YOLO V8 でリアルタイムでフルーツを検出し、回収装置(お助けアイテム)の位置を調整する。フルーツの座標を ROS2 humble で publish する。</description>
+    <maintainer email="Raptor-S@outlook.jp">貝淵 蒼馬</maintainer>
+    <license>Apache License 2.0</license>
+
+    <exec_depend>rclpy</exec_depend>
+    <exec_depend>std_msgs</exec_depend>
+    <!-- <exec_depend>cv2</exec_depend> -->
+
+    <test_depend>ament_copyright</test_depend>
+    <test_depend>ament_flake8</test_depend>
+    <test_depend>ament_pep257</test_depend>
+    <test_depend>python3-pytest</test_depend>
+
+    <export>
+    <build_type>ament_python</build_type>
+    </export>
+</package>

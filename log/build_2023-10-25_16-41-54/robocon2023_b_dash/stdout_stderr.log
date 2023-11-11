@@ -1,0 +1,42 @@
+[35m[1mScanning dependencies of target Transmitter920[0m
+[  7%] Built target KiwiMotion
+[ 11%] [32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o[0m
+[ 19%] Built target BeltLiner_Controller
+[ 26%] Built target SerialKIMD
+[ 34%] Built target Solenoid_Controller
+[ 42%] Built target Xmove_Controller
+[ 50%] Built target DriveMotion
+[ 57%] Built target Drive_Controller
+[ 65%] Built target Upper_Controller
+[ 73%] Built target WallUpMotion
+[ 80%] Built target MotionMaster
+[ 88%] Built target Crawl_Controller
+[ 96%] Built target RopeMotion
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:1[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::CompressJoyData()[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:45:104:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   45 |         RCLCPP_INFO(this->get_logger(), " first here%f", this->local_joy_msg[i].axes[0] * 127.0 + 127.0[01;31m[K;[m[K);
+      |                                                                                                        [01;31m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:45:9:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   45 |         [01;36m[KRCLCPP_INFO[m[K(this->get_logger(), " first here%f", this->local_joy_msg[i].axes[0] * 127.0 + 127.0;);
+      |         [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:45:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+   45 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), " first here%f", this->local_joy_msg[i].axes[0] * 127.0 + 127.0;);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:95:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcompress_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   95 | void Transmitter920_Node::ExpandJoyData([01;35m[Kuint8_t compress_data[16][m[K)
+      |                                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/Transmitter920.dir/build.make:63: CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/Transmitter920.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

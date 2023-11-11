@@ -1,0 +1,32 @@
+[35m[1mScanning dependencies of target Crawl_Controller[0m
+[35m[1mScanning dependencies of target WallUpMotion[0m
+[ 14%] Built target DriveMotion
+[ 21%] [32mBuilding CXX object CMakeFiles/Crawl_Controller.dir/src/Crawl_Controller.cpp.o[0m
+[ 35%] Built target Drive_Controller
+[ 57%] Built target Xmove_Controller
+[ 64%] Built target SerialKIMD
+[ 78%] Built target Upper_Controller
+[ 85%] [32mBuilding CXX object CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o[0m
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.hpp:6[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:[m[K In member function ‘[01m[Kbool WallUpMotion_Node::CheckLessTime(float, float, float)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:150:40:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  150 |     return ((now_time - old_time) > dt)
+      |                                        [01;31m[K^[m[K
+      |                                        [32m[K;[m[K
+  151 | [32m[K}[m[K
+      | [32m[K~[m[K                                       
+make[2]: *** [CMakeFiles/WallUpMotion.dir/build.make:63: CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:279: CMakeFiles/WallUpMotion.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 92%] [32m[1mLinking CXX executable Crawl_Controller[0m
+[ 92%] Built target Crawl_Controller
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,55 @@
+[0.784s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.842s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.897s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.084s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.136s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.141s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.268s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.332s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.337s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.488s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.605s] -- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[1.683s] -- Found sdl2_vendor: 3.0.1 (/opt/ros/foxy/share/sdl2_vendor/cmake)
+[1.683s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.755s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.756s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.756s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/include>
+[1.756s] -- Configured cppcheck exclude dirs and/or files: 
+[1.757s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.757s] -- Configured cpplint exclude dirs and/or files: 
+[1.758s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.758s] -- Added test 'lint_cmake' to check CMake code style
+[1.759s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.762s] -- Added test 'uncrustify' to check C / C++ code style
+[1.762s] -- Configured uncrustify additional arguments: 
+[1.763s] -- Added test 'xmllint' to check XML markup files
+[1.766s] -- Configuring done
+[1.771s] CMake Error at CMakeLists.txt:118 (add_executable):
+[1.773s]   Cannot find source file:
+[1.773s] 
+[1.777s]     src/joy_enumerate_devices.cpp
+[1.778s] 
+[1.778s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[1.783s]   .hpp .hxx .in .txx
+[1.788s] 
+[1.788s] 
+[1.788s] CMake Error at CMakeLists.txt:97 (add_library):
+[1.788s]   Cannot find source file:
+[1.789s] 
+[1.789s]     src/joy.cpp
+[1.789s] 
+[1.789s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[1.789s]   .hpp .hxx .in .txx
+[1.789s] 
+[1.789s] 
+[1.789s] CMake Error at CMakeLists.txt:118 (add_executable):
+[1.789s]   No SOURCES given to target: joy_enumerate_devices
+[1.789s] 
+[1.789s] 
+[1.789s] CMake Error at CMakeLists.txt:97 (add_library):
+[1.789s]   No SOURCES given to target: joy
+[1.790s] 
+[1.790s] 
+[1.790s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[1.790s] make: *** [Makefile:838: cmake_check_build_system] Error 1
+[2.104s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

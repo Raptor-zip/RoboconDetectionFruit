@@ -1,0 +1,48 @@
+[0.536s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.588s] [35m[1mScanning dependencies of target Transmitter920[0m
+[0.602s] [  7%] Built target KiwiMotion
+[0.609s] [ 15%] Built target Xmove_Controller
+[0.612s] [ 19%] [32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o[0m
+[0.616s] [ 26%] Built target Solenoid_Controller
+[0.617s] [ 34%] Built target SerialKIMD
+[0.625s] [ 42%] Built target Drive_Controller
+[0.625s] [ 50%] Built target DriveMotion
+[0.630s] [ 57%] Built target BeltLiner_Controller
+[0.661s] [ 65%] Built target Upper_Controller
+[0.670s] [ 73%] Built target WallUpMotion
+[0.675s] [ 88%] Built target RopeMotion
+[0.675s] [ 88%] Built target Crawl_Controller
+[0.675s] [ 96%] Built target MotionMaster
+[1.667s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’:
+[1.667s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcompress_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.667s]   101 | void Transmitter920_Node::ExpandJoyData([01;35m[Kuint8_t compress_data[16][m[K)
+[1.667s]       |                                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[1.667s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::EncodeCOBSdata()[m[K’:
+[1.667s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:174:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.670s]   174 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 1[m[K; i++)
+[1.672s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.672s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::DecodeCOBSdata()[m[K’:
+[1.672s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:196:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.673s]   196 |     for (int i = 0; [01;35m[Ki < sizeof(temp_cobs)[m[K; i++)
+[1.673s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[1.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:203:14:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.674s]   203 |     while ([01;35m[Ki < sizeof(this->receive_buf) - 1[m[K)
+[1.674s]       |            [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:211:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.674s]   211 |     for (int i = 0; [01;35m[Ki < sizeof(this->receive_compress_data)[m[K; i++)
+[1.674s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::timer_callback()[m[K’:
+[1.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:266:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.674s]   266 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 2[m[K; i++)
+[1.674s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:271:25:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTransmitter920_Node::ExpandJoyData()[m[K’
+[1.675s]   271 |     this->ExpandJoyData([01;31m[K)[m[K;
+[1.675s]       |                         [01;31m[K^[m[K
+[1.675s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’
+[1.675s]   101 | void [01;36m[KTransmitter920_Node[m[K::ExpandJoyData(uint8_t compress_data[16])
+[1.675s]       |      [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.675s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:6:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.085s] make[2]: *** [CMakeFiles/Transmitter920.dir/build.make:63: CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o] Error 1
+[3.086s] make[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/Transmitter920.dir/all] Error 2
+[3.086s] make: *** [Makefile:141: all] Error 2
+[3.089s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

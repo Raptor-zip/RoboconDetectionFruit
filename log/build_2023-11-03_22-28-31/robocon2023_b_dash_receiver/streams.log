@@ -1,0 +1,81 @@
+[0.639s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver
+[0.745s] -- The C compiler identification is GNU 11.4.0
+[0.855s] -- The CXX compiler identification is GNU 11.4.0
+[0.868s] -- Detecting C compiler ABI info
+[1.012s] -- Detecting C compiler ABI info - done
+[1.034s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.034s] -- Detecting C compile features
+[1.035s] -- Detecting C compile features - done
+[1.046s] -- Detecting CXX compiler ABI info
+[1.246s] -- Detecting CXX compiler ABI info - done
+[1.298s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.298s] -- Detecting CXX compile features
+[1.298s] -- Detecting CXX compile features - done
+[1.301s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.802s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.990s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[2.092s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.107s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.126s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.163s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.212s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.361s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.366s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.623s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.689s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.834s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.854s] -- Looking for pthread.h
+[3.140s] -- Looking for pthread.h - found
+[3.140s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.374s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.374s] -- Found Threads: TRUE  
+[3.750s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.011s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.164s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.165s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver/include>
+[4.166s] -- Configured cppcheck exclude dirs and/or files: 
+[4.169s] -- Added test 'lint_cmake' to check CMake code style
+[4.172s] -- Added test 'uncrustify' to check C / C++ code style
+[4.172s] -- Configured uncrustify additional arguments: 
+[4.174s] -- Added test 'xmllint' to check XML markup files
+[4.178s] -- Configuring done
+[4.209s] -- Generating done
+[4.215s] -- Build files have been written to: /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver
+[4.238s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver -DCMAKE_INSTALL_PREFIX=/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver
+[4.241s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver -- -j12 -l12
+[4.351s] [ 25%] [32mBuilding CXX object CMakeFiles/receiver.dir/src/receiver.cpp.o[0m
+[4.354s] [ 50%] [32mBuilding CXX object CMakeFiles/program_checker.dir/src/program_checker.cpp.o[0m
+[21.232s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:[m[K In member function ‘[01m[Kvoid JoyPublisher::timer_callback()[m[K’:
+[21.233s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:125:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.233s]   125 |         for (int i = 0; [01;35m[Ki < sizeof(data)[m[K; i++) { //全パケットをデコード結果用の配列に取り込む（先頭と末尾を除く）
+[21.234s]       |                         [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[21.234s] [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:129:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.234s]   129 |       while([01;35m[Ki <= sizeof(data)[m[K) {
+[21.235s]       |             [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[34.720s] [ 75%] [32m[1mLinking CXX executable receiver[0m
+[35.602s] [ 75%] Built target receiver
+[119.967s] [100%] [32m[1mLinking CXX executable program_checker[0m
+[121.218s] [100%] Built target program_checker
+[121.300s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver -- -j12 -l12
+[121.675s] Invoking command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver
+[121.695s] -- Install configuration: ""
+[121.708s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/receiver
+[121.715s] -- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/receiver" to ""
+[121.720s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/program_checker
+[121.757s] -- Set runtime path of "/home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/program_checker" to ""
+[121.766s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash_receiver
+[121.766s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash_receiver
+[121.767s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/ament_prefix_path.sh
+[121.768s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/ament_prefix_path.dsv
+[121.769s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/path.sh
+[121.770s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/path.dsv
+[121.771s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.bash
+[121.771s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.sh
+[121.776s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.zsh
+[121.777s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.dsv
+[121.778s] -- Installing: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.dsv
+[121.779s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/packages/robocon2023_b_dash_receiver
+[121.780s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/cmake/robocon2023_b_dash_receiverConfig.cmake
+[121.780s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/cmake/robocon2023_b_dash_receiverConfig-version.cmake
+[121.781s] -- Up-to-date: /home/kaibuchisoma/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.xml
+[121.794s] Invoked command in '/home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kaibuchisoma/robocon_ws/build/robocon2023_b_dash_receiver

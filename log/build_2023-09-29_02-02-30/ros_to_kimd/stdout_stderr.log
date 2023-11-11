@@ -1,0 +1,45 @@
+[35m[1mScanning dependencies of target ControlKimd[0m
+[ 50%] Built target joysubtest
+[ 75%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:15[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:11[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:56:68:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Krcl_time_point_value_t rclcpp::Time::nanoseconds() const[m[K’
+   56 |        RCLCPP_INFO(this->get_logger(), "now_time  %f  ", [01;31m[Ktime_now.nanoseconds[m[K);
+      |                                                          [01;31m[K~~~~~~~~~^~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/clock.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:27[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:11[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/time.hpp:184:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  184 |   [01;36m[Knanoseconds[m[K() const;
+      |   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:209:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  209 | void signal_handler([01;35m[Kint signum[m[K)
+      |                     [01;35m[K~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/ControlKimd.dir/build.make:63: CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/ControlKimd.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

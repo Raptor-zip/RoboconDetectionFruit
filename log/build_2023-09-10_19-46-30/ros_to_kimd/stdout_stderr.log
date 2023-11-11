@@ -1,0 +1,45 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ros-industrial/robocon_ws/build/ros_to_kimd
+[35m[1mScanning dependencies of target ControlKimd[0m
+[35m[1mScanning dependencies of target joysubtest[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/joysubtest.dir/src/kimd_send_joystick.cpp.o[0m
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:11:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+   11 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/ControlKimd.dir/build.make:63: CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/ControlKimd.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:33:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   33 |   void topic_callback([01;35m[Ksensor_msgs::msg::Joy::SharedPtr msg[m[K)
+      |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:72:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   72 | void signal_handler([01;35m[Kint signum[m[K)
+      |                     [01;35m[K~~~~^~~~~~[m[K
+[ 75%] [32m[1mLinking CXX executable joysubtest[0m
+[ 75%] Built target joysubtest
+make: *** [Makefile:141: all] Error 2

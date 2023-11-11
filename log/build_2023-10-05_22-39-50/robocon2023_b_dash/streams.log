@@ -1,0 +1,42 @@
+[0.434s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.467s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.475s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.601s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.625s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.628s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.713s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.753s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.753s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.856s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.942s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.988s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.988s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.988s] -- Configured cppcheck include dirs: 
+[0.989s] -- Configured cppcheck exclude dirs and/or files: 
+[0.990s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.990s] -- Configured cpplint exclude dirs and/or files: 
+[0.990s] -- Added test 'lint_cmake' to check CMake code style
+[0.990s] -- Added test 'uncrustify' to check C / C++ code style
+[0.990s] -- Configured uncrustify additional arguments: 
+[0.990s] -- Added test 'xmllint' to check XML markup files
+[0.991s] -- Configuring done
+[0.998s] -- Generating done
+[0.999s] -- Build files have been written to: /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[1.016s] [35m[1mScanning dependencies of target Xmove_Controller[0m
+[1.036s] [ 50%] Built target SerialKIMD
+[1.047s] [ 75%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+[1.784s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:7[m[K,
+[1.784s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[1.784s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.784s]    19 |  [01;35m[K}[m[K;
+[1.785s]       |  [01;35m[K^[m[K
+[4.086s] [100%] [32m[1mLinking CXX executable Xmove_Controller[0m
+[4.248s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[4.248s] (.text+0x24): undefined reference to `main'
+[4.248s] /usr/bin/ld: CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o: in function `Xmove_Controller_Node::Xmove_Controller_Node()':
+[4.248s] Xmove_Controller.cpp:(.text+0x266): undefined reference to `vtable for Xmove_Controller_Node'
+[4.248s] collect2: error: ld returned 1 exit status
+[4.250s] make[2]: *** [CMakeFiles/Xmove_Controller.dir/build.make:141: Xmove_Controller] Error 1
+[4.251s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/Xmove_Controller.dir/all] Error 2
+[4.251s] make: *** [Makefile:141: all] Error 2
+[4.252s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

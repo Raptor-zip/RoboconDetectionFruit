@@ -1,0 +1,1036 @@
+[0.765s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.820s] [  5%] Built target joy_enumerate_devices
+[0.857s] [ 11%] Built target Xmove_Controller
+[0.907s] [ 17%] Built target Solenoid_Controller
+[0.942s] [ 23%] Built target DriveMotion
+[0.994s] [ 29%] Built target Transmitter920
+[1.022s] [ 35%] Built target Drive_Controller
+[1.045s] [ 41%] Built target Upper_Controller
+[1.078s] [ 47%] Built target WallUpMotion
+[1.105s] [ 52%] Built target Crawl_Controller
+[1.137s] [ 58%] Built target MotionMaster
+[1.161s] [ 64%] Built target RopeMotion
+[1.185s] [ 70%] Built target SerialKIMD
+[1.225s] [ 76%] Built target Receiver920
+[1.250s] [ 82%] Built target BeltLiner_Controller
+[1.276s] [ 88%] Built target joy_node
+[1.316s] [ 94%] Built target KiwiMotion
+[1.329s] [35m[1mScanning dependencies of target joy[0m
+[1.332s] [ 97%] [32mBuilding CXX object CMakeFiles/joy.dir/src/joy.cpp.o[0m
+[2.546s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:19:1:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ does not name a type; did you mean ‘[01m[Kjoy[m[K’?
+[2.546s]    19 | [01;31m[KJoy[m[K::Joy(const rclcpp::NodeOptions & options)
+[2.546s]       | [01;31m[K^~~[m[K
+[2.546s]       | [32m[Kjoy[m[K
+[2.547s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:85:1:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ does not name a type; did you mean ‘[01m[Kjoy[m[K’?
+[2.547s]    85 | [01;31m[KJoy[m[K::~Joy()
+[2.547s]       | [01;31m[K^~~[m[K
+[2.547s]       | [32m[Kjoy[m[K
+[2.547s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:98:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.547s]    98 | void [01;31m[KJoy[m[K::feedbackCb(const std::shared_ptr<sensor_msgs::msg::JoyFeedback> msg)
+[2.547s]       |      [01;31m[K^~~[m[K
+[2.552s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kvoid joy::feedbackCb(std::shared_ptr<sensor_msgs::msg::JoyFeedback_<std::allocator<void> > >)[m[K’:
+[2.552s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:100:7:[m[K [01;31m[Kerror: [m[K‘[01m[Khaptic_[m[K’ was not declared in this scope
+[2.552s]   100 |   if ([01;31m[Khaptic_[m[K == nullptr) {
+[2.552s]       |       [01;31m[K^~~~~~~[m[K
+[2.554s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:121:24:[m[K [01;31m[Kerror: [m[K‘[01m[Khaptic_[m[K’ was not declared in this scope
+[2.554s]   121 |   SDL_HapticRumblePlay([01;31m[Khaptic_[m[K, msg->intensity, 1000);
+[2.554s]       |                        [01;31m[K^~~~~~~[m[K
+[2.554s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.554s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:124:7:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.555s]   124 | float [01;31m[KJoy[m[K::convertRawAxisValueToROS(int16_t val)
+[2.555s]       |       [01;31m[K^~~[m[K
+[2.563s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kfloat joy::convertRawAxisValueToROS(int16_t)[m[K’:
+[2.563s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:139:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kunscaled_deadzone_[m[K’ was not declared in this scope
+[2.563s]   139 |   if (double_val > [01;31m[Kunscaled_deadzone_[m[K) {
+[2.563s]       |                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.565s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:147:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kscale_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscalbn[m[K’?
+[2.565s]   147 |   return static_cast<float>(double_val * [01;31m[Kscale_[m[K);
+[2.565s]       |                                          [01;31m[K^~~~~~[m[K
+[2.565s]       |                                          [32m[Kscalbn[m[K
+[2.565s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.565s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:150:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.565s]   150 | bool [01;31m[KJoy[m[K::handleJoyAxis(const SDL_Event & e)
+[2.565s]       |      [01;31m[K^~~[m[K
+[2.577s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kbool joy::handleJoyAxis(const SDL_Event&)[m[K’:
+[2.577s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:154:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.577s]   154 |   if (e.jaxis.which != [01;31m[Kjoystick_instance_id_[m[K) {
+[2.577s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.579s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:158:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.579s]   158 |   if (e.jaxis.axis >= [01;31m[Kjoy_msg_[m[K.axes.size()) {
+[2.579s]       |                       [01;31m[K^~~~~~~~[m[K
+[2.580s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.580s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.580s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:159:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.580s]   159 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Saw axes too large for this device, ignoring");
+[2.580s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.580s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.580s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.581s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.581s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.581s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.581s]       |                 [01;36m[K^~~~~~[m[K
+[2.581s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.581s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.581s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.581s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:159:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.581s]   159 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw axes too large for this device, ignoring");
+[2.581s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.581s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:159:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.581s]   159 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw axes too large for this device, ignoring");
+[2.581s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.581s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:159:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.581s]   159 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw axes too large for this device, ignoring");
+[2.581s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.582s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:163:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.582s]   163 |   float last_axis_value = [01;31m[Kjoy_msg_[m[K.axes.at(e.jaxis.axis);
+[2.582s]       |                           [01;31m[K^~~~~~~~[m[K
+[2.592s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:166:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoalesce_interval_ms_[m[K’ was not declared in this scope
+[2.592s]   166 |     if ([01;31m[Kcoalesce_interval_ms_[m[K > 0 && !publish_soon_) {
+[2.592s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.597s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:166:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_soon_[m[K’ was not declared in this scope
+[2.597s]   166 |     if (coalesce_interval_ms_ > 0 && ![01;31m[Kpublish_soon_[m[K) {
+[2.597s]       |                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[2.605s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:168:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_soon_time_[m[K’ was not declared in this scope
+[2.605s]   168 |       [01;31m[Kpublish_soon_time_[m[K = this->now();
+[2.605s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.605s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:168:28:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.605s]   168 |       publish_soon_time_ = [01;31m[Kthis[m[K->now();
+[2.605s]       |                            [01;31m[K^~~~[m[K
+[2.605s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:170:50:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.605s]   170 |       rclcpp::Duration time_since_publish_soon = [01;31m[Kthis[m[K->now() - publish_soon_time_;
+[2.605s]       |                                                  [01;31m[K^~~~[m[K
+[2.614s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:170:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_soon_time_[m[K’ was not declared in this scope
+[2.614s]   170 |     rclcpp::Duration time_since_publish_soon = this->now() - [01;31m[Kpublish_soon_time_[m[K;
+[2.614s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.614s] 
+[2.614s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.614s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:182:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.614s]   182 | bool [01;31m[KJoy[m[K::handleJoyButtonDown(const SDL_Event & e)
+[2.614s]       |      [01;31m[K^~~[m[K
+[2.624s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kbool joy::handleJoyButtonDown(const SDL_Event&)[m[K’:
+[2.624s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:186:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.624s]   186 |   if (e.jbutton.which != [01;31m[Kjoystick_instance_id_[m[K) {
+[2.624s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.626s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:190:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.626s]   190 |   if (e.jbutton.button >= [01;31m[Kjoy_msg_[m[K.buttons.size()) {
+[2.626s]       |                           [01;31m[K^~~~~~~~[m[K
+[2.626s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.626s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.626s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.627s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.627s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:191:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.627s]   191 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Saw button too large for this device, ignoring");
+[2.627s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.627s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.627s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.627s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.627s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.627s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.627s]       |                 [01;36m[K^~~~~~[m[K
+[2.628s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.628s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.628s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.628s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:191:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.628s]   191 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.628s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.628s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:191:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.628s]   191 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.628s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.628s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:191:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.628s]   191 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.628s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.632s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:195:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ksticky_buttons_[m[K’ was not declared in this scope
+[2.633s]   195 |   if ([01;31m[Ksticky_buttons_[m[K) {
+[2.633s]       |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.635s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:197:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.635s]   197 |     [01;31m[Kjoy_msg_[m[K.buttons.at(e.jbutton.button) = 1 - joy_msg_.buttons.at(e.jbutton.button);
+[2.635s]       |     [01;31m[K^~~~~~~~[m[K
+[2.637s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:199:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.637s]   199 |     [01;31m[Kjoy_msg_[m[K.buttons.at(e.jbutton.button) = 1;
+[2.637s]       |     [01;31m[K^~~~~~~~[m[K
+[2.637s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.637s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:206:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.637s]   206 | bool [01;31m[KJoy[m[K::handleJoyButtonUp(const SDL_Event & e)
+[2.638s]       |      [01;31m[K^~~[m[K
+[2.648s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kbool joy::handleJoyButtonUp(const SDL_Event&)[m[K’:
+[2.648s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:210:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.648s]   210 |   if (e.jbutton.which != [01;31m[Kjoystick_instance_id_[m[K) {
+[2.648s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.650s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:214:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.650s]   214 |   if (e.jbutton.button >= [01;31m[Kjoy_msg_[m[K.buttons.size()) {
+[2.650s]       |                           [01;31m[K^~~~~~~~[m[K
+[2.650s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.650s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.651s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.651s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:215:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.651s]   215 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Saw button too large for this device, ignoring");
+[2.651s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.651s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.651s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.651s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.651s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.651s]       |                 [01;36m[K^~~~~~[m[K
+[2.651s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.651s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.652s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.652s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.652s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:215:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.652s]   215 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.652s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.652s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:215:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.652s]   215 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.652s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.652s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:215:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.652s]   215 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw button too large for this device, ignoring");
+[2.652s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.658s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:219:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ksticky_buttons_[m[K’ was not declared in this scope
+[2.658s]   219 |   if (![01;31m[Ksticky_buttons_[m[K) {
+[2.658s]       |        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.661s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:220:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.661s]   220 |     [01;31m[Kjoy_msg_[m[K.buttons.at(e.jbutton.button) = 0;
+[2.661s]       |     [01;31m[K^~~~~~~~[m[K
+[2.661s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.661s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:227:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.661s]   227 | bool [01;31m[KJoy[m[K::handleJoyHatMotion(const SDL_Event & e)
+[2.661s]       |      [01;31m[K^~~[m[K
+[2.672s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kbool joy::handleJoyHatMotion(const SDL_Event&)[m[K’:
+[2.672s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:231:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.672s]   231 |   if (e.jhat.which != [01;31m[Kjoystick_instance_id_[m[K) {
+[2.672s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.674s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:240:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_[m[K’ was not declared in this scope
+[2.674s]   240 |   int num_axes = SDL_JoystickNumAxes([01;31m[Kjoystick_[m[K);
+[2.674s]       |                                      [01;31m[K^~~~~~~~~[m[K
+[2.675s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.675s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.675s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.675s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:242:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.675s]   242 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get axes: %s", SDL_GetError());
+[2.675s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.675s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.676s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.676s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.676s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.676s]       |                 [01;36m[K^~~~~~[m[K
+[2.676s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.676s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.676s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.676s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:242:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.676s]   242 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get axes: %s", SDL_GetError());
+[2.676s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.676s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:242:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.677s]   242 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get axes: %s", SDL_GetError());
+[2.677s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.677s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:242:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.677s]   242 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get axes: %s", SDL_GetError());
+[2.677s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.677s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:248:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.677s]   248 |   if ((axes_start_index + 1) >= [01;31m[Kjoy_msg_[m[K.axes.size()) {
+[2.678s]       |                                 [01;31m[K^~~~~~~~[m[K
+[2.678s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.678s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.678s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:249:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.678s]   249 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Saw hat too large for this device, ignoring");
+[2.678s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.678s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.678s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.679s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.679s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.679s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.679s]       |                 [01;36m[K^~~~~~[m[K
+[2.679s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.679s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.679s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.679s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:249:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.679s]   249 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw hat too large for this device, ignoring");
+[2.679s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.679s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:249:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.679s]   249 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw hat too large for this device, ignoring");
+[2.679s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.679s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:249:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.679s]   249 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Saw hat too large for this device, ignoring");
+[2.679s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.680s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:254:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.680s]   254 |     [01;31m[Kjoy_msg_[m[K.axes.at(axes_start_index) = 1.0;
+[2.680s]       |     [01;31m[K^~~~~~~~[m[K
+[2.682s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:257:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.682s]   257 |     [01;31m[Kjoy_msg_[m[K.axes.at(axes_start_index) = -1.0;
+[2.682s]       |     [01;31m[K^~~~~~~~[m[K
+[2.683s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:260:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.683s]   260 |     [01;31m[Kjoy_msg_[m[K.axes.at(axes_start_index + 1) = 1.0;
+[2.683s]       |     [01;31m[K^~~~~~~~[m[K
+[2.685s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:263:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.685s]   263 |     [01;31m[Kjoy_msg_[m[K.axes.at(axes_start_index + 1) = -1.0;
+[2.685s]       |     [01;31m[K^~~~~~~~[m[K
+[2.687s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:266:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.687s]   266 |     [01;31m[Kjoy_msg_[m[K.axes.at(axes_start_index) = 0.0;
+[2.687s]       |     [01;31m[K^~~~~~~~[m[K
+[2.687s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.687s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:274:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.687s]   274 | void [01;31m[KJoy[m[K::handleJoyDeviceAdded(const SDL_Event & e)
+[2.687s]       |      [01;31m[K^~~[m[K
+[2.689s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kvoid joy::handleJoyDeviceAdded(const SDL_Event&)[m[K’:
+[2.689s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:276:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdev_name_[m[K’ was not declared in this scope
+[2.689s]   276 |   if (![01;31m[Kdev_name_[m[K.empty()) {
+[2.689s]       |        [01;31m[K^~~~~~~~~[m[K
+[2.690s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.690s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.690s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:279:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.690s]   279 |       RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get the number of joysticks: %s", SDL_GetError());
+[2.690s]       |                   [01;31m[K^~~~~~~~~~[m[K
+[2.690s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.690s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.691s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.691s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.691s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.691s]       |                 [01;36m[K^~~~~~[m[K
+[2.691s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.691s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.691s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.691s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:279:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.691s]   279 |       [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get the number of joysticks: %s", SDL_GetError());
+[2.691s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.692s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:279:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.692s]   279 |       [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get the number of joysticks: %s", SDL_GetError());
+[2.692s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.692s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:279:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.692s]   279 |       [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get the number of joysticks: %s", SDL_GetError());
+[2.692s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.692s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:286:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.692s]   286 |         RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Could not get joystick name: %s", SDL_GetError());
+[2.692s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[2.692s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.692s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.692s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.692s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.692s]       |                 [01;36m[K^~~~~~[m[K
+[2.692s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.692s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.693s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.693s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.693s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:286:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.693s]   286 |         [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Could not get joystick name: %s", SDL_GetError());
+[2.693s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.693s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:286:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.693s]   286 |         [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Could not get joystick name: %s", SDL_GetError());
+[2.693s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.694s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:286:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.694s]   286 |         [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Could not get joystick name: %s", SDL_GetError());
+[2.694s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.694s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:292:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdev_id_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdev_t[m[K’?
+[2.694s]   292 |         [01;31m[Kdev_id_[m[K = i;
+[2.694s]       |         [01;31m[K^~~~~~~[m[K
+[2.694s]       |         [32m[Kdev_t[m[K
+[2.694s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.694s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.694s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.694s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:298:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.694s]   298 |         [01;31m[Kget_logger[m[K(), "Could not get joystick with name %s: %s",
+[2.694s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.694s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.695s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.695s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.696s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.696s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.696s]       |                 [01;36m[K^~~~~~[m[K
+[2.696s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.696s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.696s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.696s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:297:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.696s]   297 |       [01;31m[KRCLCPP_WARN[m[K(
+[2.696s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.696s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:297:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.696s]   297 |       [01;31m[KRCLCPP_WARN[m[K(
+[2.696s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.696s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:297:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.696s]   297 |       [01;31m[KRCLCPP_WARN[m[K(
+[2.696s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[2.697s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:304:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kdev_id_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdev_t[m[K’?
+[2.697s]   304 |   if (e.jdevice.which != [01;31m[Kdev_id_[m[K) {
+[2.697s]       |                          [01;31m[K^~~~~~~[m[K
+[2.697s]       |                          [32m[Kdev_t[m[K
+[2.697s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:308:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_[m[K’ was not declared in this scope
+[2.697s]   308 |   [01;31m[Kjoystick_[m[K = SDL_JoystickOpen(dev_id_);
+[2.697s]       |   [01;31m[K^~~~~~~~~[m[K
+[2.698s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:308:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kdev_id_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdev_t[m[K’?
+[2.698s]   308 |   joystick_ = SDL_JoystickOpen([01;31m[Kdev_id_[m[K);
+[2.699s]       |                                [01;31m[K^~~~~~~[m[K
+[2.699s]       |                                [32m[Kdev_t[m[K
+[2.699s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.699s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.699s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:310:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.699s]   310 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Unable to open joystick %d: %s", dev_id_, SDL_GetError());
+[2.699s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.699s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.699s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.700s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.700s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.700s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.700s]       |                 [01;36m[K^~~~~~[m[K
+[2.700s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.700s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.700s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.700s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:310:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.700s]   310 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Unable to open joystick %d: %s", dev_id_, SDL_GetError());
+[2.700s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.700s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:310:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.700s]   310 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Unable to open joystick %d: %s", dev_id_, SDL_GetError());
+[2.700s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.700s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:310:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.700s]   310 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Unable to open joystick %d: %s", dev_id_, SDL_GetError());
+[2.700s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.709s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:316:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.709s]   316 |   [01;31m[Kjoystick_instance_id_[m[K = SDL_JoystickGetDeviceInstanceID(dev_id_);
+[2.709s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.710s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.710s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.710s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:318:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.710s]   318 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get instance ID for joystick: %s", SDL_GetError());
+[2.710s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.710s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.710s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.711s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.711s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.711s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.711s]       |                 [01;36m[K^~~~~~[m[K
+[2.711s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.711s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.712s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.712s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:318:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.712s]   318 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get instance ID for joystick: %s", SDL_GetError());
+[2.712s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.712s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:318:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.712s]   318 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get instance ID for joystick: %s", SDL_GetError());
+[2.712s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.712s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:318:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.712s]   318 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get instance ID for joystick: %s", SDL_GetError());
+[2.712s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.712s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:326:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.712s]   326 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get number of buttons: %s", SDL_GetError());
+[2.712s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.712s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.713s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.713s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.713s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.713s]       |                 [01;36m[K^~~~~~[m[K
+[2.713s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.713s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.714s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.714s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.714s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.714s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.714s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.714s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:326:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.715s]   326 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of buttons: %s", SDL_GetError());
+[2.715s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.715s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:326:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.715s]   326 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of buttons: %s", SDL_GetError());
+[2.715s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.715s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:326:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.715s]   326 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of buttons: %s", SDL_GetError());
+[2.715s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.715s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:331:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.715s]   331 |   [01;31m[Kjoy_msg_[m[K.buttons.resize(num_buttons);
+[2.716s]       |   [01;31m[K^~~~~~~~[m[K
+[2.716s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.716s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.716s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:335:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.716s]   335 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get number of axes: %s", SDL_GetError());
+[2.716s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.716s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.716s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.717s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.717s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.717s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.717s]       |                 [01;36m[K^~~~~~[m[K
+[2.717s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.717s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.718s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.718s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.718s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.718s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.718s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.718s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.718s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:335:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.718s]   335 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of axes: %s", SDL_GetError());
+[2.718s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.718s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:335:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.718s]   335 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of axes: %s", SDL_GetError());
+[2.718s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.719s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:335:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.719s]   335 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of axes: %s", SDL_GetError());
+[2.719s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.719s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:342:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.719s]   342 |     RCLCPP_WARN([01;31m[Kget_logger[m[K(), "Failed to get number of hats: %s", SDL_GetError());
+[2.719s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.719s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.719s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.720s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.720s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.720s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.720s]       |                 [01;36m[K^~~~~~[m[K
+[2.720s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.720s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.721s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.721s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:342:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.721s]   342 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of hats: %s", SDL_GetError());
+[2.721s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.721s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:342:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.721s]   342 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of hats: %s", SDL_GetError());
+[2.721s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.721s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:342:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.721s]   342 |     [01;31m[KRCLCPP_WARN[m[K(get_logger(), "Failed to get number of hats: %s", SDL_GetError());
+[2.721s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.721s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:357:3:[m[K [01;31m[Kerror: [m[K‘[01m[Khaptic_[m[K’ was not declared in this scope
+[2.721s]   357 |   [01;31m[Khaptic_[m[K = SDL_HapticOpenFromJoystick(joystick_);
+[2.721s]       |   [01;31m[K^~~~~~~[m[K
+[2.721s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.721s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.721s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.721s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:365:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.722s]   365 |     RCLCPP_INFO([01;31m[Kget_logger[m[K(), "No haptic (rumble) available, skipping initialization");
+[2.722s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.722s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.722s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.722s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.722s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.722s]       |                 [01;36m[K^~~~~~[m[K
+[2.722s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.722s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.722s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.722s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:365:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.723s]   365 |     [01;31m[KRCLCPP_INFO[m[K(get_logger(), "No haptic (rumble) available, skipping initialization");
+[2.723s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.723s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:365:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.723s]   365 |     [01;31m[KRCLCPP_INFO[m[K(get_logger(), "No haptic (rumble) available, skipping initialization");
+[2.723s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.723s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:365:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.723s]   365 |     [01;31m[KRCLCPP_INFO[m[K(get_logger(), "No haptic (rumble) available, skipping initialization");
+[2.723s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.723s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:369:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.723s]   369 |     [01;31m[Kget_logger[m[K(), "Opened joystick: %s.  deadzone: %f",
+[2.723s]       |     [01;31m[K^~~~~~~~~~[m[K
+[2.723s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.723s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.723s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.723s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.723s]       |                 [01;36m[K^~~~~~[m[K
+[2.723s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.723s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.724s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.724s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.724s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:368:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.724s]   368 |   [01;31m[KRCLCPP_INFO[m[K(
+[2.724s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.724s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:368:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.725s]   368 |   [01;31m[KRCLCPP_INFO[m[K(
+[2.725s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.725s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:368:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.725s]   368 |   [01;31m[KRCLCPP_INFO[m[K(
+[2.725s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[2.726s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.726s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.726s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.726s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:370:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kscaled_deadzone_[m[K’ was not declared in this scope
+[2.727s]   370 |     SDL_JoystickName(joystick_), [01;31m[Kscaled_deadzone_[m[K);
+[2.727s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.727s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.727s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:373:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.727s]   373 | void [01;31m[KJoy[m[K::handleJoyDeviceRemoved(const SDL_Event & e)
+[2.727s]       |      [01;31m[K^~~[m[K
+[2.738s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kvoid joy::handleJoyDeviceRemoved(const SDL_Event&)[m[K’:
+[2.738s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:375:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_instance_id_[m[K’ was not declared in this scope
+[2.738s]   375 |   if (e.jdevice.which != [01;31m[Kjoystick_instance_id_[m[K) {
+[2.739s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.741s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:379:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.741s]   379 |   [01;31m[Kjoy_msg_[m[K.buttons.resize(0);
+[2.741s]       |   [01;31m[K^~~~~~~~[m[K
+[2.743s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:381:7:[m[K [01;31m[Kerror: [m[K‘[01m[Khaptic_[m[K’ was not declared in this scope
+[2.743s]   381 |   if ([01;31m[Khaptic_[m[K != nullptr) {
+[2.743s]       |       [01;31m[K^~~~~~~[m[K
+[2.745s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:385:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_[m[K’ was not declared in this scope
+[2.745s]   385 |   if ([01;31m[Kjoystick_[m[K != nullptr) {
+[2.745s]       |       [01;31m[K^~~~~~~~~[m[K
+[2.745s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.745s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:391:6:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ has not been declared
+[2.745s]   391 | void [01;31m[KJoy[m[K::eventThread()
+[2.745s]       |      [01;31m[K^~~[m[K
+[2.746s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K In function ‘[01m[Kvoid joy::eventThread()[m[K’:
+[2.746s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:394:31:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.746s]   394 |   rclcpp::Time last_publish = [01;31m[Kthis[m[K->now();
+[2.746s]       |                               [01;31m[K^~~~[m[K
+[2.757s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:399:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kautorepeat_interval_ms_[m[K’ was not declared in this scope
+[2.757s]   399 |     int wait_time_ms = [01;31m[Kautorepeat_interval_ms_[m[K;
+[2.757s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.762s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:400:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_soon_[m[K’ was not declared in this scope
+[2.762s]   400 |     if ([01;31m[Kpublish_soon_[m[K) {
+[2.762s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[2.773s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:401:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoalesce_interval_ms_[m[K’ was not declared in this scope
+[2.773s]   401 |       wait_time_ms = std::min(wait_time_ms, [01;31m[Kcoalesce_interval_ms_[m[K);
+[2.773s]       |                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.774s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.774s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.775s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.775s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:419:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_logger[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::get_logger[m[K’?
+[2.775s]   419 |         RCLCPP_INFO([01;31m[Kget_logger[m[K(), "Unknown event type %d", e.type);
+[2.775s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[2.775s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/logging.hpp:23[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.775s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.775s] [01m[K/opt/ros/foxy/include/rclcpp/logger.hpp:80:17:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::get_logger[m[K’ declared here
+[2.775s]    80 |   friend Logger [01;36m[Krclcpp[m[K::get_logger(const std::string & name);
+[2.775s]       |                 [01;36m[K^~~~~~[m[K
+[2.775s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.775s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.776s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.776s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.776s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.776s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:10[m[K:
+[2.776s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:419:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.776s]   419 |         [01;31m[KRCLCPP_INFO[m[K(get_logger(), "Unknown event type %d", e.type);
+[2.776s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.776s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:419:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.776s]   419 |         [01;31m[KRCLCPP_INFO[m[K(get_logger(), "Unknown event type %d", e.type);
+[2.776s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.776s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:419:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.776s]   419 |         [01;31m[KRCLCPP_INFO[m[K(get_logger(), "Unknown event type %d", e.type);
+[2.776s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.776s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:424:26:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.776s]   424 |       rclcpp::Time now = [01;31m[Kthis[m[K->now();
+[2.776s]       |                          [01;31m[K^~~~[m[K
+[2.782s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:426:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kautorepeat_rate_[m[K’ was not declared in this scope
+[2.782s]   426 |       if (([01;31m[Kautorepeat_rate_[m[K > 0.0 &&
+[2.782s]       |            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.788s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:428:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_soon_[m[K’ was not declared in this scope
+[2.788s]   428 |         [01;31m[Kpublish_soon_[m[K)
+[2.788s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[2.791s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:436:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoystick_[m[K’ was not declared in this scope
+[2.791s]   436 |     if ([01;31m[Kjoystick_[m[K != nullptr && should_publish) {
+[2.791s]       |         [01;31m[K^~~~~~~~~[m[K
+[2.793s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:437:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoy_msg_[m[K’ was not declared in this scope
+[2.793s]   437 |       [01;31m[Kjoy_msg_[m[K.header.frame_id = "joy";
+[2.793s]       |       [01;31m[K^~~~~~~~[m[K
+[2.793s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:438:31:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.793s]   438 |       joy_msg_.header.stamp = [01;31m[Kthis[m[K->now();
+[2.793s]       |                               [01;31m[K^~~~[m[K
+[2.794s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:440:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_[m[K’ was not declared in this scope
+[2.794s]   440 |       [01;31m[Kpub_[m[K->publish(joy_msg_);
+[2.794s]       |       [01;31m[K^~~~[m[K
+[2.796s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:443:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kfuture_[m[K’ was not declared in this scope
+[2.796s]   443 |     status = [01;31m[Kfuture_[m[K.wait_for(std::chrono::seconds(0));
+[2.796s]       |              [01;31m[K^~~~~~~[m[K
+[2.797s] In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+[2.797s]                  from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+[2.797s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:11[m[K:
+[2.797s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:[m[K At global scope:
+[2.797s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:449:38:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ is not a member of ‘[01m[Kjoy[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Joy[m[K’?
+[2.797s]   449 | RCLCPP_COMPONENTS_REGISTER_NODE(joy::[01;31m[KJoy[m[K)
+[2.797s]       |                                      [01;31m[K^~~[m[K
+[2.797s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/joy.hpp:7[m[K,
+[2.797s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:12[m[K:
+[2.797s] [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/joy__struct.hpp:142:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Joy[m[K’ declared here
+[2.797s]   142 | using [01;36m[KJoy[m[K =
+[2.797s]       |       [01;36m[K^~~[m[K
+[2.797s] In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+[2.798s]                  from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+[2.798s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:11[m[K:
+[2.798s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:449:38:[m[K [01;31m[Kerror: [m[K‘[01m[KJoy[m[K’ is not a member of ‘[01m[Kjoy[m[K’; did you mean ‘[01m[Ksensor_msgs::msg::Joy[m[K’?
+[2.798s]   449 | RCLCPP_COMPONENTS_REGISTER_NODE(joy::[01;31m[KJoy[m[K)
+[2.798s]       |                                      [01;31m[K^~~[m[K
+[2.798s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/joy.hpp:7[m[K,
+[2.798s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:12[m[K:
+[2.798s] [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/joy__struct.hpp:142:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Joy[m[K’ declared here
+[2.798s]   142 | using [01;36m[KJoy[m[K =
+[2.798s]       |       [01;36m[K^~~[m[K
+[2.798s] In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+[2.798s]                  from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+[2.798s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:11[m[K:
+[2.798s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:449:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.798s]   449 | [01;31m[KRCLCPP_COMPONENTS_REGISTER_NODE[m[K(joy::Joy)
+[2.798s]       | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.064s] In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader_core.hpp:57[m[K,
+[3.064s]                  from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:55[m[K,
+[3.064s]                  from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+[3.064s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:11[m[K:
+[3.064s] /opt/ros/foxy/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = int; B = rclcpp_components::NodeFactory][m[K’:
+[3.065s] [01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[3.065s] [01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Krclcpp_components::NodeFactory*[m[K’ in return
+[3.065s]   218 |     return [01;31m[Knew C[m[K;
+[3.065s]       |            [01;31m[K^~~~~[m[K
+[3.065s]       |            [01;31m[K|[m[K
+[3.065s]       |            [01;31m[Kint*[m[K
+[3.113s] make[2]: *** [CMakeFiles/joy.dir/build.make:63: CMakeFiles/joy.dir/src/joy.cpp.o] Error 1
+[3.113s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/joy.dir/all] Error 2
+[3.114s] make: *** [Makefile:141: all] Error 2
+[3.116s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

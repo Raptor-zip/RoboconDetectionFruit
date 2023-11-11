@@ -1,0 +1,72 @@
+[0.538s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.708s] [35m[1mScanning dependencies of target Transmitter920[0m
+[0.708s] [  7%] Built target BeltLiner_Controller
+[0.720s] [ 15%] Built target Drive_Controller
+[0.728s] [ 23%] Built target DriveMotion
+[0.729s] [ 30%] Built target Solenoid_Controller
+[0.730s] [ 38%] Built target KiwiMotion
+[0.737s] [ 46%] Built target SerialKIMD
+[0.740s] [ 53%] Built target Xmove_Controller
+[0.754s] [ 57%] [32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o[0m
+[0.782s] [ 65%] Built target WallUpMotion
+[0.790s] [ 73%] Built target Upper_Controller
+[0.795s] [ 80%] Built target Crawl_Controller
+[0.800s] [ 88%] Built target RopeMotion
+[0.800s] [ 96%] Built target MotionMaster
+[2.348s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’:
+[2.348s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcompress_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.349s]   101 | void Transmitter920_Node::ExpandJoyData([01;35m[Kuint8_t compress_data[16][m[K)
+[2.349s]       |                                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[2.349s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::EncodeCOBSdata()[m[K’:
+[2.349s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:109:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.349s]   109 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 1[m[K; i++)
+[2.349s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.349s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::DecodeCOBSdata()[m[K’:
+[2.350s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:131:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.350s]   131 |     for (int i = 0; [01;35m[Ki < sizeof(temp_cobs)[m[K; i++)
+[2.350s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[2.350s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:138:14:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.350s]   138 |     while ([01;35m[Ki < sizeof(temp_cobs)[m[K)
+[2.351s]       |            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[2.351s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:146:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.351s]   146 |     for (int i = 0; [01;35m[Ki < sizeof(this->receive_compress_data)[m[K; i++)
+[2.351s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.351s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::timer_callback()[m[K’:
+[2.351s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:201:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.351s]   201 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 2[m[K; i++)
+[2.352s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.276s] [100%] [32m[1mLinking CXX executable Transmitter920[0m
+[5.477s] [100%] Built target Transmitter920
+[5.487s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[5.536s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[5.542s] -- Install configuration: ""
+[5.543s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+[5.544s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+[5.546s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+[5.547s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+[5.549s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller
+[5.550s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion
+[5.551s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller
+[5.552s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller
+[5.554s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller
+[5.555s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion
+[5.557s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/MotionMaster
+[5.558s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/KiwiMotion
+[5.558s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Transmitter920
+[5.560s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Transmitter920" to ""
+[5.560s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+[5.561s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+[5.561s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+[5.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+[5.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+[5.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+[5.562s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
+[5.563s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash

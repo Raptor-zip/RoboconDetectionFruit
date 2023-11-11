@@ -1,0 +1,41 @@
+[0.438s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.491s] [35m[1mScanning dependencies of target WallUpMotion[0m
+[0.506s] [ 16%] Built target SerialKIMD
+[0.512s] [ 33%] Built target Upper_Controller
+[0.514s] [ 50%] Built target Drive_Controller
+[0.518s] [ 58%] [32mBuilding CXX object CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o[0m
+[0.518s] [ 75%] Built target Xmove_Controller
+[0.524s] [ 91%] Built target DriveMotion
+[1.369s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.hpp:7[m[K,
+[1.369s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:2[m[K:
+[1.369s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.369s]    19 |  [01;35m[K}[m[K;
+[1.369s]       |  [01;35m[K^[m[K
+[1.398s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.398s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.398s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:1[m[K:
+[1.398s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:[m[K In member function ‘[01m[Kvoid WallUpMotion_Node::timer_callback()[m[K’:
+[1.398s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:91:17:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+[1.398s]    91 |     RCLCPP_INFO([01;31m[Knode[m[K->get_logger(), "Spined");
+[1.398s]       |                 [01;31m[K^~~~[m[K
+[1.398s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:91:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.398s]    91 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "Spined");
+[1.398s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:91:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.398s]    91 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "Spined");
+[1.398s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:91:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.398s]    91 |     [01;31m[KRCLCPP_INFO[m[K(node->get_logger(), "Spined");
+[1.398s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.444s] make[2]: *** [CMakeFiles/WallUpMotion.dir/build.make:63: CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o] Error 1
+[2.445s] make[1]: *** [CMakeFiles/Makefile2:250: CMakeFiles/WallUpMotion.dir/all] Error 2
+[2.445s] make: *** [Makefile:141: all] Error 2
+[2.446s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

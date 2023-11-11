@@ -1,0 +1,55 @@
+[0.462s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.498s] [35m[1mScanning dependencies of target Upper_Controller[0m
+[0.519s] [ 20%] Built target Xmove_Controller
+[0.521s] [ 40%] Built target Drive_Controller
+[0.525s] [ 50%] [32mBuilding CXX object CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o[0m
+[0.525s] [ 70%] Built target DriveMotion
+[0.526s] [ 90%] Built target SerialKIMD
+[1.419s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:7[m[K,
+[1.420s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[1.420s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.420s]    19 |  [01;35m[K}[m[K;
+[1.420s]       |  [01;35m[K^[m[K
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:81:44:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[1.448s]    81 |     if (this->button_state & [01;35m[K(0b0001 << 0) == 1[m[K) // left
+[1.448s]       |                              [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:86:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[1.448s]    86 |     else if (this->button_state & [01;35m[K(0b0001 << 1) == 1[m[K) // right
+[1.448s]       |                                   [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:91:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[1.448s]    91 |     else if (this->button_state & [01;35m[K(0b0001 << 2) == 1[m[K) // up
+[1.448s]       |                                   [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:96:49:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[1.448s]    96 |     else if (this->button_state & [01;35m[K(0b0001 << 3) == 1[m[K) // down
+[1.448s]       |                                   [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+[1.448s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:98:27:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+[1.448s]    98 |         if ([01;35m[Kthis->up_flag = 0[m[K)
+[1.448s]       |             [01;35m[K~~~~~~~~~~~~~~^~~[m[K
+[4.008s] [100%] [32m[1mLinking CXX executable Upper_Controller[0m
+[4.158s] [100%] Built target Upper_Controller
+[4.168s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[4.191s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[4.200s] -- Install configuration: ""
+[4.200s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+[4.200s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+[4.200s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+[4.201s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+[4.201s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller
+[4.201s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller" to ""
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+[4.202s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+[4.202s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
+[4.204s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash

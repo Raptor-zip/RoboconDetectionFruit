@@ -1,0 +1,501 @@
+[0.000000] (-) TimerEvent: {}
+[0.000213] (robocon2023_b_dash) JobQueued: {'identifier': 'robocon2023_b_dash', 'dependencies': OrderedDict()}
+[0.000266] (robocon2023_b_dash) JobStarted: {'identifier': 'robocon2023_b_dash'}
+[0.104083] (-) TimerEvent: {}
+[0.128928] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'cmake'}
+[0.129497] (robocon2023_b_dash) Command: {'cmd': ['/usr/bin/cmake', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash', '-DCMAKE_INSTALL_PREFIX=/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash'], 'cwd': '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros-industrial'), ('SSH_AGENT_PID', '1773'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros-industrial'), ('OLDPWD', '/home/ros-industrial/robocon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1586'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros-industrial'), ('JOURNAL_STREAM', '8:54910'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros-industrial'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros-industrial/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1808,unix/ubuntu:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '14aa157ac866447e9ffae7f7afe77d80'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/dc121977_a8fd_410d_be00_228852b9f001'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.89'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy')]), 'shell': False}
+[0.189323] (robocon2023_b_dash) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.204295] (-) TimerEvent: {}
+[0.235047] (robocon2023_b_dash) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.239259] (robocon2023_b_dash) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.303211] (robocon2023_b_dash) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.304018] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.304426] (-) TimerEvent: {}
+[0.367612] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.375471] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.375807] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.377984] (robocon2023_b_dash) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.404954] (-) TimerEvent: {}
+[0.446291] (robocon2023_b_dash) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.447125] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.505449] (-) TimerEvent: {}
+[0.516340] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.524782] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.525203] (robocon2023_b_dash) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.527953] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.547642] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.548024] (robocon2023_b_dash) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.606073] (-) TimerEvent: {}
+[0.706517] (-) TimerEvent: {}
+[0.711256] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.753084] (robocon2023_b_dash) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.759634] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.806961] (-) TimerEvent: {}
+[0.830031] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.854405] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.907323] (-) TimerEvent: {}
+[0.919027] (robocon2023_b_dash) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.969728] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.971590] (robocon2023_b_dash) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.972558] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.007943] (-) TimerEvent: {}
+[1.035060] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.035674] (robocon2023_b_dash) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.100613] (robocon2023_b_dash) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.101107] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.108427] (-) TimerEvent: {}
+[1.153863] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.154230] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.208635] (-) TimerEvent: {}
+[1.215597] (robocon2023_b_dash) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.216543] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.309253] (-) TimerEvent: {}
+[1.346091] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.409971] (-) TimerEvent: {}
+[1.453503] (robocon2023_b_dash) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.510538] (-) TimerEvent: {}
+[1.516286] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.520782] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.521426] (robocon2023_b_dash) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.521516] (robocon2023_b_dash) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.526061] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.526181] (robocon2023_b_dash) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.527193] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.529468] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.530899] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.534812] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.534927] (robocon2023_b_dash) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.535818] (robocon2023_b_dash) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.540015] (robocon2023_b_dash) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.591705] (robocon2023_b_dash) StdoutLine: {'line': b'-- Generating done\n'}
+[1.594345] (robocon2023_b_dash) StdoutLine: {'line': b'-- Build files have been written to: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash\n'}
+[1.603864] (robocon2023_b_dash) CommandEnded: {'returncode': 0}
+[1.604701] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'build'}
+[1.604776] (robocon2023_b_dash) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash', '--', '-j8', '-l8'], 'cwd': '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros-industrial'), ('SSH_AGENT_PID', '1773'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros-industrial'), ('OLDPWD', '/home/ros-industrial/robocon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1586'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros-industrial'), ('JOURNAL_STREAM', '8:54910'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros-industrial'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros-industrial/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1808,unix/ubuntu:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '14aa157ac866447e9ffae7f7afe77d80'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/dc121977_a8fd_410d_be00_228852b9f001'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.89'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy')]), 'shell': False}
+[1.610865] (-) TimerEvent: {}
+[1.641854] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Transmitter920\x1b[0m\n'}
+[1.642115] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target DriveMotion\x1b[0m\n'}
+[1.642198] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Solenoid_Controller\x1b[0m\n'}
+[1.642302] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target KiwiMotion\x1b[0m\n'}
+[1.642719] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target BeltLiner_Controller\x1b[0m\n'}
+[1.643371] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Xmove_Controller\x1b[0m\n'}
+[1.645319] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target SerialKIMD\x1b[0m\n'}
+[1.645934] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Receiver920\x1b[0m\n'}
+[1.711259] (-) TimerEvent: {}
+[1.809500] (robocon2023_b_dash) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/KiwiMotion.dir/src/Kiwi_Motion.cpp.o\x1b[0m\n'}
+[1.809773] (robocon2023_b_dash) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/Solenoid_Controller.dir/src/Solenoid_Controller.cpp.o\x1b[0m\n'}
+[1.811814] (robocon2023_b_dash) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/BeltLiner_Controller.dir/src/BeltLiner_Controller.cpp.o\x1b[0m\n'}
+[1.812046] (-) TimerEvent: {}
+[1.812336] (robocon2023_b_dash) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o\x1b[0m\n'}
+[1.812955] (robocon2023_b_dash) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o\x1b[0m\n'}
+[1.813077] (robocon2023_b_dash) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/DriveMotion.dir/src/Drive_Motion.cpp.o\x1b[0m\n'}
+[1.813695] (robocon2023_b_dash) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/Receiver920.dir/src/Receiver920.cpp.o\x1b[0m\n'}
+[1.814022] (robocon2023_b_dash) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o\x1b[0m\n'}
+[1.912498] (-) TimerEvent: {}
+[2.013274] (-) TimerEvent: {}
+[2.114229] (-) TimerEvent: {}
+[2.214995] (-) TimerEvent: {}
+[2.316006] (-) TimerEvent: {}
+[2.417016] (-) TimerEvent: {}
+[2.517840] (-) TimerEvent: {}
+[2.618512] (-) TimerEvent: {}
+[2.719307] (-) TimerEvent: {}
+[2.820053] (-) TimerEvent: {}
+[2.920726] (-) TimerEvent: {}
+[3.021330] (-) TimerEvent: {}
+[3.122247] (-) TimerEvent: {}
+[3.223033] (-) TimerEvent: {}
+[3.323903] (-) TimerEvent: {}
+[3.424558] (-) TimerEvent: {}
+[3.525518] (-) TimerEvent: {}
+[3.626318] (-) TimerEvent: {}
+[3.727065] (-) TimerEvent: {}
+[3.828036] (-) TimerEvent: {}
+[3.928692] (-) TimerEvent: {}
+[4.029285] (-) TimerEvent: {}
+[4.130036] (-) TimerEvent: {}
+[4.230985] (-) TimerEvent: {}
+[4.331572] (-) TimerEvent: {}
+[4.432476] (-) TimerEvent: {}
+[4.533310] (-) TimerEvent: {}
+[4.634040] (-) TimerEvent: {}
+[4.734728] (-) TimerEvent: {}
+[4.835577] (-) TimerEvent: {}
+[4.936456] (-) TimerEvent: {}
+[5.037206] (-) TimerEvent: {}
+[5.082631] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Motion.hpp:7\x1b[m\x1b[K,\n'}
+[5.083019] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Motion.cpp:2\x1b[m\x1b[K:\n'}
+[5.083156] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.083286] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.083397] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.090730] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Kiwi_Motion.hpp:7\x1b[m\x1b[K,\n'}
+[5.091004] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Kiwi_Motion.cpp:2\x1b[m\x1b[K:\n'}
+[5.091133] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.091255] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.091378] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.114347] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8\x1b[m\x1b[K,\n'}
+[5.114641] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[5.114803] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.114937] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.115062] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.116009] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Solenoid_Controller.hpp:6\x1b[m\x1b[K,\n'}
+[5.116156] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Solenoid_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[5.116275] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.116399] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.116673] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.137845] (-) TimerEvent: {}
+[5.149812] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:2\x1b[m\x1b[K:\n'}
+[5.150066] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.hpp:24:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.150142] (robocon2023_b_dash) StderrLine: {'line': b'   24 |     \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.150206] (robocon2023_b_dash) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.156092] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.cpp:2\x1b[m\x1b[K:\n'}
+[5.156291] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.hpp:24:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.156450] (robocon2023_b_dash) StderrLine: {'line': b'   24 |     \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.156515] (robocon2023_b_dash) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.177658] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.hpp:14\x1b[m\x1b[K,\n'}
+[5.177937] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.cpp:2\x1b[m\x1b[K:\n'}
+[5.178069] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.178187] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.178303] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.207642] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/BeltLiner_Controller.hpp:6\x1b[m\x1b[K,\n'}
+[5.207905] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/BeltLiner_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[5.208030] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.208152] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[5.208265] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.210376] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Receiver920_Node::DecodeCOBSdata()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.210675] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.cpp:66:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.211001] (robocon2023_b_dash) StderrLine: {'line': b'   66 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(temp_cobs)\x1b[m\x1b[K; i++)\n'}
+[5.211102] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.211382] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.cpp:73:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.211503] (robocon2023_b_dash) StderrLine: {'line': b'   73 |     while (\x1b[01;35m\x1b[Ki < sizeof(this->receive_buf) - 1\x1b[m\x1b[K)\n'}
+[5.211561] (robocon2023_b_dash) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.213550] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Receiver920.cpp:96:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.213677] (robocon2023_b_dash) StderrLine: {'line': b'   96 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(this->receive_compress_data)\x1b[m\x1b[K; i++)\n'}
+[5.213757] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.238326] (-) TimerEvent: {}
+[5.273722] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Transmitter920_Node::EncodeCOBSdata()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.274008] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:133:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.274245] (robocon2023_b_dash) StderrLine: {'line': b'  133 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(this->compress_data) + 1\x1b[m\x1b[K; i++)\n'}
+[5.274467] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.274922] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Transmitter920_Node::DecodeCOBSdata()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.275062] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:155:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.275228] (robocon2023_b_dash) StderrLine: {'line': b'  155 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(temp_cobs)\x1b[m\x1b[K; i++)\n'}
+[5.275351] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.275475] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:162:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.275594] (robocon2023_b_dash) StderrLine: {'line': b'  162 |     while (\x1b[01;35m\x1b[Ki < sizeof(this->receive_buf) - 1\x1b[m\x1b[K)\n'}
+[5.275703] (robocon2023_b_dash) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.275872] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:170:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.275992] (robocon2023_b_dash) StderrLine: {'line': b'  170 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(this->receive_compress_data)\x1b[m\x1b[K; i++)\n'}
+[5.276116] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.278535] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Transmitter920_Node::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.278785] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:220:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.278909] (robocon2023_b_dash) StderrLine: {'line': b'  220 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(this->compress_data) + 2\x1b[m\x1b[K; i++)\n'}
+[5.279026] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.297258] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Xmove_Controller_Node::ImageRecognition_Callback(std_msgs::msg::Int16MultiArray_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.297485] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:35:103:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krecognition_msg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[5.297581] (robocon2023_b_dash) StderrLine: {'line': b'   35 | void Xmove_Controller_Node::ImageRecognition_Callback(\x1b[01;35m\x1b[Kconst std_msgs::msg::Int16MultiArray::SharedPtr recognition_msg\x1b[m\x1b[K)\n'}
+[5.297638] (robocon2023_b_dash) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.297826] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:236:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.297906] (robocon2023_b_dash) StderrLine: {'line': b'  236 |     for (int i = 0; \x1b[01;35m\x1b[Ki < sizeof(this->cobs_data)\x1b[m\x1b[K; i++)\n'}
+[5.297957] (robocon2023_b_dash) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.338950] (-) TimerEvent: {}
+[5.439934] (-) TimerEvent: {}
+[5.540667] (-) TimerEvent: {}
+[5.641554] (-) TimerEvent: {}
+[5.742428] (-) TimerEvent: {}
+[5.843249] (-) TimerEvent: {}
+[5.944012] (-) TimerEvent: {}
+[6.044452] (-) TimerEvent: {}
+[6.145346] (-) TimerEvent: {}
+[6.246027] (-) TimerEvent: {}
+[6.346588] (-) TimerEvent: {}
+[6.447477] (-) TimerEvent: {}
+[6.548042] (-) TimerEvent: {}
+[6.648857] (-) TimerEvent: {}
+[6.749607] (-) TimerEvent: {}
+[6.850509] (-) TimerEvent: {}
+[6.952144] (-) TimerEvent: {}
+[7.053405] (-) TimerEvent: {}
+[7.154012] (-) TimerEvent: {}
+[7.255136] (-) TimerEvent: {}
+[7.355978] (-) TimerEvent: {}
+[7.456456] (-) TimerEvent: {}
+[7.556936] (-) TimerEvent: {}
+[7.657932] (-) TimerEvent: {}
+[7.758521] (-) TimerEvent: {}
+[7.859469] (-) TimerEvent: {}
+[7.960721] (-) TimerEvent: {}
+[8.061714] (-) TimerEvent: {}
+[8.162535] (-) TimerEvent: {}
+[8.263502] (-) TimerEvent: {}
+[8.364499] (-) TimerEvent: {}
+[8.465136] (-) TimerEvent: {}
+[8.565954] (-) TimerEvent: {}
+[8.666772] (-) TimerEvent: {}
+[8.694241] (robocon2023_b_dash) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking CXX executable Receiver920\x1b[0m\n'}
+[8.767074] (-) TimerEvent: {}
+[8.867792] (-) TimerEvent: {}
+[8.968431] (-) TimerEvent: {}
+[9.058536] (robocon2023_b_dash) StdoutLine: {'line': b'[ 32%] Built target Receiver920\n'}
+[9.068801] (-) TimerEvent: {}
+[9.071019] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Drive_Controller\x1b[0m\n'}
+[9.132596] (robocon2023_b_dash) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/Drive_Controller.dir/src/Drive_Controller.cpp.o\x1b[0m\n'}
+[9.169306] (-) TimerEvent: {}
+[9.270192] (-) TimerEvent: {}
+[9.371321] (-) TimerEvent: {}
+[9.472050] (-) TimerEvent: {}
+[9.572700] (-) TimerEvent: {}
+[9.673737] (-) TimerEvent: {}
+[9.774300] (-) TimerEvent: {}
+[9.875370] (-) TimerEvent: {}
+[9.976434] (-) TimerEvent: {}
+[10.077515] (-) TimerEvent: {}
+[10.178142] (-) TimerEvent: {}
+[10.278827] (-) TimerEvent: {}
+[10.379459] (-) TimerEvent: {}
+[10.480464] (-) TimerEvent: {}
+[10.581184] (-) TimerEvent: {}
+[10.681968] (-) TimerEvent: {}
+[10.782927] (-) TimerEvent: {}
+[10.883895] (-) TimerEvent: {}
+[10.984773] (-) TimerEvent: {}
+[11.085409] (-) TimerEvent: {}
+[11.186247] (-) TimerEvent: {}
+[11.289298] (-) TimerEvent: {}
+[11.389989] (-) TimerEvent: {}
+[11.491142] (-) TimerEvent: {}
+[11.594577] (-) TimerEvent: {}
+[11.695808] (-) TimerEvent: {}
+[11.773881] (robocon2023_b_dash) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking CXX executable SerialKIMD\x1b[0m\n'}
+[11.797005] (-) TimerEvent: {}
+[11.898060] (-) TimerEvent: {}
+[11.958073] (robocon2023_b_dash) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX executable Solenoid_Controller\x1b[0m\n'}
+[11.998861] (-) TimerEvent: {}
+[12.099611] (-) TimerEvent: {}
+[12.201866] (-) TimerEvent: {}
+[12.225585] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.hpp:6\x1b[m\x1b[K,\n'}
+[12.225996] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[12.226109] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[12.226187] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[12.226268] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[12.289557] (robocon2023_b_dash) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX executable BeltLiner_Controller\x1b[0m\n'}
+[12.302687] (-) TimerEvent: {}
+[12.328655] (robocon2023_b_dash) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable Transmitter920\x1b[0m\n'}
+[12.404650] (-) TimerEvent: {}
+[12.505697] (-) TimerEvent: {}
+[12.517476] (robocon2023_b_dash) StdoutLine: {'line': b'[ 50%] Built target SerialKIMD\n'}
+[12.537596] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Upper_Controller\x1b[0m\n'}
+[12.606015] (-) TimerEvent: {}
+[12.608220] (robocon2023_b_dash) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o\x1b[0m\n'}
+[12.626362] (robocon2023_b_dash) StdoutLine: {'line': b'[ 53%] Built target Solenoid_Controller\n'}
+[12.658044] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target WallUpMotion\x1b[0m\n'}
+[12.706283] (-) TimerEvent: {}
+[12.721058] (robocon2023_b_dash) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o\x1b[0m\n'}
+[12.793899] (robocon2023_b_dash) StdoutLine: {'line': b'[ 57%] Built target BeltLiner_Controller\n'}
+[12.806617] (-) TimerEvent: {}
+[12.818832] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target Crawl_Controller\x1b[0m\n'}
+[12.827297] (robocon2023_b_dash) StdoutLine: {'line': b'[ 57%] Built target Transmitter920\n'}
+[12.846439] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target MotionMaster\x1b[0m\n'}
+[12.879465] (robocon2023_b_dash) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/Crawl_Controller.dir/src/Crawl_Controller.cpp.o\x1b[0m\n'}
+[12.907003] (-) TimerEvent: {}
+[12.909096] (robocon2023_b_dash) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/MotionMaster.dir/src/MotionMaster.cpp.o\x1b[0m\n'}
+[12.918878] (robocon2023_b_dash) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX executable DriveMotion\x1b[0m\n'}
+[13.007514] (-) TimerEvent: {}
+[13.109458] (-) TimerEvent: {}
+[13.212385] (-) TimerEvent: {}
+[13.313227] (-) TimerEvent: {}
+[13.414178] (-) TimerEvent: {}
+[13.458188] (robocon2023_b_dash) StdoutLine: {'line': b'[ 67%] Built target DriveMotion\n'}
+[13.474150] (robocon2023_b_dash) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target RopeMotion\x1b[0m\n'}
+[13.514821] (-) TimerEvent: {}
+[13.532206] (robocon2023_b_dash) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o\x1b[0m\n'}
+[13.615565] (-) TimerEvent: {}
+[13.716684] (-) TimerEvent: {}
+[13.817799] (-) TimerEvent: {}
+[13.919052] (-) TimerEvent: {}
+[14.020072] (-) TimerEvent: {}
+[14.120985] (-) TimerEvent: {}
+[14.221818] (-) TimerEvent: {}
+[14.322467] (-) TimerEvent: {}
+[14.423386] (-) TimerEvent: {}
+[14.524418] (-) TimerEvent: {}
+[14.559272] (robocon2023_b_dash) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable KiwiMotion\x1b[0m\n'}
+[14.625012] (-) TimerEvent: {}
+[14.725840] (-) TimerEvent: {}
+[14.766228] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:7\x1b[m\x1b[K,\n'}
+[14.766546] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[14.766699] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[14.766821] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[14.766909] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.826608] (-) TimerEvent: {}
+[14.876598] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.hpp:7\x1b[m\x1b[K,\n'}
+[14.876950] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:2\x1b[m\x1b[K:\n'}
+[14.877093] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[14.877372] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[14.877471] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.917676] (robocon2023_b_dash) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX executable Xmove_Controller\x1b[0m\n'}
+[14.927338] (-) TimerEvent: {}
+[14.952969] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.hpp:6\x1b[m\x1b[K,\n'}
+[14.953302] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.cpp:2\x1b[m\x1b[K:\n'}
+[14.953420] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[14.953526] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[14.953628] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.997255] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/MotionMaster.hpp:6\x1b[m\x1b[K,\n'}
+[14.997580] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/MotionMaster.cpp:2\x1b[m\x1b[K:\n'}
+[14.997770] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[14.997920] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[14.998044] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[15.027461] (robocon2023_b_dash) StdoutLine: {'line': b'[ 78%] Built target KiwiMotion\n'}
+[15.027789] (-) TimerEvent: {}
+[15.128632] (-) TimerEvent: {}
+[15.229475] (-) TimerEvent: {}
+[15.330441] (-) TimerEvent: {}
+[15.347786] (robocon2023_b_dash) StdoutLine: {'line': b'[ 78%] Built target Xmove_Controller\n'}
+[15.431072] (-) TimerEvent: {}
+[15.467774] (robocon2023_b_dash) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7\x1b[m\x1b[K,\n'}
+[15.468131] (robocon2023_b_dash) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2\x1b[m\x1b[K:\n'}
+[15.468252] (robocon2023_b_dash) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ prohibits anonymous structs [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[15.468334] (robocon2023_b_dash) StderrLine: {'line': b'   19 |  \x1b[01;35m\x1b[K}\x1b[m\x1b[K;\n'}
+[15.468390] (robocon2023_b_dash) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[15.531764] (-) TimerEvent: {}
+[15.632562] (-) TimerEvent: {}
+[15.733360] (-) TimerEvent: {}
+[15.833947] (-) TimerEvent: {}
+[15.934776] (-) TimerEvent: {}
+[16.035572] (-) TimerEvent: {}
+[16.136170] (-) TimerEvent: {}
+[16.236806] (-) TimerEvent: {}
+[16.337418] (-) TimerEvent: {}
+[16.438376] (-) TimerEvent: {}
+[16.539217] (-) TimerEvent: {}
+[16.640105] (-) TimerEvent: {}
+[16.740529] (-) TimerEvent: {}
+[16.841419] (-) TimerEvent: {}
+[16.941964] (-) TimerEvent: {}
+[17.042806] (-) TimerEvent: {}
+[17.143898] (-) TimerEvent: {}
+[17.244673] (-) TimerEvent: {}
+[17.345640] (-) TimerEvent: {}
+[17.446367] (-) TimerEvent: {}
+[17.547508] (-) TimerEvent: {}
+[17.648424] (-) TimerEvent: {}
+[17.748971] (-) TimerEvent: {}
+[17.849575] (-) TimerEvent: {}
+[17.901995] (robocon2023_b_dash) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX executable Drive_Controller\x1b[0m\n'}
+[17.950339] (-) TimerEvent: {}
+[18.050960] (-) TimerEvent: {}
+[18.151678] (-) TimerEvent: {}
+[18.199410] (robocon2023_b_dash) StdoutLine: {'line': b'[ 82%] Built target Drive_Controller\n'}
+[18.252037] (-) TimerEvent: {}
+[18.352968] (-) TimerEvent: {}
+[18.453918] (-) TimerEvent: {}
+[18.554997] (-) TimerEvent: {}
+[18.655625] (-) TimerEvent: {}
+[18.756395] (-) TimerEvent: {}
+[18.856950] (-) TimerEvent: {}
+[18.957842] (-) TimerEvent: {}
+[19.058383] (-) TimerEvent: {}
+[19.159217] (-) TimerEvent: {}
+[19.260177] (-) TimerEvent: {}
+[19.360962] (-) TimerEvent: {}
+[19.461478] (-) TimerEvent: {}
+[19.562450] (-) TimerEvent: {}
+[19.663025] (-) TimerEvent: {}
+[19.763657] (-) TimerEvent: {}
+[19.846621] (robocon2023_b_dash) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable Crawl_Controller\x1b[0m\n'}
+[19.848551] (robocon2023_b_dash) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking CXX executable MotionMaster\x1b[0m\n'}
+[19.864119] (-) TimerEvent: {}
+[19.964816] (-) TimerEvent: {}
+[20.065476] (-) TimerEvent: {}
+[20.166249] (-) TimerEvent: {}
+[20.174103] (robocon2023_b_dash) StdoutLine: {'line': b'[ 89%] Built target Crawl_Controller\n'}
+[20.178829] (robocon2023_b_dash) StdoutLine: {'line': b'[ 89%] Built target MotionMaster\n'}
+[20.201076] (robocon2023_b_dash) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable Upper_Controller\x1b[0m\n'}
+[20.266721] (-) TimerEvent: {}
+[20.367613] (-) TimerEvent: {}
+[20.437953] (robocon2023_b_dash) StdoutLine: {'line': b'[ 92%] Built target Upper_Controller\n'}
+[20.467904] (-) TimerEvent: {}
+[20.568696] (-) TimerEvent: {}
+[20.669559] (-) TimerEvent: {}
+[20.770324] (-) TimerEvent: {}
+[20.870939] (-) TimerEvent: {}
+[20.971429] (-) TimerEvent: {}
+[21.071971] (-) TimerEvent: {}
+[21.172483] (-) TimerEvent: {}
+[21.272931] (-) TimerEvent: {}
+[21.373805] (-) TimerEvent: {}
+[21.474460] (-) TimerEvent: {}
+[21.574983] (-) TimerEvent: {}
+[21.675586] (-) TimerEvent: {}
+[21.725693] (robocon2023_b_dash) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable WallUpMotion\x1b[0m\n'}
+[21.775767] (-) TimerEvent: {}
+[21.876274] (-) TimerEvent: {}
+[21.977358] (-) TimerEvent: {}
+[22.078425] (-) TimerEvent: {}
+[22.179097] (-) TimerEvent: {}
+[22.229538] (robocon2023_b_dash) StdoutLine: {'line': b'[ 96%] Built target WallUpMotion\n'}
+[22.279316] (-) TimerEvent: {}
+[22.323064] (robocon2023_b_dash) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable RopeMotion\x1b[0m\n'}
+[22.379761] (-) TimerEvent: {}
+[22.480427] (-) TimerEvent: {}
+[22.581106] (-) TimerEvent: {}
+[22.681928] (-) TimerEvent: {}
+[22.725540] (robocon2023_b_dash) StdoutLine: {'line': b'[100%] Built target RopeMotion\n'}
+[22.742289] (robocon2023_b_dash) CommandEnded: {'returncode': 0}
+[22.782339] (-) TimerEvent: {}
+[22.864665] (robocon2023_b_dash) JobProgress: {'identifier': 'robocon2023_b_dash', 'progress': 'install'}
+[22.883158] (robocon2023_b_dash) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash'], 'cwd': '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ros-industrial'), ('SSH_AGENT_PID', '1773'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros-industrial'), ('OLDPWD', '/home/ros-industrial/robocon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1586'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros-industrial'), ('JOURNAL_STREAM', '8:54910'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros-industrial'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ros-industrial/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/1808,unix/ubuntu:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '14aa157ac866447e9ffae7f7afe77d80'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/dc121977_a8fd_410d_be00_228852b9f001'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.89'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/build/robocon2023_b_dash'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=854beef9a739a897bef8760265448dbd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ros-industrial/robocon_ws/install/usb920_ver2:/home/ros-industrial/robocon_ws/install/time_practice:/home/ros-industrial/robocon_ws/install/sllidar_ros2:/home/ros-industrial/robocon_ws/install/ros_to_kimd:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver:/home/ros-industrial/robocon_ws/install/robocon2023_b_dash:/opt/ros/foxy')]), 'shell': False}
+[22.884627] (-) TimerEvent: {}
+[22.893420] (robocon2023_b_dash) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.893966] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD\n'}
+[22.896137] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD" to ""\n'}
+[22.896950] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller\n'}
+[22.898922] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller" to ""\n'}
+[22.899078] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion\n'}
+[22.901608] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion" to ""\n'}
+[22.902356] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller\n'}
+[22.904995] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller" to ""\n'}
+[22.905635] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller\n'}
+[22.907941] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller" to ""\n'}
+[22.908337] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion\n'}
+[22.913359] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion" to ""\n'}
+[22.913653] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller\n'}
+[22.916022] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller" to ""\n'}
+[22.916289] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller\n'}
+[22.919918] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller" to ""\n'}
+[22.920513] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller\n'}
+[22.923923] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller" to ""\n'}
+[22.924185] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion\n'}
+[22.928703] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion" to ""\n'}
+[22.929035] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/MotionMaster\n'}
+[22.932188] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/MotionMaster" to ""\n'}
+[22.932763] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/KiwiMotion\n'}
+[22.937767] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/KiwiMotion" to ""\n'}
+[22.938383] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Transmitter920\n'}
+[22.942280] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Transmitter920" to ""\n'}
+[22.942640] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Receiver920\n'}
+[22.945604] (robocon2023_b_dash) StdoutLine: {'line': b'-- Set runtime path of "/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/lib/robocon2023_b_dash/Receiver920" to ""\n'}
+[22.945911] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash\n'}
+[22.946064] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash\n'}
+[22.946329] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh\n'}
+[22.946568] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv\n'}
+[22.946983] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh\n'}
+[22.947339] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv\n'}
+[22.947478] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash\n'}
+[22.947728] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh\n'}
+[22.947868] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh\n'}
+[22.947990] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv\n'}
+[22.948086] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv\n'}
+[22.948302] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash\n'}
+[22.948374] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake\n'}
+[22.948472] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake\n'}
+[22.948743] (robocon2023_b_dash) StdoutLine: {'line': b'-- Installing: /home/ros-industrial/robocon_ws/src/robocon2023_b_dash/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml\n'}
+[22.950528] (robocon2023_b_dash) CommandEnded: {'returncode': 0}
+[22.985721] (-) TimerEvent: {}
+[23.086693] (-) TimerEvent: {}
+[23.187274] (-) TimerEvent: {}
+[23.292075] (-) TimerEvent: {}
+[23.395268] (-) TimerEvent: {}
+[23.497375] (-) TimerEvent: {}
+[23.515556] (robocon2023_b_dash) JobEnded: {'identifier': 'robocon2023_b_dash', 'rc': 0}
+[23.517149] (-) EventReactorShutdown: {}

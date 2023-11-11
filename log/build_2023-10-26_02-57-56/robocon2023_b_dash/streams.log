@@ -1,0 +1,60 @@
+[0.828s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.867s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.893s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.059s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.101s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.207s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.252s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.255s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.387s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.493s] -- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[1.540s] -- Found sdl2_vendor: 3.0.1 (/opt/ros/foxy/share/sdl2_vendor/cmake)
+[1.544s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.597s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.601s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.601s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/include>
+[1.601s] -- Configured cppcheck exclude dirs and/or files: 
+[1.601s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.601s] -- Configured cpplint exclude dirs and/or files: 
+[1.602s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.602s] -- Added test 'lint_cmake' to check CMake code style
+[1.602s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.603s] -- Added test 'uncrustify' to check C / C++ code style
+[1.603s] -- Configured uncrustify additional arguments: 
+[1.605s] -- Added test 'xmllint' to check XML markup files
+[1.606s] -- Configuring done
+[1.680s] -- Generating done
+[1.680s] -- Build files have been written to: /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[1.700s] [35m[1mScanning dependencies of target joy_enumerate_devices[0m
+[1.732s] [  2%] [32mBuilding CXX object CMakeFiles/joy_enumerate_devices.dir/src/joy_enumerate_devices.cpp.o[0m
+[2.155s] [  5%] [32m[1mLinking CXX executable joy_enumerate_devices[0m
+[2.256s] [  5%] Built target joy_enumerate_devices
+[2.286s] [ 11%] Built target Xmove_Controller
+[2.315s] [ 17%] Built target Solenoid_Controller
+[2.342s] [ 23%] Built target DriveMotion
+[2.369s] [ 29%] Built target Transmitter920
+[2.393s] [ 35%] Built target Drive_Controller
+[2.417s] [ 41%] Built target Upper_Controller
+[2.447s] [ 47%] Built target WallUpMotion
+[2.474s] [ 52%] Built target Crawl_Controller
+[2.501s] [ 58%] Built target MotionMaster
+[2.528s] [ 64%] Built target RopeMotion
+[2.556s] [ 70%] Built target SerialKIMD
+[2.583s] [ 76%] Built target Receiver920
+[2.607s] [ 82%] Built target BeltLiner_Controller
+[2.614s] [35m[1mScanning dependencies of target joy_node[0m
+[2.729s] [ 85%] [32mBuilding CXX object CMakeFiles/joy_node.dir/rclcpp_components/node_main_joy_node.cpp.o[0m
+[4.361s] [ 88%] [32m[1mLinking CXX executable joy_node[0m
+[4.495s] [ 88%] Built target joy_node
+[4.519s] [ 94%] Built target KiwiMotion
+[4.527s] [35m[1mScanning dependencies of target joy[0m
+[4.562s] [ 97%] [32mBuilding CXX object CMakeFiles/joy.dir/src/joy.cpp.o[0m
+[4.682s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/joy.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Krobocon2023_b_dash_transceiver/joy.hpp: No such file or directory
+[4.683s]    14 | #include [01;31m[K"robocon2023_b_dash_transceiver/joy.hpp"[m[K
+[4.683s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.683s] compilation terminated.
+[4.684s] make[2]: *** [CMakeFiles/joy.dir/build.make:63: CMakeFiles/joy.dir/src/joy.cpp.o] Error 1
+[4.685s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/joy.dir/all] Error 2
+[4.685s] make: *** [Makefile:141: all] Error 2
+[4.688s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

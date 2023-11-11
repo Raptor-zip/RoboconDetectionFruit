@@ -1,0 +1,39 @@
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:8[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::Joy_Callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:39:42:[m[K [01;35m[Kwarning: [m[Kleft shift of negative value [[01;35m[K-Wshift-negative-value[m[K]
+   39 |         this->button_state &= ~0b0001 << [01;35m[K0[m[K;
+      |                                          [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:48:42:[m[K [01;35m[Kwarning: [m[Kleft shift of negative value [[01;35m[K-Wshift-negative-value[m[K]
+   48 |         this->button_state &= ~0b0001 << [01;35m[K1[m[K;
+      |                                          [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:57:42:[m[K [01;35m[Kwarning: [m[Kleft shift of negative value [[01;35m[K-Wshift-negative-value[m[K]
+   57 |         this->button_state &= ~0b0001 << [01;35m[K2[m[K;
+      |                                          [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:66:42:[m[K [01;35m[Kwarning: [m[Kleft shift of negative value [[01;35m[K-Wshift-negative-value[m[K]
+   66 |         this->button_state &= ~0b0001 << [01;35m[K3[m[K;
+      |                                          [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:81:42:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+   81 |     if (this->button_state & [01;35m[K0b0001 << 0 == 1[m[K) // left
+      |                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:86:47:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+   86 |     else if (this->button_state & [01;35m[K0b0001 << 1 == 1[m[K) // right
+      |                                   [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:91:47:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+   91 |     else if (this->button_state & [01;35m[K0b0001 << 2 == 1[m[K) // up
+      |                                   [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:96:47:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+   96 |     else if (this->button_state & [01;35m[K0b0001 << 3 == 1[m[K) // down
+      |                                   [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:98:27:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+   98 |         if ([01;35m[Kthis->up_flag = 0[m[K)
+      |             [01;35m[K~~~~~~~~~~~~~~^~~[m[K

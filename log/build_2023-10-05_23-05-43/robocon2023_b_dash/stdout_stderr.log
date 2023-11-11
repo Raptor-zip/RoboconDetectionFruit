@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target Xmove_Controller[0m
+[ 50%] Built target SerialKIMD
+[ 75%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:37:46:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   37 |     printf("show bin %d",this->xmove_msg.bin[[01;31m[Ki[m[K]);
+      |                                              [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/Xmove_Controller.dir/build.make:63: CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/Xmove_Controller.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

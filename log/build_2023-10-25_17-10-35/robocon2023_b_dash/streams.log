@@ -1,0 +1,37 @@
+[0.516s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.582s] [  7%] Built target BeltLiner_Controller
+[0.585s] [ 15%] Built target KiwiMotion
+[0.588s] [ 23%] Built target Xmove_Controller
+[0.590s] [ 30%] Built target SerialKIMD
+[0.596s] [35m[1mScanning dependencies of target Transmitter920[0m
+[0.596s] [ 38%] Built target Solenoid_Controller
+[0.610s] [ 46%] Built target DriveMotion
+[0.620s] [ 53%] Built target Drive_Controller
+[0.627s] [ 57%] [32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o[0m
+[0.642s] [ 65%] Built target WallUpMotion
+[0.645s] [ 73%] Built target MotionMaster
+[0.657s] [ 80%] Built target Crawl_Controller
+[0.657s] [ 88%] Built target Upper_Controller
+[0.658s] [ 96%] Built target RopeMotion
+[1.509s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’:
+[1.509s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcompress_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.509s]   101 | void Transmitter920_Node::ExpandJoyData([01;35m[Kuint8_t compress_data[16][m[K)
+[1.509s]       |                                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[1.509s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::MakeCOBSdata()[m[K’:
+[1.509s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:109:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.510s]   109 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 1[m[K; i++)
+[1.510s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.510s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:125:62:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[1.510s]   125 |     this->cobs_data[sizeof(this->compress_data) + 1] = 0x00;4
+[1.510s]       |                                                              [01;31m[K^[m[K
+[1.510s]       |                                                              [32m[K;[m[K
+[1.510s] ......
+[1.511s]   163 | [32m[K}[m[K
+[1.511s]       | [32m[K~[m[K                                                             
+[1.511s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:125:61:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+[1.511s]   125 |     this->cobs_data[sizeof(this->compress_data) + 1] = 0x00;[01;35m[K4[m[K
+[1.511s]       |                                                             [01;35m[K^[m[K
+[2.381s] make[2]: *** [CMakeFiles/Transmitter920.dir/build.make:63: CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o] Error 1
+[2.381s] make[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/Transmitter920.dir/all] Error 2
+[2.382s] make: *** [Makefile:141: all] Error 2
+[2.385s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

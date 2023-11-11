@@ -1,0 +1,34 @@
+[0.526s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.569s] [35m[1mScanning dependencies of target RopeMotion[0m
+[0.602s] [ 10%] Built target BeltLiner_Controller
+[0.603s] [ 20%] Built target SerialKIMD
+[0.607s] [ 30%] Built target Xmove_Controller
+[0.608s] [ 35%] [32mBuilding CXX object CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o[0m
+[0.609s] [ 45%] Built target DriveMotion
+[0.609s] [ 55%] Built target Solenoid_Controller
+[0.609s] [ 65%] Built target Crawl_Controller
+[0.615s] [ 75%] Built target Drive_Controller
+[0.618s] [35m[1mScanning dependencies of target WallUpMotion[0m
+[0.639s] [ 85%] Built target Upper_Controller
+[0.644s] [ 90%] [32mBuilding CXX object CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o[0m
+[1.419s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7[m[K,
+[1.419s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[1.419s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.420s]    19 |  [01;35m[K}[m[K;
+[1.420s]       |  [01;35m[K^[m[K
+[1.436s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.hpp:7[m[K,
+[1.436s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:2[m[K:
+[1.436s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.437s]    19 |  [01;35m[K}[m[K;
+[1.437s]       |  [01;35m[K^[m[K
+[1.473s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:[m[K In member function ‘[01m[Kvoid WallUpMotion_Node::Wallup_Task()[m[K’:
+[1.473s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:572:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[1.473s]   572 |             this->SetClawlIncPos([01;31m[K,[m[K FAST_MODE, 0);
+[1.473s]       |                                  [01;31m[K^[m[K
+[2.486s] make[2]: *** [CMakeFiles/WallUpMotion.dir/build.make:63: CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o] Error 1
+[2.486s] make[1]: *** [CMakeFiles/Makefile2:393: CMakeFiles/WallUpMotion.dir/all] Error 2
+[2.486s] make[1]: *** Waiting for unfinished jobs....
+[3.856s] [ 95%] [32m[1mLinking CXX executable RopeMotion[0m
+[4.000s] [ 95%] Built target RopeMotion
+[4.001s] make: *** [Makefile:141: all] Error 2
+[4.006s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

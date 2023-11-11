@@ -1,0 +1,175 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rclcpp_components: 2.4.3 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Found sdl2_vendor: 3.0.1 (/opt/ros/foxy/share/sdl2_vendor/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ros-industrial/robocon_ws/build/robocon2023_b_dash_transceiver
+[35m[1mScanning dependencies of target joy_node[0m
+[35m[1mScanning dependencies of target usb920_node[0m
+[35m[1mScanning dependencies of target joy[0m
+[35m[1mScanning dependencies of target program_checker_node[0m
+[35m[1mScanning dependencies of target joy_enumerate_devices[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/joy_enumerate_devices.dir/src/joy_enumerate_devices.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/joy_node.dir/rclcpp_components/node_main_joy_node.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/program_checker_node.dir/src/program_checker.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/usb920_node.dir/src/usb920_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/joy.dir/src/joy.cpp.o[0m
+[ 60%] [32m[1mLinking CXX executable joy_enumerate_devices[0m
+[ 60%] Built target joy_enumerate_devices
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:[m[K In member function ‘[01m[Kvoid JoySubscriber::topic_callback1(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:73:71:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K-[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   73 |                 DS_data.data[0].JoyStickData.button_status |= (1 << [01;35m[Ki - 2[m[K);
+      |                                                                     [01;35m[K~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:75:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K-[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   75 |                 DS_data.data[0].JoyStickData.button_status &= ~(1 << [01;35m[Ki - 2[m[K);
+      |                                                                      [01;35m[K~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:80:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   80 |                 DS_data.data[0].JoyStickData.button_status |= (1 << [01;35m[K11 + i[m[K);
+      |                                                                     [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:81:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   81 |                 DS_data.data[0].JoyStickData.button_status &= ~(1 << [01;35m[K13 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:83:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   83 |                 DS_data.data[0].JoyStickData.button_status |= (1 << [01;35m[K13 + i[m[K);
+      |                                                                     [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:84:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   84 |                 DS_data.data[0].JoyStickData.button_status &= ~(1 << [01;35m[K11 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:86:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   86 |                 DS_data.data[0].JoyStickData.button_status &= ~(1 << [01;35m[K11 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:87:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+   87 |                 DS_data.data[0].JoyStickData.button_status &= ~(1 << [01;35m[K13 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:100:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  100 |         for(int i = 0; [01;35m[Ki < sizeof(DS_data.bin) + 1[m[K; i++) {
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:115:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  115 |         for(int i = 0; [01;35m[Ki < sizeof(cobs)[m[K; i++) {
+      |                        [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:[m[K In member function ‘[01m[Kvoid JoySubscriber::topic_callback2(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:133:71:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K-[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  133 |                 DS_data.data[1].JoyStickData.button_status |= (1 << [01;35m[Ki - 2[m[K);
+      |                                                                     [01;35m[K~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:135:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K-[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  135 |                 DS_data.data[1].JoyStickData.button_status &= ~(1 << [01;35m[Ki - 2[m[K);
+      |                                                                      [01;35m[K~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:140:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  140 |                 DS_data.data[1].JoyStickData.button_status |= (1 << [01;35m[K11 + i[m[K);
+      |                                                                     [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:141:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  141 |                 DS_data.data[1].JoyStickData.button_status &= ~(1 << [01;35m[K13 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:143:72:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  143 |                 DS_data.data[1].JoyStickData.button_status |= (1 << [01;35m[K13 + i[m[K);
+      |                                                                     [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:144:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  144 |                 DS_data.data[1].JoyStickData.button_status &= ~(1 << [01;35m[K11 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:146:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  146 |                 DS_data.data[1].JoyStickData.button_status &= ~(1 << [01;35m[K11 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:147:73:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ inside ‘[01m[K<<[m[K’ [[01;35m[K-Wparentheses[m[K]
+  147 |                 DS_data.data[1].JoyStickData.button_status &= ~(1 << [01;35m[K13 + i[m[K);
+      |                                                                      [01;35m[K~~~^~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:160:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  160 |         for(int i = 0; [01;35m[Ki < sizeof(DS_data.bin) + 1[m[K; i++) {
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:175:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+  175 |         for(int i = 0; [01;35m[Ki < sizeof(cobs)[m[K; i++) {
+      |                        [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_transceiver/src/usb920_node.cpp:192:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ki[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  192 |     int [01;35m[Ki[m[K;
+      |         [01;35m[K^[m[K
+[ 70%] [32m[1mLinking CXX executable joy_node[0m
+[ 70%] Built target joy_node
+[ 80%] [32m[1mLinking CXX executable program_checker_node[0m
+[ 90%] [32m[1mLinking CXX executable usb920_node[0m
+[ 90%] Built target program_checker_node
+[ 90%] Built target usb920_node
+[100%] [32m[1mLinking CXX shared library libjoy.so[0m
+[100%] Built target joy
+-- Install configuration: ""
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/libjoy.so
+-- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/libjoy.so" to ""
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/joy_node
+-- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/joy_node" to ""
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/joy_enumerate_devices
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/include/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/include/robocon2023_b_dash_transceiver/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/include/robocon2023_b_dash_transceiver/robocon2023_b_dash_transceiver/DualShock.h
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/include/robocon2023_b_dash_transceiver/robocon2023_b_dash_transceiver/joy.hpp
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/config
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/launch
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/launch/all_launch.py
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/usb920_node
+-- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/usb920_node" to ""
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/program_checker_node
+-- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/lib/robocon2023_b_dash_transceiver/program_checker_node" to ""
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/environment/ament_prefix_path.sh
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/environment/ament_prefix_path.dsv
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/environment/path.sh
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/environment/path.dsv
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/local_setup.bash
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/local_setup.sh
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/local_setup.zsh
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/local_setup.dsv
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.dsv
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/ament_index/resource_index/packages/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/ament_index/resource_index/rclcpp_components/robocon2023_b_dash_transceiver
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/export_joyExport.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/export_joyExport-noconfig.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/robocon2023_b_dash_transceiverConfig.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/cmake/robocon2023_b_dash_transceiverConfig-version.cmake
+-- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_transceiver/share/robocon2023_b_dash_transceiver/package.xml

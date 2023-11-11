@@ -1,0 +1,102 @@
+[0.527s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.601s] [35m[1mScanning dependencies of target Transmitter920[0m
+[0.623s] [  7%] Built target BeltLiner_Controller
+[0.624s] [ 15%] Built target KiwiMotion
+[0.624s] [ 23%] Built target Xmove_Controller
+[0.625s] [ 30%] Built target Solenoid_Controller
+[0.629s] [ 42%] Built target Drive_Controller
+[0.629s] [ 42%] [32mBuilding CXX object CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o[0m
+[0.629s] [ 50%] Built target DriveMotion
+[0.630s] [ 57%] Built target SerialKIMD
+[0.657s] [ 65%] Built target Upper_Controller
+[0.668s] [ 73%] Built target WallUpMotion
+[0.669s] [ 80%] Built target Crawl_Controller
+[0.669s] [ 88%] Built target MotionMaster
+[0.673s] [ 96%] Built target RopeMotion
+[1.487s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:2[m[K:
+[1.487s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.hpp:29:30:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K,[m[K’ at end of member declaration
+[1.487s]    29 |     uint8_t compress_data[16][01;31m[K,[m[K ;
+[1.487s]       |                              [01;31m[K^[m[K
+[1.487s]       |                              [31m[K-[m[K
+[1.504s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::ExpandJoyData(uint8_t*)[m[K’:
+[1.504s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:101:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcompress_data[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.505s]   101 | void Transmitter920_Node::ExpandJoyData([01;35m[Kuint8_t compress_data[16][m[K)
+[1.506s]       |                                         [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[1.506s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::EncodeCOBSdata()[m[K’:
+[1.506s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:109:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.506s]   109 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 1[m[K; i++)
+[1.507s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.507s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::DecodeCOBSdata()[m[K’:
+[1.507s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:130:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.507s]   130 |     for (int i = 0; [01;35m[Ki < sizeof(this->receive_cobs_data)[m[K; i++)
+[1.507s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.507s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:136:14:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.507s]   136 |     while ([01;35m[Ki <= sizeof(receive_cobs_data)[m[K)
+[1.507s]       |            [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.508s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:[m[K In member function ‘[01m[Kvoid Transmitter920_Node::timer_callback()[m[K’:
+[1.508s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:192:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.509s]   192 |     for (int i = 0; [01;35m[Ki < sizeof(this->compress_data) + 2[m[K; i++)
+[1.509s]       |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.509s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.509s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.509s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.509s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.509s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.510s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.510s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.510s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.510s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.510s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.510s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:1[m[K:
+[1.510s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:209:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.510s]   209 |                 this->[01;31m[Kreceive_compress_data[m[K[0], this->receive_compress_data[1],
+[1.510s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.510s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:209:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.510s]   209 |                 this->receive_compress_data[0], this->[01;31m[Kreceive_compress_data[m[K[1],
+[1.511s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.511s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:210:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.511s]   210 |                 this->[01;31m[Kreceive_compress_data[m[K[2], this->receive_compress_data[3],
+[1.511s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.511s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:210:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.511s]   210 |                 this->receive_compress_data[2], this->[01;31m[Kreceive_compress_data[m[K[3],
+[1.511s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:211:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.512s]   211 |                 this->[01;31m[Kreceive_compress_data[m[K[4], this->receive_compress_data[5],
+[1.512s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:211:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.512s]   211 |                 this->receive_compress_data[4], this->[01;31m[Kreceive_compress_data[m[K[5],
+[1.512s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:212:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.512s]   212 |                 this->[01;31m[Kreceive_compress_data[m[K[6], this->receive_compress_data[7],
+[1.512s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:212:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.512s]   212 |                 this->receive_compress_data[6], this->[01;31m[Kreceive_compress_data[m[K[7],
+[1.512s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:213:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.513s]   213 |                 this->[01;31m[Kreceive_compress_data[m[K[8], this->receive_compress_data[9],
+[1.513s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:213:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.513s]   213 |                 this->receive_compress_data[8], this->[01;31m[Kreceive_compress_data[m[K[9],
+[1.513s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:214:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.513s]   214 |                 this->[01;31m[Kreceive_compress_data[m[K[10], this->receive_compress_data[11],
+[1.513s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:214:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.513s]   214 |                 this->receive_compress_data[10], this->[01;31m[Kreceive_compress_data[m[K[11],
+[1.513s]       |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:215:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.514s]   215 |                 this->[01;31m[Kreceive_compress_data[m[K[12], this->receive_compress_data[13],
+[1.514s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:215:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.514s]   215 |                 this->receive_compress_data[12], this->[01;31m[Kreceive_compress_data[m[K[13],
+[1.514s]       |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:216:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.514s]   216 |                 this->[01;31m[Kreceive_compress_data[m[K[14], this->receive_compress_data[15]);
+[1.514s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Transmitter920.cpp:216:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Transmitter920_Node[m[K’ has no member named ‘[01m[Kreceive_compress_data[m[K’; did you mean ‘[01m[Kreceive_cobs_data[m[K’?
+[1.514s]   216 |                 this->receive_compress_data[14], this->[01;31m[Kreceive_compress_data[m[K[15]);
+[1.514s]       |                                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.438s] make[2]: *** [CMakeFiles/Transmitter920.dir/build.make:63: CMakeFiles/Transmitter920.dir/src/Transmitter920.cpp.o] Error 1
+[2.438s] make[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/Transmitter920.dir/all] Error 2
+[2.438s] make: *** [Makefile:141: all] Error 2
+[2.440s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

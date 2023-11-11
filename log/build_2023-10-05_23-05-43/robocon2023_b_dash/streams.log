@@ -1,0 +1,17 @@
+[0.461s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.499s] [35m[1mScanning dependencies of target Xmove_Controller[0m
+[0.517s] [ 50%] Built target SerialKIMD
+[0.523s] [ 75%] [32mBuilding CXX object CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o[0m
+[1.485s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.hpp:7[m[K,
+[1.485s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:2[m[K:
+[1.485s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.486s]    19 |  [01;35m[K}[m[K;
+[1.486s]       |  [01;35m[K^[m[K
+[1.511s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:[m[K In member function ‘[01m[Kvoid Xmove_Controller_Node::timer_callback()[m[K’:
+[1.512s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Xmove_Controller.cpp:37:46:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+[1.512s]    37 |     printf("show bin %d",this->xmove_msg.bin[[01;31m[Ki[m[K]);
+[1.512s]       |                                              [01;31m[K^[m[K
+[2.579s] make[2]: *** [CMakeFiles/Xmove_Controller.dir/build.make:63: CMakeFiles/Xmove_Controller.dir/src/Xmove_Controller.cpp.o] Error 1
+[2.579s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/Xmove_Controller.dir/all] Error 2
+[2.579s] make: *** [Makefile:141: all] Error 2
+[2.581s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

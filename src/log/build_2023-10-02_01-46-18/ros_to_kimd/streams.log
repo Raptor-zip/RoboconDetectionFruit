@@ -1,0 +1,101 @@
+[0.022s] Invoking command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/ros-industrial/robocon_ws/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/ros-industrial/robocon_ws/src/install/ros_to_kimd
+[0.110s] -- The C compiler identification is GNU 9.4.0
+[0.160s] -- The CXX compiler identification is GNU 9.4.0
+[0.170s] -- Check for working C compiler: /usr/bin/cc
+[0.219s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.221s] -- Detecting C compiler ABI info
+[0.275s] -- Detecting C compiler ABI info - done
+[0.283s] -- Detecting C compile features
+[0.284s] -- Detecting C compile features - done
+[0.287s] -- Check for working CXX compiler: /usr/bin/c++
+[0.350s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.351s] -- Detecting CXX compiler ABI info
+[0.413s] -- Detecting CXX compiler ABI info - done
+[0.421s] -- Detecting CXX compile features
+[0.421s] -- Detecting CXX compile features - done
+[0.423s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.447s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.447s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.626s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.682s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.690s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.765s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.789s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.867s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.937s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.939s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.943s] -- Looking for pthread.h
+[1.002s] -- Looking for pthread.h - found
+[1.002s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.059s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.059s] -- Looking for pthread_create in pthreads
+[1.104s] -- Looking for pthread_create in pthreads - not found
+[1.104s] -- Looking for pthread_create in pthread
+[1.155s] -- Looking for pthread_create in pthread - found
+[1.158s] -- Found Threads: TRUE  
+[1.302s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.407s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.475s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.481s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.481s] -- Configured cppcheck include dirs: 
+[1.481s] -- Configured cppcheck exclude dirs and/or files: 
+[1.486s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.486s] -- Configured cpplint exclude dirs and/or files: 
+[1.487s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.489s] -- Added test 'lint_cmake' to check CMake code style
+[1.490s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.495s] -- Added test 'uncrustify' to check C / C++ code style
+[1.495s] -- Configured uncrustify additional arguments: 
+[1.496s] -- Added test 'xmllint' to check XML markup files
+[1.498s] -- Configuring done
+[1.510s] -- Generating done
+[1.511s] -- Build files have been written to: /home/ros-industrial/robocon_ws/src/build/ros_to_kimd
+[1.521s] Invoked command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/ros-industrial/robocon_ws/src/ros_to_kimd -DCMAKE_INSTALL_PREFIX=/home/ros-industrial/robocon_ws/src/install/ros_to_kimd
+[1.522s] Invoking command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/src/build/ros_to_kimd -- -j8 -l8
+[1.563s] [35m[1mScanning dependencies of target ControlKimd[0m
+[1.563s] [35m[1mScanning dependencies of target joysubtest[0m
+[1.590s] [ 25%] [32mBuilding CXX object CMakeFiles/joysubtest.dir/src/kimd_send_joystick.cpp.o[0m
+[1.591s] [ 50%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+[4.342s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.342s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:33:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.342s]    33 |   void topic_callback([01;35m[Ksensor_msgs::msg::Joy::SharedPtr msg[m[K)
+[4.342s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[4.348s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[4.349s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/kimd_send_joystick.cpp:72:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.349s]    72 | void signal_handler([01;35m[Kint signum[m[K)
+[4.349s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[4.371s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:15[m[K:
+[4.371s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[4.371s]    19 |  [01;35m[K}[m[K;
+[4.371s]       |  [01;35m[K^[m[K
+[4.435s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[4.435s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:233:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[4.435s]   233 | void signal_handler([01;35m[Kint signum[m[K)
+[4.435s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[7.910s] [ 75%] [32m[1mLinking CXX executable joysubtest[0m
+[8.052s] [100%] [32m[1mLinking CXX executable ControlKimd[0m
+[8.109s] [100%] Built target joysubtest
+[8.247s] [100%] Built target ControlKimd
+[8.254s] Invoked command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/src/build/ros_to_kimd -- -j8 -l8
+[8.279s] Invoking command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/src/build/ros_to_kimd
+[8.285s] -- Install configuration: ""
+[8.285s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/lib/ros_to_kimd/joysubtest
+[8.286s] -- Set runtime path of "/home/ros-industrial/robocon_ws/src/install/ros_to_kimd/lib/ros_to_kimd/joysubtest" to ""
+[8.286s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/lib/ros_to_kimd/ControlKimd
+[8.288s] -- Set runtime path of "/home/ros-industrial/robocon_ws/src/install/ros_to_kimd/lib/ros_to_kimd/ControlKimd" to ""
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ament_index/resource_index/package_run_dependencies/ros_to_kimd
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ament_index/resource_index/parent_prefix_path/ros_to_kimd
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/environment/ament_prefix_path.sh
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/environment/ament_prefix_path.dsv
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/environment/path.sh
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/environment/path.dsv
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/local_setup.bash
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/local_setup.sh
+[8.288s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/local_setup.zsh
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/local_setup.dsv
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/package.dsv
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ament_index/resource_index/packages/ros_to_kimd
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/cmake/ros_to_kimdConfig.cmake
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/cmake/ros_to_kimdConfig-version.cmake
+[8.289s] -- Installing: /home/ros-industrial/robocon_ws/src/install/ros_to_kimd/share/ros_to_kimd/package.xml
+[8.293s] Invoked command in '/home/ros-industrial/robocon_ws/src/build/ros_to_kimd' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/src/build/ros_to_kimd

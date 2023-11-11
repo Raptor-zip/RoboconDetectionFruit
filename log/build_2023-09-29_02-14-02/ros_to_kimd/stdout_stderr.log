@@ -1,0 +1,20 @@
+[35m[1mScanning dependencies of target ControlKimd[0m
+[ 50%] Built target joysubtest
+[ 75%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:15[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:55:35:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Krclcpp::Time[m[K’ to ‘[01m[Kdouble[m[K’ in initialization
+   55 |         double dt = [01;31m[K(ros_clock.now())[m[K;
+      |                     [01;31m[K~~~~~~~~~~~~~~^~~[m[K
+      |                                   [01;31m[K|[m[K
+      |                                   [01;31m[Krclcpp::Time[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:208:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  208 | void signal_handler([01;35m[Kint signum[m[K)
+      |                     [01;35m[K~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/ControlKimd.dir/build.make:63: CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/ControlKimd.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

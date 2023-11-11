@@ -1,0 +1,16 @@
+[0.470s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.504s] [35m[1mScanning dependencies of target SerialKIMD[0m
+[0.524s] [ 50%] [32mBuilding CXX object CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o[0m
+[1.347s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.hpp:14[m[K,
+[1.347s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.cpp:2[m[K:
+[1.347s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.347s]    19 |  [01;35m[K}[m[K;
+[1.347s]       |  [01;35m[K^[m[K
+[1.740s] [100%] [32m[1mLinking CXX executable SerialKIMD[0m
+[1.853s] /usr/bin/ld: CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o: in function `SerialKIMD_Node::~SerialKIMD_Node()':
+[1.853s] SerialKIMD.cpp:(.text+0x55d): undefined reference to `SerialKIMD_Node::SerialClose()'
+[1.853s] collect2: error: ld returned 1 exit status
+[1.855s] make[2]: *** [CMakeFiles/SerialKIMD.dir/build.make:131: SerialKIMD] Error 1
+[1.855s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/SerialKIMD.dir/all] Error 2
+[1.855s] make: *** [Makefile:141: all] Error 2
+[1.857s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

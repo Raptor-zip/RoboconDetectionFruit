@@ -1,0 +1,32 @@
+[35m[1mScanning dependencies of target RopeMotion[0m
+[ 10%] Built target BeltLiner_Controller
+[ 20%] Built target SerialKIMD
+[ 30%] Built target Xmove_Controller
+[ 35%] [32mBuilding CXX object CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o[0m
+[ 45%] Built target DriveMotion
+[ 55%] Built target Solenoid_Controller
+[ 65%] Built target Crawl_Controller
+[ 75%] Built target Drive_Controller
+[35m[1mScanning dependencies of target WallUpMotion[0m
+[ 85%] Built target Upper_Controller
+[ 90%] [32mBuilding CXX object CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o[0m
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:[m[K In member function ‘[01m[Kvoid WallUpMotion_Node::Wallup_Task()[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/WallUp_Motion.cpp:572:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  572 |             this->SetClawlIncPos([01;31m[K,[m[K FAST_MODE, 0);
+      |                                  [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/WallUpMotion.dir/build.make:63: CMakeFiles/WallUpMotion.dir/src/WallUp_Motion.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:393: CMakeFiles/WallUpMotion.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 95%] [32m[1mLinking CXX executable RopeMotion[0m
+[ 95%] Built target RopeMotion
+make: *** [Makefile:141: all] Error 2

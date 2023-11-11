@@ -1,0 +1,33 @@
+[35m[1mScanning dependencies of target usb920_ver2_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/usb920_ver2_node.dir/src/usb920_ver2_node.cpp.o[0m
+[01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:[m[K In member function ‘[01m[Kvoid JoyPublisher::timer_callback()[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:89:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   89 |       for (int i = 0; [01;35m[Ki < sizeof(data)[m[K; i++) { //全パケットをデコード結果用の配列に取り込む（先頭と末尾を除く）
+      |                       [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:93:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   93 |       while([01;35m[Ki <= sizeof(data)[m[K) {
+      |             [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:154:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  154 | void signal_handler([01;35m[Kint signum[m[K)
+      |                     [01;35m[K~~~~^~~~~~[m[K
+[100%] [32m[1mLinking CXX executable usb920_ver2_node[0m
+[100%] Built target usb920_ver2_node
+-- Install configuration: ""
+-- Installing: /home/ros-industrial/robocon_ws/install/usb920_ver2/lib/usb920_ver2/usb920_ver2_node
+-- Set runtime path of "/home/ros-industrial/robocon_ws/install/usb920_ver2/lib/usb920_ver2/usb920_ver2_node" to ""
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/package_run_dependencies/usb920_ver2
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/parent_prefix_path/usb920_ver2
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/path.sh
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/path.dsv
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.bash
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.sh
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.zsh
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.dsv
+-- Installing: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.dsv
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/packages/usb920_ver2
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/cmake/usb920_ver2Config.cmake
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/cmake/usb920_ver2Config-version.cmake
+-- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.xml

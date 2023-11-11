@@ -1,0 +1,114 @@
+[0.648s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.691s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.714s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.873s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.897s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.899s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.994s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.033s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.036s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.147s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.249s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.298s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.300s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.300s] -- Configured cppcheck include dirs: 
+[1.300s] -- Configured cppcheck exclude dirs and/or files: 
+[1.301s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.301s] -- Configured cpplint exclude dirs and/or files: 
+[1.302s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.302s] -- Added test 'lint_cmake' to check CMake code style
+[1.302s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.303s] -- Added test 'uncrustify' to check C / C++ code style
+[1.303s] -- Configured uncrustify additional arguments: 
+[1.303s] -- Added test 'xmllint' to check XML markup files
+[1.305s] -- Configuring done
+[1.367s] -- Generating done
+[1.367s] -- Build files have been written to: /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[1.391s] [35m[1mScanning dependencies of target KiwiMotion[0m
+[1.417s] [  4%] [32mBuilding CXX object CMakeFiles/KiwiMotion.dir/src/Kiwi_Motion.cpp.o[0m
+[2.309s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Kiwi_Motion.hpp:7[m[K,
+[2.309s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Kiwi_Motion.cpp:2[m[K:
+[2.309s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[2.309s]    19 |  [01;35m[K}[m[K;
+[2.309s]       |  [01;35m[K^[m[K
+[6.227s] [  8%] [32m[1mLinking CXX executable KiwiMotion[0m
+[6.413s] [  8%] Built target KiwiMotion
+[6.431s] [ 16%] Built target Upper_Controller
+[6.450s] [ 25%] Built target WallUpMotion
+[6.458s] [35m[1mScanning dependencies of target Crawl_Controller[0m
+[6.474s] [ 29%] [32mBuilding CXX object CMakeFiles/Crawl_Controller.dir/src/Crawl_Controller.cpp.o[0m
+[7.294s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.hpp:6[m[K,
+[7.294s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Crawl_Controller.cpp:2[m[K:
+[7.294s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[7.294s]    19 |  [01;35m[K}[m[K;
+[7.294s]       |  [01;35m[K^[m[K
+[9.498s] [ 37%] Built target MotionMaster
+[9.508s] [35m[1mScanning dependencies of target Drive_Controller[0m
+[9.528s] [ 41%] [32mBuilding CXX object CMakeFiles/Drive_Controller.dir/src/Drive_Controller.cpp.o[0m
+[10.008s] [ 45%] [32m[1mLinking CXX executable Crawl_Controller[0m
+[10.177s] [ 45%] Built target Crawl_Controller
+[10.206s] [ 54%] Built target RopeMotion
+[10.230s] [ 62%] Built target DriveMotion
+[10.242s] [35m[1mScanning dependencies of target Solenoid_Controller[0m
+[10.267s] [ 66%] [32mBuilding CXX object CMakeFiles/Solenoid_Controller.dir/src/Solenoid_Controller.cpp.o[0m
+[10.330s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.hpp:6[m[K,
+[10.330s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Drive_Controller.cpp:2[m[K:
+[10.330s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[10.330s]    19 |  [01;35m[K}[m[K;
+[10.330s]       |  [01;35m[K^[m[K
+[11.050s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Solenoid_Controller.hpp:6[m[K,
+[11.050s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Solenoid_Controller.cpp:2[m[K:
+[11.050s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[11.050s]    19 |  [01;35m[K}[m[K;
+[11.050s]       |  [01;35m[K^[m[K
+[13.013s] [ 70%] [32m[1mLinking CXX executable Drive_Controller[0m
+[13.189s] [ 70%] Built target Drive_Controller
+[13.214s] [ 79%] Built target Xmove_Controller
+[13.237s] [ 87%] Built target SerialKIMD
+[13.247s] [35m[1mScanning dependencies of target BeltLiner_Controller[0m
+[13.270s] [ 91%] [32mBuilding CXX object CMakeFiles/BeltLiner_Controller.dir/src/BeltLiner_Controller.cpp.o[0m
+[13.720s] [ 95%] [32m[1mLinking CXX executable Solenoid_Controller[0m
+[13.887s] [ 95%] Built target Solenoid_Controller
+[14.096s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/BeltLiner_Controller.hpp:6[m[K,
+[14.096s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/BeltLiner_Controller.cpp:2[m[K:
+[14.096s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[14.097s]    19 |  [01;35m[K}[m[K;
+[14.097s]       |  [01;35m[K^[m[K
+[16.518s] [100%] [32m[1mLinking CXX executable BeltLiner_Controller[0m
+[16.677s] [100%] Built target BeltLiner_Controller
+[16.684s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[16.723s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash
+[16.727s] -- Install configuration: ""
+[16.727s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/SerialKIMD
+[16.728s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Xmove_Controller
+[16.728s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/DriveMotion
+[16.728s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller
+[16.729s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Drive_Controller" to ""
+[16.729s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Upper_Controller
+[16.730s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/WallUpMotion
+[16.730s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller
+[16.732s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Crawl_Controller" to ""
+[16.732s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller
+[16.733s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/Solenoid_Controller" to ""
+[16.733s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller
+[16.734s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/BeltLiner_Controller" to ""
+[16.734s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/RopeMotion
+[16.734s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/MotionMaster
+[16.735s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/KiwiMotion
+[16.736s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash/lib/robocon2023_b_dash/KiwiMotion" to ""
+[16.736s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash
+[16.736s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash
+[16.736s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.sh
+[16.736s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/ament_prefix_path.dsv
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.sh
+[16.737s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/environment/path.dsv
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.bash
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.sh
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.zsh
+[16.737s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/local_setup.dsv
+[16.737s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.dsv
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/ament_index/resource_index/packages/robocon2023_b_dash
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig.cmake
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/cmake/robocon2023_b_dashConfig-version.cmake
+[16.737s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash/share/robocon2023_b_dash/package.xml
+[16.739s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash

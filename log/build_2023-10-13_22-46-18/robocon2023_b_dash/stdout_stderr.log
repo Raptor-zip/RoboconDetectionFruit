@@ -1,0 +1,42 @@
+[35m[1mScanning dependencies of target RopeMotion[0m
+[ 10%] Built target Xmove_Controller
+[ 15%] [32mBuilding CXX object CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o[0m
+[ 25%] Built target DriveMotion
+[ 35%] Built target SerialKIMD
+[ 45%] Built target BeltLiner_Controller
+[ 55%] Built target Drive_Controller
+[ 65%] Built target Crawl_Controller
+[ 75%] Built target Solenoid_Controller
+[ 85%] Built target Upper_Controller
+[ 95%] Built target WallUpMotion
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:[m[K In member function ‘[01m[Kvoid RopeMotion_Node::InitPos_Clawl(uint8_t, uint8_t)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:189:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RopeMotion_Node[m[K’ has no member named ‘[01m[KGetClawlZEROPos[m[K’; did you mean ‘[01m[KSetClawlIncPos[m[K’?
+  189 |     this->crawl_msg[0].M = this->[01;31m[KGetClawlZEROPos[m[K(crawl_num);
+      |                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                  [32m[KSetClawlIncPos[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:[m[K In member function ‘[01m[Kvoid RopeMotion_Node::SetClawlAbsPos(uint8_t, uint8_t, float)[m[K’:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:209:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RopeMotion_Node[m[K’ has no member named ‘[01m[KGetClawlZEROPos[m[K’; did you mean ‘[01m[KSetClawlIncPos[m[K’?
+  209 |         this->crawl_msg[crawl_num].M = value + this->[01;31m[KGetClawlZEROPos[m[K(crawl_num);
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[KSetClawlIncPos[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:217:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass RopeMotion_Node[m[K’ has no member named ‘[01m[KGetClawlZEROPos[m[K’; did you mean ‘[01m[KSetClawlIncPos[m[K’?
+  217 |         this->crawl_msg[crawl_num].M = value + this->[01;31m[KGetClawlZEROPos[m[K(crawl_num);
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[KSetClawlIncPos[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:[m[K At global scope:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:226:7:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kfloat RopeMotion_Node::GetClawlZEROPos(uint8_t)[m[K’
+  226 | float [01;31m[KRopeMotion_Node[m[K::GetClawlZEROPos(uint8_t crawl_num)
+      |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:226:7:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kfloat RopeMotion_Node::GetClawlZEROPos(uint8_t)[m[K’
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:11:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass RopeMotion_Node[m[K’ defined here
+   11 | class [01;36m[KRopeMotion_Node[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/RopeMotion.dir/build.make:63: CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:312: CMakeFiles/RopeMotion.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,35 @@
+[0.444s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver -- -j8 -l8
+[0.489s] [35m[1mScanning dependencies of target receiver[0m
+[0.506s] [ 50%] Built target program_checker
+[0.518s] [ 75%] [32mBuilding CXX object CMakeFiles/receiver.dir/src/receiver.cpp.o[0m
+[1.588s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:[m[K In member function ‘[01m[Kvoid JoyPublisher::timer_callback()[m[K’:
+[1.588s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:125:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.588s]   125 |         for (int i = 0; [01;35m[Ki < sizeof(data)[m[K; i++) { //全パケットをデコード結果用の配列に取り込む（先頭と末尾を除く）
+[1.588s]       |                         [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[1.588s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash_receiver/src/receiver.cpp:129:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.588s]   129 |       while([01;35m[Ki <= sizeof(data)[m[K) {
+[1.588s]       |             [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[2.999s] [100%] [32m[1mLinking CXX executable receiver[0m
+[3.122s] [100%] Built target receiver
+[3.134s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver -- -j8 -l8
+[3.155s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver
+[3.165s] -- Install configuration: ""
+[3.165s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/receiver
+[3.166s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/receiver" to ""
+[3.166s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/lib/robocon2023_b_dash_receiver/program_checker
+[3.166s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/package_run_dependencies/robocon2023_b_dash_receiver
+[3.166s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/parent_prefix_path/robocon2023_b_dash_receiver
+[3.167s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/ament_prefix_path.sh
+[3.167s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/ament_prefix_path.dsv
+[3.167s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/path.sh
+[3.167s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/environment/path.dsv
+[3.167s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.bash
+[3.168s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.sh
+[3.168s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.zsh
+[3.168s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/local_setup.dsv
+[3.168s] -- Installing: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.dsv
+[3.168s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/ament_index/resource_index/packages/robocon2023_b_dash_receiver
+[3.168s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/cmake/robocon2023_b_dash_receiverConfig.cmake
+[3.169s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/cmake/robocon2023_b_dash_receiverConfig-version.cmake
+[3.169s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/robocon2023_b_dash_receiver/share/robocon2023_b_dash_receiver/package.xml
+[3.172s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/robocon2023_b_dash_receiver

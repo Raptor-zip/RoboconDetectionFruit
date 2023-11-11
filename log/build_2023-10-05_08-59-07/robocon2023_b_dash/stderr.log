@@ -1,0 +1,11 @@
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.hpp:14[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/SerialKIMD.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+/usr/bin/ld: CMakeFiles/SerialKIMD.dir/src/SerialKIMD.cpp.o: in function `SerialKIMD_Node::~SerialKIMD_Node()':
+SerialKIMD.cpp:(.text+0x55d): undefined reference to `SerialKIMD_Node::SerialClose()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/SerialKIMD.dir/build.make:131: SerialKIMD] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/SerialKIMD.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

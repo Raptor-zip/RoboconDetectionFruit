@@ -1,0 +1,26 @@
+[0.462s] Invoking command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8
+[0.523s] [35m[1mScanning dependencies of target RopeMotion[0m
+[0.527s] [ 10%] Built target BeltLiner_Controller
+[0.531s] [ 25%] Built target Crawl_Controller
+[0.531s] [ 30%] Built target DriveMotion
+[0.537s] [ 40%] Built target Xmove_Controller
+[0.538s] [ 50%] Built target Solenoid_Controller
+[0.541s] [ 60%] Built target SerialKIMD
+[0.542s] [ 70%] Built target Drive_Controller
+[0.544s] [ 75%] [32mBuilding CXX object CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o[0m
+[0.570s] [ 85%] Built target WallUpMotion
+[0.570s] [ 95%] Built target Upper_Controller
+[1.507s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7[m[K,
+[1.507s]                  from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[1.507s] [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[1.507s]    19 |  [01;35m[K}[m[K;
+[1.507s]       |  [01;35m[K^[m[K
+[4.215s] [100%] [32m[1mLinking CXX executable RopeMotion[0m
+[4.357s] /usr/bin/ld: CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o: in function `RopeMotion_Node::Rope_Task()':
+[4.357s] Rope_Motion.cpp:(.text+0x2997): undefined reference to `RopeMotion_Node::DriveSpeedControl(unsigned char, float)'
+[4.357s] /usr/bin/ld: Rope_Motion.cpp:(.text+0x29b0): undefined reference to `RopeMotion_Node::DriveSpeedControl(unsigned char, float)'
+[4.358s] collect2: error: ld returned 1 exit status
+[4.360s] make[2]: *** [CMakeFiles/RopeMotion.dir/build.make:141: RopeMotion] Error 1
+[4.360s] make[1]: *** [CMakeFiles/Makefile2:312: CMakeFiles/RopeMotion.dir/all] Error 2
+[4.360s] make: *** [Makefile:141: all] Error 2
+[4.364s] Invoked command in '/home/ros-industrial/robocon_ws/build/robocon2023_b_dash' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/robocon2023_b_dash -- -j8 -l8

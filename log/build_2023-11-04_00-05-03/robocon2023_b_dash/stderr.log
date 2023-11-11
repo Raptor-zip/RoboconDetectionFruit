@@ -1,0 +1,34 @@
+In file included from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.hpp:8[m[K,
+                 from [01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:2[m[K:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:14:16:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+   14 |         struct [01;35m[K{[m[K
+      |                [01;35m[K^[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:7:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kclock_t[m[K’
+    7 | [01;31m[Kclock_t[m[K start_collection, end_collection, start_elevating, end_elevating; //自動回収の開始時刻と終了時刻を格納する変数と最後の自動制御した時刻を格納する変数
+      | [01;31m[K^~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::ImageRecognition_Callback(std_msgs::msg::Int16MultiArray_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:82:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kend_collection[m[K’ was not declared in this scope
+   82 |     [01;31m[Kend_collection[m[K = clock();
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:86:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_collection[m[K’ was not declared in this scope
+   86 |         if ((double)(end_collection - [01;31m[Kstart_collection[m[K) / CLOCKS_PER_SEC > 0.3 && last_lock == 0){ // 暴走防止 大体*10した値
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:92:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_elevating[m[K’ was not declared in this scope
+   92 |                 [01;31m[Kstart_elevating[m[K = clock();
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:99:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_elevating[m[K’ was not declared in this scope
+   99 |                 [01;31m[Kstart_elevating[m[K = clock();
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:106:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_elevating[m[K’ was not declared in this scope
+  106 |                 [01;31m[Kstart_elevating[m[K = clock();
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:[m[K In member function ‘[01m[Kvoid Upper_Controller_Node::timer_callback()[m[K’:
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:127:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kend_elevating[m[K’ was not declared in this scope
+  127 |     [01;31m[Kend_elevating[m[K = clock();
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/kaibuchisoma/robocon_ws/src/robocon2023_b_dash/src/Upper_Controller.cpp:128:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart_elevating[m[K’ was not declared in this scope
+  128 |     if ((double)(end_elevating - [01;31m[Kstart_elevating[m[K) / CLOCKS_PER_SEC > 0.4){ // 暴走防止 大体*10した値
+      |                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Upper_Controller.dir/build.make:76: CMakeFiles/Upper_Controller.dir/src/Upper_Controller.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:267: CMakeFiles/Upper_Controller.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2

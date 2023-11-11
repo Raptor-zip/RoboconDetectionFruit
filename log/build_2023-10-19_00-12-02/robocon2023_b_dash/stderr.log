@@ -1,0 +1,12 @@
+In file included from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.hpp:7[m[K,
+                 from [01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/Rope_Motion.cpp:2[m[K:
+[01m[K/home/ros-industrial/robocon_ws/src/robocon2023_b_dash/src/RoboconMsg/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+   19 |  [01;35m[K}[m[K;
+      |  [01;35m[K^[m[K
+/usr/bin/ld: CMakeFiles/RopeMotion.dir/src/Rope_Motion.cpp.o: in function `RopeMotion_Node::Rope_Task()':
+Rope_Motion.cpp:(.text+0x2997): undefined reference to `RopeMotion_Node::DriveSpeedControl(unsigned char, float)'
+/usr/bin/ld: Rope_Motion.cpp:(.text+0x29b0): undefined reference to `RopeMotion_Node::DriveSpeedControl(unsigned char, float)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/RopeMotion.dir/build.make:141: RopeMotion] Error 1
+make[1]: *** [CMakeFiles/Makefile2:312: CMakeFiles/RopeMotion.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,20 @@
+[0.023s] Invoking command in '/home/ros-industrial/robocon_ws/build/ros_to_kimd': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/ros_to_kimd -- -j8 -l8
+[0.059s] [35m[1mScanning dependencies of target ControlKimd[0m
+[0.073s] [ 50%] Built target joysubtest
+[0.078s] [ 75%] [32mBuilding CXX object CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o[0m
+[0.818s] In file included from [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:15[m[K:
+[0.818s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ABU2023_GenericOutput_Header.h:19:2:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K-Wpedantic[m[K]
+[0.818s]    19 |  [01;35m[K}[m[K;
+[0.818s]       |  [01;35m[K^[m[K
+[0.834s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In member function ‘[01m[Kvoid KiMDJoySubscriber::topic_callback(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[0.834s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:54:66:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Krcl_time_point_value_t[m[K’ {aka ‘[01m[Klong int[m[K’} to non-scalar type ‘[01m[Krclcpp::Time[m[K’ requested
+[0.834s]    54 |         rclcpp::Time time_now = [01;31m[Krclcpp::Clock().now().nanoseconds()[m[K;
+[0.834s]       |                                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[0.838s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[0.838s] [01m[K/home/ros-industrial/robocon_ws/src/ros_to_kimd/src/ControlKimd.cpp:209:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.838s]   209 | void signal_handler([01;35m[Kint signum[m[K)
+[0.838s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[2.067s] make[2]: *** [CMakeFiles/ControlKimd.dir/build.make:63: CMakeFiles/ControlKimd.dir/src/ControlKimd.cpp.o] Error 1
+[2.067s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/ControlKimd.dir/all] Error 2
+[2.067s] make: *** [Makefile:141: all] Error 2
+[2.073s] Invoked command in '/home/ros-industrial/robocon_ws/build/ros_to_kimd' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/ros_to_kimd -- -j8 -l8

@@ -1,0 +1,37 @@
+[0.125s] Invoking command in '/home/ros-industrial/robocon_ws/build/usb920_ver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/usb920_ver2 -- -j8 -l8
+[0.172s] [35m[1mScanning dependencies of target usb920_ver2_node[0m
+[0.198s] [ 50%] [32mBuilding CXX object CMakeFiles/usb920_ver2_node.dir/src/usb920_ver2_node.cpp.o[0m
+[1.078s] [01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:[m[K In member function ‘[01m[Kvoid JoyPublisher::timer_callback()[m[K’:
+[1.078s] [01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:89:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.079s]    89 |       for (int i = 0; [01;35m[Ki < sizeof(data)[m[K; i++) { //全パケットをデコード結果用の配列に取り込む（先頭と末尾を除く）
+[1.079s]       |                       [01;35m[K~~^~~~~~~~~~~~~~[m[K
+[1.079s] [01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:93:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[1.079s]    93 |       while([01;35m[Ki <= sizeof(data)[m[K) {
+[1.079s]       |             [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[1.083s] [01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:[m[K In function ‘[01m[Kvoid signal_handler(int)[m[K’:
+[1.083s] [01m[K/home/ros-industrial/robocon_ws/src/usb920_ver2/src/usb920_ver2_node.cpp:154:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksignum[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.083s]   154 | void signal_handler([01;35m[Kint signum[m[K)
+[1.083s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[2.516s] [100%] [32m[1mLinking CXX executable usb920_ver2_node[0m
+[2.613s] [100%] Built target usb920_ver2_node
+[2.621s] Invoked command in '/home/ros-industrial/robocon_ws/build/usb920_ver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/ros-industrial/robocon_ws/build/usb920_ver2 -- -j8 -l8
+[2.645s] Invoking command in '/home/ros-industrial/robocon_ws/build/usb920_ver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/usb920_ver2
+[2.649s] -- Install configuration: ""
+[2.649s] -- Installing: /home/ros-industrial/robocon_ws/install/usb920_ver2/lib/usb920_ver2/usb920_ver2_node
+[2.650s] -- Set runtime path of "/home/ros-industrial/robocon_ws/install/usb920_ver2/lib/usb920_ver2/usb920_ver2_node" to ""
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/package_run_dependencies/usb920_ver2
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/parent_prefix_path/usb920_ver2
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/ament_prefix_path.sh
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/ament_prefix_path.dsv
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/path.sh
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/environment/path.dsv
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.bash
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.sh
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.zsh
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/local_setup.dsv
+[2.650s] -- Installing: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.dsv
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/ament_index/resource_index/packages/usb920_ver2
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/cmake/usb920_ver2Config.cmake
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/cmake/usb920_ver2Config-version.cmake
+[2.650s] -- Up-to-date: /home/ros-industrial/robocon_ws/install/usb920_ver2/share/usb920_ver2/package.xml
+[2.651s] Invoked command in '/home/ros-industrial/robocon_ws/build/usb920_ver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/ros-industrial/robocon_ws/build/usb920_ver2
